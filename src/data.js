@@ -60,19 +60,19 @@ export const testimonials = [
 
 export const education = [
   {
+    school: "Nile University of Nigeria",
+    degree: "PGD",
+    course: "Computer Science",
+    year: 2021,
+    image: "./nile.jpg"
+  },
+  {
     school: "Afe Babalola University",
     degree: "B.Eng",
     course: "Electrical/Electronics",
     year: 2016,
     image: "./abuad.png",
     link: "./deg.pdf"
-  },
-  {
-    school: "Nile University of Nigeria",
-    degree: "PGD",
-    course: "Computer Science",
-    year: 2021,
-    image: "./nile.jpg"
   },
   {
     school: "World Evaluation Services",

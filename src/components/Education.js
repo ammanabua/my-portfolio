@@ -12,7 +12,7 @@ export default function Education() {
             My Education
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            You can get a sense of my background and switch to tech, check out my education
+            Explore my academic qualifications
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
