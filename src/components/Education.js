@@ -1,25 +1,25 @@
-import { CodeIcon } from "@heroicons/react/solid";
+import { AcademicCapIcon, BadgeCheckIcon } from "@heroicons/react/solid";
 import React from "react";
-import { projects } from "../data";
+import { education } from "../data";
 
-export default function Projects() {
+export default function Education() {
   return (
-    <section id="projects" className="text-gray-400 bg-gray-900 body-font">
+    <section id="education">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40">
-        <div className="flex flex-col w-full mb-20">
-          <CodeIcon className="mx-auto inline-block w-10 mb-4" />
-          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
-            Things I've Built
+        <div className="text-center mb-20">
+          <AcademicCapIcon className="w-10 inline-block mb-4" />
+          <h1 className="sm:text-4xl text-3xl font-medium title-font text-white mb-4">
+            My Education
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Explore a few of my projects here. I know, there's still room for improvement.
+          <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+            You can get a sense of my background and switch to tech, check out my education
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
-          {projects.map((project) => (
+          {education.map((education) => (
             <a
-              href={project.link}
-              key={project.image}
+              href={education.link}
+              key={education.image}
               className="sm:w-1/2 w-100 p-4" 
               rel="noopener"
               target="_blank">
@@ -27,23 +27,22 @@ export default function Projects() {
                 <img
                   alt="gallery"
                   className="absolute inset-0 w-full h-full object-cover object-center"
-                  src={project.image}
+                  src={education.image}
                 />
                 <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
                   <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
-                    {project.subtitle}
+                    {education.degree}
                   </h2>
                   <h1 className="title-font text-lg font-medium text-white mb-3">
-                    {project.title}
+                    {education.course}
                   </h1>
-                  <p className="leading-relaxed">{project.description}</p>
+                  <p className="leading-relaxed">{education.school}, {education.year}</p>
                 </div>
               </div>
             </a>
           ))}
         </div>
-      </div>
+        </div>
     </section>
   );
 }
-
