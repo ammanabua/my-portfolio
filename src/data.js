@@ -5,7 +5,7 @@ export const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
     image: "./project-1.gif",
-    link: "https://reactbootcamp.com",
+    link: "#",
   },
   {
     title: "Thoughts App",
@@ -13,7 +13,7 @@ export const projects = [
     description:
       "A social media app for like minded people to share their thoughts and connect with each other",
     image: "./project-2.gif",
-    link: "https://reactbootcamp.com",
+    link: "#",
   },
   {
     title: "Naija News App",
@@ -29,7 +29,7 @@ export const projects = [
     description:
       "Feeling bored? Lighten your mood with programming jokes from my app!",
     image: "./project-4.gif",
-    link: "https://reactbootcamp.com",
+    link: "#",
   },
   {
     title: "Drizit Environmental Ltd",
