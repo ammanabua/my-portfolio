@@ -1,20 +1,5 @@
 export const projects = [
-  {
-    title: "React Reserve",
-    subtitle: "MERN Stack",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-1.gif",
-    link: "#",
-  },
-  {
-    title: "Thoughts App",
-    subtitle: "MERNG Stack",
-    description:
-      "A social media app for like minded people to share their thoughts and connect with each other",
-    image: "./project-2.gif",
-    link: "#",
-  },
+    
   {
     title: "Naija News App",
     subtitle: "Node, Express & News API",
@@ -22,14 +7,6 @@ export const projects = [
       "Get lates News updates on this simple news app",
     image: "./project-3.gif",
     link: "https://naija-news.herokuapp.com/",
-  },
-  {
-    title: "Random Joke Generator",
-    subtitle: "React Hooks",
-    description:
-      "Feeling bored? Lighten your mood with programming jokes from my app!",
-    image: "./project-4.gif",
-    link: "#",
   },
   {
     title: "Drizit Environmental Ltd",
@@ -63,7 +40,7 @@ export const education = [
     school: "Nile University of Nigeria",
     degree: "PGD",
     course: "Computer Science",
-    year: 2021,
+    year: 2022,
     image: "./nile.jpg"
   },
   {
@@ -74,14 +51,6 @@ export const education = [
     image: "./abuad.png",
     link: "./deg.pdf"
   },
-  {
-    school: "World Evaluation Services",
-    degree: "Verified International Academic Qualifications",
-    course: "",
-    year: "2019",
-    image: "./wes.png",
-    link: "https://www.credly.com/badges/da1c3880-5bfa-4913-8afe-216a871db81b/public_url"
-  }
 ];
 
 export const skills = [
@@ -95,6 +64,8 @@ export const skills = [
   "Bootstrap",
   "Tailwind",
   "Figma",
+  "ReactNative",
+  "Android Studio",
   "Git",
   "GitHub",
   "Heroku",
