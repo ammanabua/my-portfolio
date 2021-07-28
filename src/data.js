@@ -5,7 +5,7 @@ export const projects = [
     subtitle: "Node, Express & News API",
     description:
       "Get lates News updates on this simple news app",
-    image: "./project-3.gif",
+    image: "./news.png",
     link: "https://naija-news.herokuapp.com/",
   },
   {
