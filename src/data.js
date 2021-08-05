@@ -16,6 +16,22 @@ export const projects = [
     image: "./drizitenv.png",
     link: "https://drizitnig.ng/",
   },
+  {
+    title: "Patatap Clone",
+    subtitle: "Paper js, Howler js",
+    description:
+      "A clone of the popular Patatap animation sound-kit, assigning shapes and sounds to each key",
+    image: "./patatap.jpg",
+    link: "https://trusting-rosalind-906192.netlify.app/",
+  },
+  {
+    title: "TYIK Corp.",
+    subtitle: "Canadian Business Website",
+    description:
+      "Website for a business based in Canada to give overall information about their services and management",
+    image: "./tyikcorp.png",
+    link: "https://tyikcorp.com/",
+  },
 ];
 
 export const testimonials = [
