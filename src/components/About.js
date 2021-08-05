@@ -1,4 +1,5 @@
 import React from "react";
+import { SocialIcon } from "react-social-icons";
 
 
 export default function About() {
@@ -26,15 +27,20 @@ export default function About() {
                     My Portfolio
                     </a>
                 </div>
+                <div className="flex justify-center my-8">
+                    <SocialIcon url="https://github.com/ammanabua" target="_blank" rel="noopener noreferrer" />
+                    <SocialIcon url="https://linkedin.com/in/amman-abua" className="ml-4" target="_blank" rel="noopener noreferrer" />
+                    <SocialIcon url="https://twitter.com/ammanie_k" className="ml-4" target="_blank" rel="noopener noreferrer" />
+                </div>
                 </div>
                 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                <img
+                    <img
                     className="object-cover object-center rounded-full"
                     alt="hero"
                     src="./me.png"
-                />
+                     />
                 </div>
             </div>
-            </section>
+        </section>
       )
 }

@@ -76,6 +76,7 @@ export const skills = [
   "Node",
   "MongoDB",
   "GraphQL",
+  "RESTful APIs",
   "Bootstrap",
   "TailwindCSS",
   "Figma",

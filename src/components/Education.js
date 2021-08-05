@@ -1,4 +1,4 @@
-import { AcademicCapIcon, BadgeCheckIcon } from "@heroicons/react/solid";
+import { AcademicCapIcon } from "@heroicons/react/solid";
 import React from "react";
 import { education } from "../data";
 
