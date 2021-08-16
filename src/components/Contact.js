@@ -24,11 +24,7 @@ export default function Contact() {
         .catch((error) => alert(error));
     }
 
-    const resetInputField = () => {
-      setName("");
-      setEmail("");
-      setMessage("")
-    }
+    
 
   return (
     <section id="contact" className="relative">

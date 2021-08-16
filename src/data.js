@@ -18,11 +18,19 @@ export const projects = [
   },
   {
     title: "TYIK Corp.",
-    subtitle: "Canadian Business Website",
+    subtitle: "HTML, CSS & JavaScript",
     description:
       "Website for a business based in Canada to give overall information about their services and management",
     image: "./tyikcorp.png",
     link: "https://tyikcorp.com/",
+  },
+  {
+    title: "Color Game",
+    subtitle: "HTML, CSS & JavaScript",
+    description:
+      "RGB colour guessing game",
+    image: "./color-game.png",
+    link: "https://ammans-color-game.netlify.app/",
   },
 ];
 
@@ -46,18 +54,17 @@ export const testimonials = [
 export const education = [
   {
     school: "Nile University of Nigeria",
-    degree: "PGD",
+    degree: "Post Graduate Diploma",
     course: "Computer Science",
     year: 2022,
     image: "./nile.jpg"
   },
   {
     school: "Afe Babalola University",
-    degree: "B.Eng",
+    degree: "Bachelor of Engineering",
     course: "Electrical/Electronics",
     year: 2016,
     image: "./abuad.png",
-    link: "./deg.pdf"
   },
 ];
 
