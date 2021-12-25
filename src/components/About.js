@@ -15,7 +15,9 @@ export default function About() {
           strings: ['Web Developer', 'Designer', 'Content-Creator', 'Basketballer'],
           typeSpeed: 100,
          });
-    },[])
+    },[]);
+
+    
     return (
         <section id="about">
             <div className="container mx-auto flex px-10 my-20 md:flex-row flex-col items-center">
