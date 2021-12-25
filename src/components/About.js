@@ -12,8 +12,8 @@ export default function About() {
           showCursor: true,
           backDelay: 1500,
           backSpeed: 60, 
-          strings: ['Web Developer', 'Designer', 'Content-Creator', 'Basketballer' ],
-          typeSpeed: 150,
+          strings: ['Web Developer', 'Designer', 'Content-Creator', 'Basketballer'],
+          typeSpeed: 100,
          });
     },[])
     return (
