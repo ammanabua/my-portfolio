@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { SocialIcon } from "react-social-icons";
+import { init } from 'ityped';
 
 
 export default function About() {
+
+    const textRef = useRef();
+
+    useEffect(() => {
+      init(textRef.current, { 
+          showCursor: true,
+          backDelay: 1500,
+          backSpeed: 60, 
+          strings: ['Web Developer', 'Designer', 'Content-Creator', 'Basketballer' ],
+          typeSpeed: 150,
+         });
+    },[])
     return (
         <section id="about">
             <div className="container mx-auto flex px-10 my-20 md:flex-row flex-col items-center">
@@ -12,7 +25,7 @@ export default function About() {
                         <br className="lg:inline-block" />
                     </h2>
                     <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Amman Abua</h1>
-                    <h3 className="title-font text-2xl mb-4 font-medium"><span className="title-font text-yellow-600">Web Developer</span></h3>
+                    <h3 className="title-font text-2xl mb-4 font-medium"><span className="title-font text-yellow-600" ref={textRef}></span></h3>
                     <p className="mb-8 leading-relaxed">
                         Web developer with a passion for writing clean and efficient code; bringing ideas to life.
                     </p>
