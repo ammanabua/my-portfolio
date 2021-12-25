@@ -21,7 +21,7 @@ export default function Projects() {
         <div className="container">
           <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8">
             {projects.map((project) => (
-                <div key={project.image} className="rounded overflow-hidden shadow-2xl border-solid border-2 border-grey-500">
+                <div key={project.image} className="rounded overflow-hidden shadow-2xl">
                 <img className="w-full" src={project.image} alt="Mountain" />
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">{project.title}</div>

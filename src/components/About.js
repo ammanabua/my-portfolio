@@ -7,11 +7,12 @@ export default function About() {
         <section id="about">
             <div className="container mx-auto flex px-10 my-20 md:flex-row flex-col items-center">
                 <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                    <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-                        Hi, I'm Amman.
+                    <h2>
+                        Hi There, I'm
                         <br className="lg:inline-block" />
-                    </h1>
-                    <h3 className="title-font text-3xl mb-4 font-medium">Web Developer <span className="text-yellow-600">Freelancer</span></h3>
+                    </h2>
+                    <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Amman Abua</h1>
+                    <h3 className="title-font text-2xl mb-4 font-medium"><span className="title-font text-yellow-600">Web Developer</span></h3>
                     <p className="mb-8 leading-relaxed">
                         Web developer with a passion for writing clean and efficient code; bringing ideas to life.
                     </p>
@@ -27,10 +28,10 @@ export default function About() {
                         My Portfolio
                         </a>
                     </div>
-                    <div className="flex justify-center my-8">
+                    <div className="flex justify-center my-10">
                         <SocialIcon bgColor="grey" fgColor="#fff" url="https://github.com/ammanabua" style={{ height: 35, width: 35 }} target="_blank" rel="noopener noreferrer" />
-                        <SocialIcon bgColor="grey" fgColor="#fff" url="https://linkedin.com/in/amman-abua" style={{ height: 35, width: 35 }} className="ml-4" target="_blank" rel="noopener noreferrer" />
-                        <SocialIcon bgColor="grey" fgColor="#fff" url="https://twitter.com/ammanie_k" style={{ height: 35, width: 35 }} className="ml-4" target="_blank" rel="noopener noreferrer" />
+                        <SocialIcon bgColor="grey" fgColor="#fff" url="https://linkedin.com/in/amman-abua" style={{ height: 35, width: 35 }} className="ml-10" target="_blank" rel="noopener noreferrer" />
+                        <SocialIcon bgColor="grey" fgColor="#fff" url="https://twitter.com/ammanie_k" style={{ height: 35, width: 35 }} className="ml-10" target="_blank" rel="noopener noreferrer" />
                     </div>
                 </div>
                 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
