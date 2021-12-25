@@ -7,9 +7,10 @@ export const projects = [
       "Get lates News updates on this simple news app",
     image: "./news.png",
     link: "https://naija-news.herokuapp.com/",
+    github: "https://github.com/ammanabua/News_App",
   },
   {
-    title: "Drizit Environmental Ltd",
+    title: "Drizit Environmental",
     subtitle: "WordPress",
     description:
       "Website for an Environmental Cleanup company, looking to tap into the Nigerian market",
@@ -25,7 +26,7 @@ export const projects = [
     link: "https://tyikcorp.com/",
   },
   {
-    title: "Color Game",
+    title: "Color Guessing Game",
     subtitle: "HTML, CSS & JavaScript",
     description:
       "RGB colour guessing game",
@@ -69,6 +70,8 @@ export const education = [
 ];
 
 export const skills = [
+  "HTML",
+  "CSS",
   "JavaScript",
   "React",
   "Express",
