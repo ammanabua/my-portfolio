@@ -1,6 +1,15 @@
 export const projects = [
     
   {
+    title: "Manny's Web Shop",
+    subtitle: "React, Commercejs, Material UI & Paystack",
+    description:
+      "E-commerce website to shop for your top quality apparel",
+    image: "./mannys.png",
+    link: "https://mannyswebshop.netlify.app/",
+    github: "https://github.com/ammanabua/e-commerce-shop",
+  },
+  {
     title: "Naija News App",
     subtitle: "Node, Express & News API",
     description:
