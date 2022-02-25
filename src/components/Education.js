@@ -15,7 +15,7 @@ export default function Education() {
             Explore my academic qualifications
           </p>
         </div>
-        <div className="flex flex-wrap -m-4">
+        <div className="flex flex-wrap justify-center align-center">
           {education.map((education) => (
             <a
               href={education.link}
