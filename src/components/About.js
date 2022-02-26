@@ -28,7 +28,7 @@ export default function About() {
                     </h2>
                     <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Amman Abua</h1>
                     <h3 className="title-font text-2xl mb-4 font-medium"><span className="title-font text-yellow-600" ref={textRef}></span></h3>
-                    <p className="mb-8 leading-relaxed">
+                    <p className="mb-8 leading-relaxed text-justify">
                         Web developer with a passion for writing clean and efficient code; bringing ideas to life.
                     </p>
                     <div className="flex justify-center">

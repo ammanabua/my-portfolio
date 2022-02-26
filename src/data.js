@@ -79,21 +79,68 @@ export const education = [
 ];
 
 export const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Express",
-  "Node",
-  "MongoDB",
-  "GraphQL",
-  "RESTful APIs",
-  "Bootstrap",
-  "TailwindCSS",
-  "Figma",
-  "Git",
-  "GitHub",
-  "Heroku",
-  "Netlify",
-  "Wordpress"
+  {
+    title: "HTML",
+    image: "./html-5.svg"
+  },
+  {
+    title: "CSS",
+    image: "./css-3.svg"
+  },
+  {
+    title: "JavaScript",
+    image: "./javascript.svg"
+  },
+  {
+    title: "React",
+    image: "./react.svg"
+  },
+  {
+    title: "Express",
+    image: "./express.svg"
+  },
+  {
+    title: "Nodejs",
+    image: "./nodejs-icon.svg"
+  },
+  {
+    title: "MongoDB",
+    image: "./mongodb.svg"
+  },
+  {
+    title: "GraphQL",
+    image: "./graphql.svg"
+  },
+  {
+    title: "Bootstrap",
+    image: "./bootstrap.svg"
+  },
+  {
+    title: "TailwindCSS",
+    image: "./tailwindcss-icon.svg"
+  },
+  {
+    title: "Figma",
+    image: "./figma.svg"
+  },
+  {
+    title: "Git",
+    image: "./git-icon.svg"
+  },
+  {
+    title: "GitHub",
+    image: "./github-icon.svg"
+  },
+  {
+    title: "Heroku",
+    image: "./heroku-icon.svg"
+  },
+  {
+    title: "Netlify",
+    image: "./netlify.svg"
+  },
+  {
+    title: "WordPress",
+    image: "./wordpress-icon.svg"
+  }
 ];
