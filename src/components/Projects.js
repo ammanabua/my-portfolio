@@ -22,7 +22,7 @@ export default function Projects() {
           <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8">
             {projects.map((project) => (
               <div key={project.image} className="rounded overflow-hidden shadow-2xl">
-                <img className="w-full" src={project.image} alt="Mountain" />
+                <img className="w-full" src={project.image} alt={project.title} />
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">{project.title}</div>
                   <p className="text-gray-700 text-base">
@@ -33,8 +33,8 @@ export default function Projects() {
                   <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{project.subtitle}</span>
                 </div>
                 <div className="mx-auto mb-5">
-                  <SocialIcon network="rss" fgColor="#fff" url={project.link} style={{ height: 25, width: 25 }} target="_blank" rel="noopener noreferrer" className="mr-3" />
-                  <SocialIcon network="github" fgColor="#fff" url={project.github} style={{ height: 25, width: 25 }} target="_blank" rel="noopener noreferrer" />
+                  <a className="bg-green-500 hover:bg-blue-700 text-white py-2 px-4 rounded" href={project.link} target="_blank" rel="noreferrer noopener">Demo</a>
+                  <a className="bg-gray-500 hover:bg-blue-700 text-white py-2 px-4 rounded ml-4" href={project.github} target="_blank" rel="noreferrer noopener">GitHub</a>
                 </div>
               </div>
             ))}

@@ -22,7 +22,7 @@ export const projects = [
     title: "Drizit Environmental",
     subtitle: "WordPress",
     description:
-      "Website for an Environmental Cleanup company, looking to tap into the Nigerian market",
+      "Website for an Environmental Cleanup company in Nigeria",
     image: "./drizitenv.png",
     link: "https://drizitnig.ng/",
   },
