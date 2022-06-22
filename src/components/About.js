@@ -36,7 +36,7 @@ export default function About() {
                     <div className="flex justify-center">
                         <a
                         href="#contact"
-                        className="text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">
+                        className="text-white bg-blue-900 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">
                         Hire Me
                         </a>
                         <a
