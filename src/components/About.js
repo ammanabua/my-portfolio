@@ -30,8 +30,8 @@ export default function About() {
                     </h2>
                     <h1 className="title-font  sm:text-6xl mb-4 font-medium text-indigo-900">Amman</h1>
                     <h3 className="title-font text-2xl mb-4 font-medium"><span className="title-font text-yellow-600" ref={textRef}></span></h3>
-                    <p className="mb-8 leading-relaxed text-justify sm:w-100 lg:w-3/4 text-gray-700">
-                        I am a self-taught developer currently based in Abuja, Nigeria. I have a passion for writing clean and efficient code. I began my coding journey in 2019 and I now consider myself fluent in HTML, CSS, and skilled in JavaScript. I enjoy writing code to creatively find solutions and help businesses increase their potential. I'm passionate about <span className="text-2xl font-medium text-from-yellow-800">Code</span>, <span className="text-2xl font-medium">Art</span>, <span className="text-2xl font-medium">Music</span> & <span className="text-2xl font-medium">Basketball</span>
+                    <p className="mb-8 leading-relaxed text-center md:text-left sm:w-100 lg:w-3/4 text-gray-700">
+                        I am a self-taught developer currently based in Abuja, Nigeria. I have a passion for writing clean and efficient code. I began my coding journey in 2019 and I am fluent in HTML, CSS, and skilled in JavaScript. I enjoy writing code to find creative solutions and help businesses increase their potential. I'm passionate about <span className="text-2xl font-medium text-from-yellow-800">Code</span>, <span className="text-2xl font-medium">Art</span>, <span className="text-2xl font-medium">Music</span> & <span className="text-2xl font-medium">Basketball</span>
                     </p>
                     <div className="flex justify-center">
                         <a
