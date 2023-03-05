@@ -8,11 +8,15 @@ module.exports = {
       colors: {
         amber: colors.amber,
         emerald: colors.emerald,
+        rose: colors.rose,
+      },
+      fontFamily: {
+        mont: ['Montserrat', 'sans-serif'],
       }
     },
   },
   variants: {
-    extend: {},
+
   },
   plugins: [],
 }
