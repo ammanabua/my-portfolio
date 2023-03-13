@@ -49,7 +49,7 @@ export default function Hero (){
 
 
   return (
-    <section className="container-fluid flex flex-col md:flex-row h-screen mx-auto px-10 items-center bg-gray-100">
+    <section id='home' className="container-fluid flex flex-col md:flex-row h-screen mx-auto px-10 items-center bg-gray-100">
         <div>
           <img
             className="object-cover object-center rounded-full z-9"
