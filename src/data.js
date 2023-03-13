@@ -5,18 +5,9 @@ export const projects = [
     subtitle: "React, Commercejs, Material UI & Paystack",
     description:
       "E-commerce website to shop for your top quality apparel",
-    image: "./mannys.png",
+    image: "./webshop.png",
     link: "https://mannyswebshop.netlify.app/",
     github: "https://github.com/ammanabua/e-commerce-shop",
-  },
-  {
-    title: "Naija News App",
-    subtitle: "Node, Express & News API",
-    description:
-      "Get lates News updates on this simple news app",
-    image: "./news.png",
-    link: "https://naija-news.herokuapp.com/",
-    github: "https://github.com/ammanabua/News_App",
   },
   {
     title: "Drizit Environmental",
@@ -39,7 +30,7 @@ export const projects = [
     subtitle: "HTML, CSS & JavaScript",
     description:
       "RGB colour guessing game",
-    image: "./color-game.png",
+    image: "./game.png",
     link: "https://ammans-color-game.netlify.app/",
   },
 ];

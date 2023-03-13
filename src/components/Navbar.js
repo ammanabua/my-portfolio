@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <header className="bg-blue-700 md:sticky top-0 z-10 opacity-90">
+    <header className="bg-blue-700 md:fixed w-full top-0 z-10 opacity-90">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
         
         <div>

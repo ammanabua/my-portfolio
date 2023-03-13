@@ -23,7 +23,7 @@ export default function Projects() {
         </div>
         
         <div className="container">
-          <div className="p-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2 gap-8">
+          <div className="p-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project) => (
               <motion.div key={project.image} className="rounded overflow-hidden shadow-2xl" whileHover={{ scale: 1.03, color: '#4F359B' }} transition={{ duration: .2}}>
                 <img className="w-full" src={project.image} alt={project.title} />

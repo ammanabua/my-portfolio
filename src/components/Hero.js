@@ -49,15 +49,22 @@ export default function Hero (){
 
 
   return (
-    <section className="container-fluid flex flex-col md:flex-row h-screen mx-auto px-10 items-center bg-white">
+    <section className="container-fluid flex flex-col md:flex-row h-screen mx-auto px-10 items-center bg-gray-100">
+        <div>
+          <img
+            className="object-cover object-center rounded-full z-9"
+            alt="Amman Abua"
+            src="./avatar.png"/>
+        </div>
+      
       <div className='flex flex-col lg:flex-grow md:w-1/2 lg:pl-24 md:pr-16 md:items-start md:text-left mb-16 md:mb-0  items-center'>
         <h2>
           Hi There 
             <WavingHand />, I'm
           <br className="lg:inline-block" />
         </h2>
-        <motion.h1 initial={{ opacity: 0 }} animate={{ opacity:1 }} className="title-font font-mont text-5xl md:text-6xl mb-4 text-blue-900">Amman</motion.h1>
-        <h3 className="title-font md:text-8xl mb-6 font-medium"><span className="title-font text-yellow-600" ref={textRef}></span></h3>
+        <motion.h1 initial={{ opacity: 0 }} animate={{ opacity:1 }} className="title-font font-mont text-2xl md:text-5xl mb-4 text-blue-900">Amman</motion.h1>
+        <h3 className="title-font text-3xl lg:text-6xl mb-6 font-medium"><span className="title-font text-yellow-600" ref={textRef}></span></h3>
 
         <div className="flex justify-center">
           <a
@@ -72,6 +79,7 @@ export default function Hero (){
           </a>
         </div>
       </div>
+      
         
     </section>
   )
