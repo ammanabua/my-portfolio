@@ -13,7 +13,7 @@ export default function Hero (){
       showCursor: true,
       backDelay: 1500,
       backSpeed: 20, 
-      strings: ['Web Developer', 'Ball Player', 'Nature Lover'],
+      strings: ['Web Developer', 'Ball Player', 'Amateur Artiste'],
       typeSpeed: 50,
       })
   },[]);
@@ -49,7 +49,7 @@ export default function Hero (){
 
 
   return (
-    <section id='home' className="container-fluid flex flex-col md:flex-row h-auto mx-auto px-10 py-12 items-center bg-blue-100">
+    <section id='home' className="container-fluid flex flex-col md:flex-row h-auto mx-auto px-10 py-4 items-center bg-yellow-100">
         <div>
           <img
             className="object-cover object-center rounded-full z-9"
@@ -62,7 +62,7 @@ export default function Hero (){
           Hi there, I'm
           <br className="lg:inline-block" />
         </h2>
-        <motion.h1 initial={{ opacity: 0 }} animate={{ opacity:1 }} className="title-font font-mont text-2xl md:text-5xl mb-4 text-blue-900">Amman</motion.h1>
+        <motion.h1 initial={{ opacity: 0 }} animate={{ opacity:1 }} className="title-font font-mont font-bold text-3xl md:text-5xl mb-4 text-blue-900">Amman</motion.h1>
         <h3 className="title-font text-3xl lg:text-6xl mb-6 font-medium"><span className="title-font text-yellow-600" ref={textRef}></span></h3>
 
         <div className="flex justify-center">

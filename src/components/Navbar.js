@@ -112,11 +112,11 @@ export default function Navbar() {
                     </Typography>
                 </Box>
                 <ul className="bg-transparent pt-36 font-rubik text-3xl font-light">
-                    <a href="/" className="block px-2 py-4" onClick={handleClose}>Home</a>
-                    <a href="/about" className="block px-2 py-4 hover:underline" onClick={handleClose}>About</a>
-                    <a href="/projects" className="block px-2 py-4 hover:underline" onClick={handleClose}>Past Work</a>
-                    <a href="/skills" className="block px-2 py-4 hover:underline" onClick={handleClose}>Skills</a>
-                    <a href="/contact" className="block px-2 py-4 hover:underline" onClick={handleClose}>Contact</a>
+                    <a href="#home" className="block px-2 py-4" onClick={handleClose}>Home</a>
+                    <a href="#about" className="block px-2 py-4 hover:underline" onClick={handleClose}>About</a>
+                    <a href="#projects" className="block px-2 py-4 hover:underline" onClick={handleClose}>Past Work</a>
+                    <a href="#skills" className="block px-2 py-4 hover:underline" onClick={handleClose}>Skills</a>
+                    <a className="block px-2 py-4 hover:underline" onClick={handleClose}>Contact</a>
                 </ul>
             </Box>
             </Modal>
