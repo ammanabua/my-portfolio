@@ -57,7 +57,7 @@ export const education = [
     school: "Nile University of Nigeria",
     degree: "Post Graduate Diploma",
     course: "Computer Science",
-    year: 2022,
+    year: 2023,
     image: "./nile.jpg"
   },
   {
@@ -133,5 +133,41 @@ export const skills = [
   {
     title: "WordPress",
     image: "./wordpress-icon.svg"
+  },
+  {
+    title: "Amazon Web Services",
+    image: "./aws.svg"
   }
 ];
+
+export const blogs = [
+  {
+    title: "INtroduction to web development",
+    image: "./nile.jpg",
+    description: "WElcome tho this blog",
+    tags: "blog"
+
+  },
+  {
+    title: "INtroduction to web development",
+    image: "./abuad.png",
+    description: "WElcome tho this blog",
+    tags: "blog"
+
+  },
+  {
+    title: "INtroduction to web development",
+    image: "./game.png",
+    description: "WElcome tho this blog",
+    tags: "blog"
+
+  },
+  {
+    title: "INtroduction to web development",
+    image: "./nile.png",
+    description: "WElcome tho this blog",
+    tags: "blog"
+
+  },
+
+]

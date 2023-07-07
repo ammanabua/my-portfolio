@@ -23,9 +23,9 @@ export default function Projects() {
         </div>
         
         <div className="container">
-          <div className="p-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="p-5 grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project) => (
-              <motion.div key={project.image} className="rounded overflow-hidden shadow-2xl" whileHover={{ scale: 1.03, color: '#4F359B' }} transition={{ duration: .2}}>
+              <motion.div key={project.image} className="rounded overflow-hidden shadow-2xl my-4" whileHover={{ scale: 1.03, color: '#4F359B' }} transition={{ duration: .2}}>
                 <img className="w-full" src={project.image} alt={project.title} />
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">{project.title}</div>
@@ -36,8 +36,8 @@ export default function Projects() {
                 <div className="px-6 pt-4 pb-2">
                   <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{project.subtitle}</span>
                 </div>
-                <div className="mx-auto mb-5">
-                  <a className="bg-green-500 hover:bg-blue-700 text-white py-2 px-4 rounded" href={project.link} target="_blank" rel="noreferrer noopener">Demo</a>
+                <div className="mx-auto my-8">
+                  <a className="bg-red-400 hover:bg-blue-700 text-white py-2 px-4 rounded" href={project.link} target="_blank" rel="noreferrer noopener">Demo</a>
                   <a className="bg-gray-500 hover:bg-blue-700 text-white py-2 px-4 rounded ml-4" href={project.github} target="_blank" rel="noreferrer noopener">GitHub</a>
                 </div>
               </motion.div>
@@ -49,3 +49,4 @@ export default function Projects() {
     </section>
   );
 }
+

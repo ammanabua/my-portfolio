@@ -15,6 +15,7 @@ export default function Contact() {
 
     function handleSubmit(e) {
         e.preventDefault();
+
         fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -39,7 +40,7 @@ export default function Contact() {
             height="100%"
             title="map"
             className="absolute inset-0"
-            frameBorder={0}
+            frameBorder={0} 
             marginHeight={0}
             marginWidth={0}
             style={{ filter: "opacity(0.7)" }}
@@ -62,14 +63,11 @@ export default function Contact() {
               <a className="text-indigo-400 leading-relaxed" href="mailto:ammanabua@gmail.com">
                 ammanabua@gmail.com
               </a>
-              <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
-                PHONE
-              </h2>
-              <p className="leading-relaxed">+234(0)-806-854-5361</p>
             </div>
           </div>
         </div>
         <form
+          honeypot
           data-netlify="true"
           name="contact"
           method="POST"

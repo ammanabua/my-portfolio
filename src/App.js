@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Blog from "./components/Blog"
 import Testimonials from "./components/Testimonials";
 
 
@@ -18,6 +19,7 @@ export default function App() {
       <About />
       <Projects />
       <Skills />
+      {/* <Blog /> */}
       <Contact />
       <Footer />
     </main>

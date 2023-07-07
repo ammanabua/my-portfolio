@@ -1,15 +1,50 @@
 import { ArrowRightIcon } from "@heroicons/react/solid";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Transition } from "@headlessui/react";
+import { Modal, Box, Typography } from "@mui/material";
 
 
 export default function Navbar() {
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const [activeLink, setActiveLink] = useState("");
+  const sectionRefs = useRef([]);
+
+  const handleOpen = () => setOpen(true)
+
+  const handleClose = () => setOpen(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveLink(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    sectionRefs.current.forEach((ref) => {
+      observer.observe(ref);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    section.scrollIntoView({ behavior: "smooth" });
+  };
+
   
   return (
     <header className="bg-blue-700 md:fixed w-full top-0 z-10 opacity-90">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
+      <div className="container mx-auto flex p-5 items-center justify-between">
         
         <div>
           <a className="title-font font-medium text-white mb-4 md:mb-0">
@@ -19,59 +54,72 @@ export default function Navbar() {
           </a>
         </div>
         <div>
-          <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
+          <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 flex items-center text-white justify-center">
             <div className="hidden md:block">
-              <a href="#home" className="mr-5 hover:text-white">
+              <a className={`${activeLink === "home" ? "active" : ""} ${"mr-5 hover:text-yellow-400"}`} onClick={() => scrollToSection("home")}>
                 Home
               </a>
-              <a href="#about" className="mr-5 hover:text-white">
+              <a className={`${activeLink === "about" ? "active" : ""} ${"mr-5 hover:text-yellow-400"}`} onClick={() => scrollToSection("about")}>
                 About
               </a>
-              <a href="#projects" className="mr-5 hover:text-white">
+              <a className={`${activeLink === "projects" ? "active" : ""} ${"mr-5 hover:text-yellow-400"}`} onClick={() => scrollToSection("projects")}>
                 Past Work
               </a>
-              <a href="#skills" className="mr-5 hover:text-white">
+              <a className={`${activeLink === "skills" ? "active" : ""} ${"mr-5 hover:text-yellow-400"}`} onClick={() => scrollToSection("skills")}>
                 Skills
               </a>
-              <a href="#education" className="mr-5 hover:text-white">
-                Education
-              </a>
-              <a href="#blog" className="mr-5 hover:text-white">
+              <a className={`${activeLink === "blog" ? "active" : ""} ${"mr-5 hover:text-yellow-400"}`} onClick={() => scrollToSection("blog")}>
                 Blog
               </a>
-              <a href="#contact" className="mr-5 hover:text-white">
+              <a className={`${activeLink === "contact" ? "active" : ""} ${"mr-5 hover:text-yellow-400"}`} onClick={() => scrollToSection("contact")}>
                 Contact
               </a>
             </div>
             
           </nav>
         </div>
+        <div class="md:hidden">
+          <button class="outline-none mobile-menu-button" onClick={handleOpen}>
+            <svg
+              class="w-8 h-8 text-white"
+              x-show="!showMenu"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
       </div>
-      <div class="md:hidden flex items-center">
-        <button class="outline-none mobile-menu-button">
-          <svg
-            class="w-6 h-6 text-gray-500"
-            x-show="!showMenu"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-          <path d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-      <div class="hidden mobile-menu">
-        <ul class="">
-          <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
-          <li><a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
-          <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Past Work</a></li>
-          <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Skills</a></li>
-          <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact</a></li>
-        </ul>
-      </div>
+      
+      <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+            >
+            <Box className="absolute w-full h-screen bg-white px-12 py-4">
+                <Box className="flex justify-between items-center">
+                    <a href='/' onClick={handleClose}>
+  
+                    </a>
+                    <Typography className="text-center" onClick={handleClose}>
+                        X
+                    </Typography>
+                </Box>
+                <ul className="bg-transparent pt-36 font-rubik text-3xl font-light">
+                    <a href="/" className="block px-2 py-4" onClick={handleClose}>Home</a>
+                    <a href="/about" className="block px-2 py-4 hover:underline" onClick={handleClose}>About</a>
+                    <a href="/projects" className="block px-2 py-4 hover:underline" onClick={handleClose}>Past Work</a>
+                    <a href="/skills" className="block px-2 py-4 hover:underline" onClick={handleClose}>Skills</a>
+                    <a href="/contact" className="block px-2 py-4 hover:underline" onClick={handleClose}>Contact</a>
+                </ul>
+            </Box>
+            </Modal>
     </header>
   );
 }
