@@ -43,35 +43,35 @@ export default function Navbar() {
 
   
   return (
-    <header className="bg-blue-700 md:fixed w-full top-0 z-10 opacity-90">
+    <header className="bg-transparent md:fixed w-full top-0 z-10">
       <div className="container mx-auto flex p-5 items-center justify-between">
         
         <div>
           <a className="title-font font-medium text-white mb-4 md:mb-0">
-            <a href="#" className="ml-3 text-4xl justify-left">
-              A<span className="text-yellow-400">k</span><span className="text-red-300">.</span>
+            <a href="#" className="ml-3 text-5xl justify-left">
+              <span className="text-blue-600">A</span><span className="text-yellow-400">k</span><span className="text-red-300">.</span>
             </a>
           </a>
         </div>
         <div>
           <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 flex items-center text-white justify-center">
             <div className="hidden md:block">
-              <a className={`${activeLink === "home" ? "active" : ""} ${"mr-5 hover:text-yellow-400"}`} onClick={() => scrollToSection("home")}>
+              <a className={`${activeLink === "home" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("home")}>
                 Home
               </a>
-              <a className={`${activeLink === "about" ? "active" : ""} ${"mr-5 hover:text-yellow-400"}`} onClick={() => scrollToSection("about")}>
+              <a className={`${activeLink === "about" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("about")}>
                 About
               </a>
-              <a className={`${activeLink === "projects" ? "active" : ""} ${"mr-5 hover:text-yellow-400"}`} onClick={() => scrollToSection("projects")}>
+              <a className={`${activeLink === "projects" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("projects")}>
                 Past Work
               </a>
-              <a className={`${activeLink === "skills" ? "active" : ""} ${"mr-5 hover:text-yellow-400"}`} onClick={() => scrollToSection("skills")}>
+              <a className={`${activeLink === "skills" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("skills")}>
                 Skills
               </a>
-              <a className={`${activeLink === "blog" ? "active" : ""} ${"mr-5 hover:text-yellow-400"}`} onClick={() => scrollToSection("blog")}>
+              <a className={`${activeLink === "blog" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("blog")}>
                 Blog
               </a>
-              <a className={`${activeLink === "contact" ? "active" : ""} ${"mr-5 hover:text-yellow-400"}`} onClick={() => scrollToSection("contact")}>
+              <a className={`${activeLink === "contact" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("contact")}>
                 Contact
               </a>
             </div>

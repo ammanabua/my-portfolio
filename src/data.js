@@ -10,20 +10,20 @@ export const projects = [
     github: "https://github.com/ammanabua/e-commerce-shop",
   },
   {
-    title: "Drizit Environmental",
-    subtitle: "WordPress",
-    description:
-      "Website for an Environmental Cleanup company in Nigeria",
-    image: "./drizitenv.png",
-    link: "https://drizitnig.ng/",
-  },
-  {
     title: "TYIK Corp.",
     subtitle: "HTML, CSS & JavaScript",
     description:
       "Website for a business based in Canada to give overall information about their services and management",
     image: "./tyikcorp.png",
     link: "https://tyikcorp.com/",
+  },
+  {
+    title: "Color Guessing Game",
+    subtitle: "HTML, CSS & JavaScript",
+    description:
+      "RGB colour guessing game",
+    image: "./game.png",
+    link: "https://ammans-color-game.netlify.app/",
   },
   {
     title: "Color Guessing Game",
