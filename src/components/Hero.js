@@ -13,7 +13,7 @@ export default function Hero (){
       showCursor: true,
       backDelay: 1500,
       backSpeed: 20, 
-      strings: ['React Engineer', 'Web Developer', 'Amateur Artiste'],
+      strings: ['React Engineer', 'Web Developer', 'Design Intern'],
       typeSpeed: 50,
       })
   },[]);
@@ -34,14 +34,14 @@ export default function Hero (){
         <div className="flex gap-4 md:justify-start w-full">
           <button
           href="#contact"
-          className="text-white bg-[#ff8906] border-2 border-white py-2 px-3 hover:bg-blue-200 hover:text-black rounded-3xl w-40 text-lg">
+          className="text-white bg-[#ff8906] border-2 border-white py-2 px-3 hover:bg-blue-200 hover:text-black rounded-md w-40 text-lg">
           Hire Me
           </button>
-          <a
+          <button
           href="/cv.pdf"
-          className="text-white bg-[#ff8906] border-2 border-white py-2 px-3 hover:bg-blue-200 hover:text-black rounded-3xl w-40 text-lg">
+          className="text-black bg-yellow-400 py-2 px-3 hover:bg-blue-200 hover:text-black rounded-md w-40 text-lg">
           Resume
-          </a>
+          </button>
         </div>
       </div>
       
