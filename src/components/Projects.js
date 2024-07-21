@@ -28,23 +28,23 @@ export default function Projects() {
         </div>
         
         <div className="container w-full">
-          <div className="">
+          <div className="text-left">
             {projects.map((project, index) => (
-              <motion.div key={project.image} className="flex justify-center w-full h-screen items-center rounded">
-                <div className={`${index % 2 != 0 ? "order-2" : ""} w-1/2`}>
+              <motion.div key={project.image} className="flex flex-col md:flex-row justify-center w-full h-screen items-center rounded">
+                <div className={`${index % 2 != 0 ? "md:order-2" : ""} md:w-1/2`}>
                   <img className="w-full" src={project.image} alt={project.title} />
                 </div>
-                <div className="flex flex-col w-1/2 bg-card-heading rounded">
+                <div className="flex flex-col md:w-1/2 text-white">
                   <div className="px-6 py-4">
-                    <div className="font-bold text-xl mb-2">{project.title}</div>
-                    <p className="text-gray-700 text-base">
+                    <div className="font-bold text-4xl mb-2">{project.title}</div>
+                    <p className="text-base text-left">
                       {project.description}
                     </p>
                   </div>
                   <div className="px-6 pt-4 pb-2">
-                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{project.subtitle}</span>
+                    <span className="inline-block px-3 py-1 text-sm font-semibold mr-2 mb-2">{project.subtitle}</span>
                   </div>
-                  <div className="mx-auto my-8">
+                  <div className="flex my-8">
                     <a className="bg-red-400 hover:bg-blue-700 text-white py-2 px-4 rounded" href={project.link} target="_blank" rel="noreferrer noopener">Demo</a>
                     <a className="bg-gray-500 hover:bg-blue-700 text-white py-2 px-4 rounded ml-4" href={project.github} target="_blank" rel="noreferrer noopener">GitHub</a>
                   </div>

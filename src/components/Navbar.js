@@ -43,7 +43,7 @@ export default function Navbar() {
 
   
   return (
-    <header className="bg-transparent md:fixed w-full top-0 z-10">
+    <header className="bg-transparent md:fixed w-full top-0 z-50">
       <div className="container mx-auto flex p-5 items-center justify-between">
         
         <div>

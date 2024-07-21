@@ -1,5 +1,13 @@
 export const projects = [
-    
+
+  {
+    title: "Entities Studio",
+    subtitle: "React, Nextjs, Axios, Nodejs, MongoDB",
+    description:
+        "Welcome to the world of art, explore the mind of the artist who expresses their paradigm of the world from a clairvoyant perspective",
+    image: "./entities.png",
+    link: "https://tyikcorp.com/",
+  },
   {
     title: "Manny's Web Shop",
     subtitle: "React, Commercejs, Material UI & Paystack",
@@ -10,27 +18,27 @@ export const projects = [
     github: "https://github.com/ammanabua/e-commerce-shop",
   },
   {
-    title: "TYIK Corp.",
-    subtitle: "HTML, CSS & JavaScript",
+    title: "Manyactive App",
+    subtitle: "React, Nextjs, Chartjs, MaterialUI, Axios, MongoDB",
     description:
-      "Website for a business based in Canada to give overall information about their services and management",
-    image: "./tyikcorp.png",
-    link: "https://tyikcorp.com/",
+      "Fitness and Mental Health tracking SAAS platform, creating access to fitness and health activities for maximum staff productivity and wellness",
+    image: "./manyactive.png",
+    link: "https://manyactive.com/",
+  },
+  {
+    title: "CS Help-Desk",
+    subtitle: "HTML, CSS",
+    description:
+      "Computer Science help desk webpage",
+    image: "./cs-helpdesk.png",
+    link: "https://ammanabua.github.io/ammanabua/cs-helpdesk.html",
   },
   {
     title: "Color Guessing Game",
     subtitle: "HTML, CSS & JavaScript",
     description:
       "RGB colour guessing game",
-    image: "./game.png",
-    link: "https://ammans-color-game.netlify.app/",
-  },
-  {
-    title: "Color Guessing Game",
-    subtitle: "HTML, CSS & JavaScript",
-    description:
-      "RGB colour guessing game",
-    image: "./game.png",
+    image: "./colors.png",
     link: "https://ammans-color-game.netlify.app/",
   },
 ];
@@ -70,6 +78,18 @@ export const education = [
 ];
 
 export const skills = [
+    {
+      title: "Amazon Web Services",
+      image: "./aws.svg"
+    },
+    {
+    title: "JAVA",
+    image: "./java.svg"
+  },
+  {
+    title: "SPRING BOOT",
+    image: "./spring-boot.svg"
+  },
   {
     title: "HTML",
     image: "./html-5.svg"
@@ -133,10 +153,6 @@ export const skills = [
   {
     title: "WordPress",
     image: "./wordpress-icon.svg"
-  },
-  {
-    title: "Amazon Web Services",
-    image: "./aws.svg"
   }
 ];
 

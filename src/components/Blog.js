@@ -1,5 +1,10 @@
-import React from 'react'
+import { React, useEffect } from 'react'
 import { blogs } from '../data'
+
+
+const getBlogs = {
+  
+}
 
 const Blog = () => {
   return (
