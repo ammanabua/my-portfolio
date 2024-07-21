@@ -31,7 +31,7 @@ export default function Projects() {
           <div className="text-left">
             {projects.map((project, index) => (
               <motion.div key={project.image} className="flex flex-col md:flex-row justify-center w-full h-screen items-center rounded">
-                <div className={`${index % 2 != 0 ? "md:order-2" : ""} md:w-1/2`}>
+                <div className={`${index % 2 !== 0 ? "md:order-2" : ""} md:w-2/3 lg:1/2`}>
                   <img className="w-full" src={project.image} alt={project.title} />
                 </div>
                 <div className="flex flex-col md:w-1/2 text-white">
@@ -44,7 +44,7 @@ export default function Projects() {
                   <div className="px-6 pt-4 pb-2">
                     <span className="inline-block px-3 py-1 text-sm font-semibold mr-2 mb-2">{project.subtitle}</span>
                   </div>
-                  <div className="flex my-8">
+                  <div className="flex my-8 px-6">
                     <a className="bg-red-400 hover:bg-blue-700 text-white py-2 px-4 rounded" href={project.link} target="_blank" rel="noreferrer noopener">Demo</a>
                     <a className="bg-gray-500 hover:bg-blue-700 text-white py-2 px-4 rounded ml-4" href={project.github} target="_blank" rel="noreferrer noopener">GitHub</a>
                   </div>
