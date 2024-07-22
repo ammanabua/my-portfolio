@@ -30,7 +30,7 @@ export default function Projects() {
         <div className="container w-full">
           <div className="text-left">
             {projects.map((project, index) => (
-              <motion.div key={project.image} className="flex flex-col md:flex-row justify-center w-full h-screen items-center rounded">
+              <motion.div key={project.image} className="flex flex-col md:flex-row justify-center w-full my-24 lg:h-screen items-center rounded">
                 <div className={`${index % 2 !== 0 ? "md:order-2" : ""} md:w-2/3 lg:1/2`}>
                   <img className="w-full" src={project.image} alt={project.title} />
                 </div>
