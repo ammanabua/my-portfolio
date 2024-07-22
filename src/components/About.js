@@ -10,7 +10,7 @@ export default function About() {
 
     return (
         <section id="about" className="container-fluid flex items-center justify-center bg-white w-full md:mb-0 md:h-screen">
-            <motion.div className="flex flex-col md:flex-row p-5 items-center justify-center md:h-3/4 md:w-4/5 mx-auto md:px-5 bg-card-bg rounded"
+            <motion.div className="flex flex-col md:flex-row p-5 items-center justify-center md:h-3/4 md:w-4/5 mx-auto md:px-5 bg-card-bg"
                 animate={{
                     
                 }}>

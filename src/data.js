@@ -17,14 +17,14 @@ export const projects = [
     link: "https://mannyswebshop.netlify.app/",
     github: "https://github.com/ammanabua/e-commerce-shop",
   },
-  {
-    title: "Manyactive App",
-    subtitle: "React, Nextjs, Chartjs, MaterialUI, Axios, MongoDB",
-    description:
-      "Fitness and Mental Health tracking SAAS platform, creating access to fitness and health activities for maximum staff productivity and wellness",
-    image: "./manyactive.png",
-    link: "https://manyactive.com/",
-  },
+  // {
+  //   title: "Manyactive App",
+  //   subtitle: "React, Nextjs, Chartjs, MaterialUI, Axios, MongoDB",
+  //   description:
+  //     "Fitness and Mental Health tracking SAAS platform, creating access to fitness and health activities for maximum staff productivity and wellness",
+  //   image: "./manyactive.png",
+  //   link: "https://manyactive.com/",
+  // },
   {
     title: "CS Help-Desk",
     subtitle: "HTML, CSS",
@@ -39,6 +39,7 @@ export const projects = [
     description:
       "RGB colour guessing game",
     image: "./colors.png",
+    stack: ["./browser.png", "./github."],
     link: "https://ammans-color-game.netlify.app/",
   },
 ];

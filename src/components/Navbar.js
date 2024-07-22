@@ -68,9 +68,9 @@ export default function Navbar() {
               <a className={`${activeLink === "skills" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("skills")}>
                 Skills
               </a>
-              <a className={`${activeLink === "blog" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("blog")}>
-                Blog
-              </a>
+              {/*<a className={`${activeLink === "blog" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("blog")}>*/}
+              {/*  Blog*/}
+              {/*</a>*/}
               <a className={`${activeLink === "contact" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("contact")}>
                 Contact
               </a>

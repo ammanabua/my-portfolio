@@ -28,16 +28,16 @@ export default function Projects() {
         </div>
         
         <div className="container w-full">
-          <div className="text-left">
+          <div className="">
             {projects.map((project, index) => (
-              <motion.div key={project.image} className="flex flex-col md:flex-row justify-center w-full my-24 lg:h-screen items-center rounded">
+              <motion.div key={project.image} className="flex flex-col md:flex-row justify-center items-start w-full my-36 text-left">
                 <div className={`${index % 2 !== 0 ? "md:order-2" : ""} md:w-2/3 lg:1/2`}>
                   <img className="w-full" src={project.image} alt={project.title} />
                 </div>
-                <div className="flex flex-col md:w-1/2 text-white">
-                  <div className="px-6 py-4">
+                <div className="md:w-1/2 text-white">
+                  <div className="py-4">
                     <div className="font-bold text-4xl mb-2">{project.title}</div>
-                    <p className="text-base text-left">
+                    <p className="text-base">
                       {project.description}
                     </p>
                   </div>
@@ -45,7 +45,9 @@ export default function Projects() {
                     <span className="inline-block px-3 py-1 text-sm font-semibold mr-2 mb-2">{project.subtitle}</span>
                   </div>
                   <div className="flex my-8 px-6">
-                    <a className="bg-red-400 hover:bg-blue-700 text-white py-2 px-4 rounded" href={project.link} target="_blank" rel="noreferrer noopener">Demo</a>
+                    <a className="bg-yellow-400 text-black py-2 px-4 rounded" href={project.link} target="_blank" rel="noreferrer noopener">
+                      Demo
+                    </a>
                     <a className="bg-gray-500 hover:bg-blue-700 text-white py-2 px-4 rounded ml-4" href={project.github} target="_blank" rel="noreferrer noopener">GitHub</a>
                   </div>
                 </div>
