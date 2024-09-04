@@ -79,18 +79,6 @@ export const education = [
 ];
 
 export const skills = [
-    {
-      title: "Amazon Web Services",
-      image: "./aws.svg"
-    },
-    {
-    title: "JAVA",
-    image: "./java.svg"
-  },
-  {
-    title: "SPRING BOOT",
-    image: "./spring-boot.svg"
-  },
   {
     title: "HTML",
     image: "./html-5.svg"
@@ -152,8 +140,16 @@ export const skills = [
     image: "./netlify.svg"
   },
   {
-    title: "WordPress",
-    image: "./wordpress-icon.svg"
+    title: "AWS",
+    image: "./aws.svg"
+  },
+  {
+    title: "JAVA",
+    image: "./java.svg"
+  },
+  {
+    title: "SPRING BOOT",
+    image: "./spring-boot.svg"
   }
 ];
 

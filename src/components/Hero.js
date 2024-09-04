@@ -4,6 +4,11 @@ import { init } from 'ityped';
 
 export default function Hero (){
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    section.scrollIntoView({ behavior: "smooth" });
+  };
+
   //Automatic Text Typing 
 
   const textRef = useRef();
@@ -32,8 +37,8 @@ export default function Hero (){
         <h3 className="title-font text-4xl mb-6 font-thin"><span className="title-font text-yellow-400" ref={textRef}></span></h3>
         <div className="flex gap-4 md:justify-start w-full">
           <button
-          href="#contact"
-          className="text-white bg-[#ff8906] border-2 border-white py-2 px-3 hover:bg-blue-200 hover:text-black rounded-md w-40 text-lg">
+          onClick={() => scrollToSection("contact")}
+          className="text-white bg-[#ff8906] border-2 border-white py-2 px-3 hover:border-opacity-0 hover:bg-blue-200 hover:text-black rounded-md w-40 text-lg">
           Hire Me
           </button>
           <a

@@ -47,11 +47,9 @@ export default function Navbar() {
       <div className="container mx-auto flex p-5 items-center justify-between">
         
         <div>
-          <a className="title-font font-medium text-white mb-4 md:mb-0">
-            <a href="#" className="ml-3 text-5xl justify-left">
+            <button onClick={() => scrollToSection("home")} className="ml-3 text-5xl justify-left title-font font-medium text-white mb-4 md:mb-0">
               <span className="text-blue-600">A</span><span className="text-yellow-400">k</span><span className="text-red-300">.</span>
-            </a>
-          </a>
+            </button>
         </div>
         <div>
           <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 flex items-center text-white justify-center">
