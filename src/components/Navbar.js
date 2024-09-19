@@ -76,10 +76,10 @@ export default function Navbar() {
             
           </nav>
         </div>
-        <div class="md:hidden">
-          <button class="outline-none mobile-menu-button" onClick={handleOpen}>
+        <div className="md:hidden">
+          <button className="outline-none mobile-menu-button" onClick={handleOpen}>
             <svg
-              class="w-8 h-8 text-white"
+              className="w-8 h-8 text-white"
               x-show="!showMenu"
               fill="none"
               stroke-linecap="round"
