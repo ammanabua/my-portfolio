@@ -15,7 +15,7 @@ export default function Skills() {
             Here are some tools that I am good working with.
           </p>
         </div>
-        <div className="grid grid-cols-6 md:grid-cols-9 gap-4 lg:w-4/5 sm:mx-auto items-end">
+        <div className="grid grid-cols-5 md:grid-cols-9 gap-4 lg:w-4/5 sm:mx-auto items-end">
           {skills.map((skill) => (
             <div key={skill.image} className="w-full mb-8">
               <div className="mx-auto mb-5 flex align-center justify-center w-8 md:w-12">

@@ -1,12 +1,20 @@
 export const projects = [
 
   {
+    title: "Camp Scout",
+    subtitle: "React, Express, Nodejs, MongoDB",
+    description:
+        "As a lover of camping and the outdoors, this application enables camp lovers to share experiences of some amazing sites and scenes visited",
+    image: "./camp-scout.png",
+    link: "https://camp-scout-b6ns.onrender.com/",
+  },
+  {
     title: "Entities Studio",
     subtitle: "React, Nextjs, Axios, Nodejs, MongoDB",
     description:
         "Welcome to the world of art, explore the mind of the artist who expresses their paradigm of the world from a clairvoyant perspective",
     image: "./entities.png",
-    link: "https://tyikcorp.com/",
+    link: "https://ammanabua.com/",
   },
   {
     title: "Manny's Web Shop",
@@ -144,41 +152,41 @@ export const skills = [
     image: "./aws.svg"
   },
   {
-    title: "JAVA",
+    title: "Java",
     image: "./java.svg"
   },
   {
-    title: "SPRING BOOT",
+    title: "Spring Boot",
     image: "./spring-boot.svg"
   }
 ];
 
 export const blogs = [
   {
-    title: "INtroduction to web development",
+    title: "Introduction to web development",
     image: "./nile.jpg",
-    description: "WElcome tho this blog",
+    description: "Welcome tho this blog",
     tags: "blog"
 
   },
   {
-    title: "INtroduction to web development",
+    title: "Introduction to web development",
     image: "./abuad.png",
-    description: "WElcome tho this blog",
+    description: "Welcome tho this blog",
     tags: "blog"
 
   },
   {
-    title: "INtroduction to web development",
+    title: "Introduction to web development",
     image: "./game.png",
-    description: "WElcome tho this blog",
+    description: "Welcome tho this blog",
     tags: "blog"
 
   },
   {
-    title: "INtroduction to web development",
+    title: "Introduction to web development",
     image: "./nile.png",
-    description: "WElcome tho this blog",
+    description: "Welcome tho this blog",
     tags: "blog"
 
   },
