@@ -12,19 +12,19 @@ export const projects = [
     title: "Entities Studio",
     subtitle: "React, Nextjs, Axios, Nodejs, MongoDB",
     description:
-        "Welcome to the world of art, explore the mind of the artist who expresses their paradigm of the world from a clairvoyant perspective",
+        "Welcome to the world of art, explore the mind of the artist who expresses their paradigm of the world from a unique perspective",
     image: "./entities.png",
     link: "https://ammanabua.com/",
   },
-  {
-    title: "Manny's Web Shop",
-    subtitle: "React, Commercejs, Material UI & Paystack",
-    description:
-      "E-commerce website to shop for your top quality apparel",
-    image: "./webshop.png",
-    link: "https://mannyswebshop.netlify.app/",
-    github: "https://github.com/ammanabua/e-commerce-shop",
-  },
+  // {
+  //   title: "Manny's Web Shop",
+  //   subtitle: "React, Commercejs, Material UI & Paystack",
+  //   description:
+  //     "E-commerce website to shop for your top quality apparel",
+  //   image: "./webshop.png",
+  //   link: "https://mannyswebshop.netlify.app/",
+  //   github: "https://github.com/ammanabua/e-commerce-shop",
+  // },
   // {
   //   title: "Manyactive App",
   //   subtitle: "React, Nextjs, Chartjs, MaterialUI, Axios, MongoDB",
