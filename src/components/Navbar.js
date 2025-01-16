@@ -3,44 +3,24 @@ import React, { useState, useEffect, useRef } from "react";
 import { Transition } from "@headlessui/react";
 import { Modal, Box, Typography, backdropClasses } from "@mui/material";
 
-import { motion, } from "framer-motion";
+import { motion } from "framer-motion";
 
-
-
-const parentVariants = {
-  visible: { opacity: 1, y: 0 },
-  hidden: { opacity: 0, y: "-4rem" },
-};
-
-const childVariants = {
-  visible: { opacity: 1, y: 0 },
-  hidden: { opacity: 0, y: "-2rem" },
-};
 
 
 
 export default function Navbar() {
 
   const [open, setOpen] = useState(false);
-
-  const [hidden, setHidden] = useState(false);
-
-  function update(latest, prev) {
-    if (latest < prev) {
-      setHidden(false);
-      // console.log("visible");
-    } else if (latest > 100 && latest > prev) {
-      setHidden(true);
-      // console.log("hidden");
-    }
-  }
-
   const [activeLink, setActiveLink] = useState("");
+
+
   const sectionRefs = useRef([]);
 
   const handleOpen = () => setOpen(true)
 
   const handleClose = () => setOpen(false)
+
+  
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -73,12 +53,10 @@ export default function Navbar() {
     <header className="md:fixed w-full top-0 z-50">
       <motion.div
        initial={{ opacity: 0 }}
-       scroll
        animate={{ opacity: 1, backgroundColor: "rgba(0, 0, 0, 0.5)" }}
         transition={{
         ease: [0.1, 0.25, 0.3, 1],
         duration: 2,
-        staggerChildren: 0.05,
         delay: 1
         }}
       
