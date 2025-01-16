@@ -1,55 +1,56 @@
 export const projects = [
 
   {
+    title: "Manyactive Website",
+    tools: [ {title: 'Figma', image: './figma.svg'}, {title: 'HTML', image: './html-5.svg'}, {title: 'React', image: './react.svg'}, {title: "Tailwind CSS", image: './tailwindcss-icon.svg'}, {title: "Git", image: './git-icon.svg'}],
+    description:
+      "Website for fitness and Mental Health tracking SAAS platform, creating access to fitness and health activities to improve staff wellness and maximize productivity",
+    image: "./manyactive.png",
+    link: "https://manyactive.com/",
+  },
+  {
     title: "Camp Scout",
-    subtitle: "React, Express, Nodejs, MongoDB",
+    tools: [{title: 'HTML', image: './html-5.svg'}, {title: 'React', image: './react.svg'}, {title: "Express.js", image: './express.svg'}, {title: "Node.js", image: './nodejs-icon.svg'}, {title: "Git", image: './git-icon.svg'}],
     description:
         "As a lover of camping and the outdoors, this application enables camp lovers to share experiences of some amazing sites and scenes visited",
     image: "./camp-scout.png",
     link: "https://camp-scout-b6ns.onrender.com/",
+    github: "https://github.com/ammanabua/camp-scout"
   },
   {
     title: "Entities Studio",
-    subtitle: "React, Nextjs, Axios, Nodejs, MongoDB",
+    tools: [{title: 'HTML', image: './html-5.svg'}, {title: 'React', image: './react.svg'}, {title: "Tailwind CSS", image: './tailwindcss-icon.svg'}, {title: "Node.js", image: './nodejs-icon.svg'}, {title: "Git", image: './git-icon.svg'}],
     description:
         "Welcome to the world of art, explore the mind of the artist who expresses their paradigm of the world from a unique perspective",
     image: "./entities.png",
     link: "https://ammanabua.com/",
+    github: "https://github.com/ammanabua/entities-studio"
   },
-  // {
-  //   title: "Manny's Web Shop",
-  //   subtitle: "React, Commercejs, Material UI & Paystack",
-  //   description:
-  //     "E-commerce website to shop for your top quality apparel",
-  //   image: "./webshop.png",
-  //   link: "https://mannyswebshop.netlify.app/",
-  //   github: "https://github.com/ammanabua/e-commerce-shop",
-  // },
-  // {
-  //   title: "Manyactive App",
-  //   subtitle: "React, Nextjs, Chartjs, MaterialUI, Axios, MongoDB",
-  //   description:
-  //     "Fitness and Mental Health tracking SAAS platform, creating access to fitness and health activities for maximum staff productivity and wellness",
-  //   image: "./manyactive.png",
-  //   link: "https://manyactive.com/",
-  // },
   {
     title: "CS Help-Desk",
-    subtitle: "HTML, CSS",
+    tools: [{title: 'HTML', image: './html-5.svg'}, {title: 'CSS', image: './css-3.svg'}],
     description:
       "Computer Science help desk webpage",
     image: "./cs-helpdesk.png",
     link: "https://ammanabua.github.io/ammanabua/cs-helpdesk.html",
   },
   {
+    title: "Patatap Clone",
+    tools: [{title: 'HTML', image: './html-5.svg'}, {title: 'CSS', image: './css-3.svg'}, {title: 'JavaScript', image: './javascript.svg'}],
+    description:
+      "Patatap clone with Canvas and Paper.js",
+    image: "./patatap.png",
+    link: "https://trusting-rosalind-906192.netlify.app/",
+    github: "https://github.com/ammanabua/patatap-clone"
+  },
+  {
     title: "Color Guessing Game",
-    subtitle: "HTML, CSS & JavaScript",
+    tools: [{title: 'HTML', image: './html-5.svg'}, {title: 'CSS', image: './css-3.svg'}, {title: 'JavaScript', image: './javascript.svg'}],
     description:
       "RGB colour guessing game",
     image: "./colors.png",
-    stack: ["./browser.png", "./github."],
     link: "https://ammans-color-game.netlify.app/",
-  },
+  }
 ];
 
 export const testimonials = [

@@ -8,10 +8,7 @@ export default function About() {
 
     return (
         <section id="about" className="container-fluid flex items-center justify-center bg-white w-full md:mb-0 md:h-screen">
-            <motion.div className="flex flex-col md:flex-row p-5 items-center justify-center md:h-3/4 md:w-4/5 mx-auto md:px-5 bg-card-bg"
-                animate={{
-                    
-                }}>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col md:flex-row p-4 items-center justify-center md:w-4/6 md:px-8 bg-card-bg rounded">
                 <div className="flex-col flex lg:flex-grow md:w-1/2 md:items-start md:text-left my-5 md:mb-0  items-center justify-between">
                     <h2 className="font-title text-4xl mb-5 text-card-heading">About Me</h2>
                     <p className="font-mont text-sm md:text-md lg:text-lg mb-5 leading-relaxed text-left w-full text-card-text tracking-wider">
