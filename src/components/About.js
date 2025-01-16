@@ -8,15 +8,15 @@ export default function About() {
 
     return (
         <section id="about" className="container-fluid flex items-center justify-center bg-white w-full md:mb-0 md:h-screen">
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col md:flex-row p-4 items-center justify-center md:w-4/6 md:px-8 bg-card-bg rounded">
-                <div className="flex-col flex lg:flex-grow md:w-1/2 md:items-start md:text-left my-5 md:mb-0  items-center justify-between">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col md:flex-row p-4 items-center justify-center md:w-5/6 md:px-8 bg-card-bg rounded">
+                <div className="flex-col flex lg:flex-grow md:w-1/2 md:items-start md:text-left my-5 md:mb-0  items-center">
                     <h2 className="font-title text-4xl mb-5 text-card-heading">About Me</h2>
                     <p className="font-mont text-sm md:text-md lg:text-lg mb-5 leading-relaxed text-left w-full text-card-text tracking-wider">
-                        Welcome to my digital playground! Crafting seamless digital experiences, one line of code at a time. Welcome to my world of creativity, where the backend is as smooth as the frontend!
+                        Welcome to my digital playground! Here, I turn ideas into reality by crafting seamless, user-centered digital experiences that blend creativity with precision. Whether it's building intuitive frontend interfaces or designing robust backend systems, I'm always up for a challenge. I'm a self-taught developer with a passion for learning and a knack for problem-solving. I'm always looking for opportunities to collaborate on exciting projects, so feel free to reach out!
                     </p>
                     
                 </div>
-                <div className="lg:max-w-lg md:w-1/2 w-full justify-center">
+                <div className="md:w-1/2 w-full justify-center">
                     <img
                     className="m-auto object-cover object-center"
                     alt="Amman Abua"
