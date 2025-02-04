@@ -19,6 +19,7 @@ export default function App() {
       <About />
       <Projects />
       <Skills />
+      <Testimonials />
       {/* <Blog /> */}
       <Contact />
       <Footer />
