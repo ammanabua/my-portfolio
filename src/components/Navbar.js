@@ -53,7 +53,7 @@ export default function Navbar() {
     <header className="md:fixed w-full top-0 z-50">
       <motion.div
        initial={{ opacity: 0 }}
-       animate={{ opacity: 1, backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+       animate={{ opacity: 1, backgroundColor: "invisible" }}
         transition={{
         ease: [0.1, 0.25, 0.3, 1],
         duration: 2,
