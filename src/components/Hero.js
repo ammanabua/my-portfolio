@@ -27,7 +27,7 @@ const Hero = () => {
     };
   }, []);
 
-  const skills = ['React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'AWS'];
+  const skills = ['React', 'Next.js', 'TypeScript', 'Node.js', 'Java', 'AWS'];
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
 
   useEffect(() => {
@@ -68,7 +68,7 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center">
         {/* Profile image with glow effect */}
         <div 
-          className={`mb-8 transition-all duration-1000 ${
+          className={`mt-8 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
           style={{ transitionDelay: '200ms' }}
@@ -76,7 +76,7 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full blur-lg opacity-75 animate-pulse" />
             <div className="relative w-32 h-32 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full flex items-center justify-center">
-              <Code2 className="w-16 h-16 text-white" />
+              <img src='/me.png' alt="Profile" width={120} height={120} className="rounded-full border-4 border-white shadow-lg" />
             </div>
           </div>
         </div>
