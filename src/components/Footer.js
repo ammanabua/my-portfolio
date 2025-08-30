@@ -13,9 +13,9 @@ export default function Footer(){
       ];
     
       const socialLinks = [
-        { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-purple-400' },
-        { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-400' },
-        { name: 'Email', href: '#', icon: Mail, color: 'hover:text-green-400' },
+        { name: 'GitHub', href: 'https://www.github.com/ammanabua', icon: Github, color: 'hover:text-purple-400' },
+        { name: 'LinkedIn', href: 'https://www.linkedin.com/in/amman-abua', icon: Linkedin, color: 'hover:text-blue-400' },
+        { name: 'Email', href: 'mailto:amman.abua93@gmail.com', icon: Mail, color: 'hover:text-green-400' },
       ];
     
     return(
@@ -35,10 +35,10 @@ export default function Footer(){
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">JD</span>
+                  <span className="text-white font-bold text-xl">AK</span>
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-xl">John Doe</h3>
+                  <h3 className="text-white font-bold text-xl">Amman Abua</h3>
                   <p className="text-gray-400">Software Engineer</p>
                 </div>
               </div>
@@ -79,21 +79,13 @@ export default function Footer(){
                   </a>
                 ))}
               </div>
-              <div className="space-y-3">
-                <a href="mailto:john@example.com" className="block text-gray-400 hover:text-white transition-colors duration-300">
-                  john@example.com
-                </a>
-                <a href="tel:+1234567890" className="block text-gray-400 hover:text-white transition-colors duration-300">
-                  +1 (234) 567-8900
-                </a>
-              </div>
             </div>
           </div>
 
           {/* Bottom Bar */}
           <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2025 John Doe. All rights reserved.
+              © 2025 Amman Abua. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
@@ -107,9 +99,9 @@ export default function Footer(){
         </div>
 
         {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-0 w-1 h-32 bg-gradient-to-b from-transparent via-purple-500/30 to-transparent"></div>
-          <div className="absolute top-1/4 right-0 w-1 h-48 bg-gradient-to-b from-transparent via-pink-500/30 to-transparent"></div>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+          <div className="absolute top-1/2 left-0 w-2 h-40 bg-gray-800"></div>
+          <div className="absolute top-1/4 right-0 w-2 h-56 bg-gradient-to-b from-transparent via-pink-500/60 to-transparent"></div>
         </div>
       </footer>
     )

@@ -101,10 +101,34 @@ const Projects = () => {
     }
   ];
 
+  const designProjects = [
+    // Placeholder for future design projects
+    {
+      id: 5,
+      title: 'Design System for Entities Studio',
+      description: 'A comprehensive design system created for Entities Studio, focusing on consistency, scalability, and user experience across all digital products.',
+      image: './ent-studio.png',
+      tech: ['Figma'],
+      category: 'Design',
+      status: 'Live',
+      demoUrl: 'https://www.figma.com/proto/PnnMlDjDxbPzJjASOXQ6mN/Entities-Studio?node-id=0-1&t=yIUA5hOs6C8Tnw8E-1',
+    },
+    {
+      id: 6,
+      title: 'Mobile App UI for IRent',
+      description: 'A sleek and modern mobile app UI design for IRent, focusing on user-friendly navigation and an engaging rental experience.',
+      image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&h=600&fit=crop',
+      tech: ['Figma', 'Adobe XD'],
+      category: 'Design',
+      status: 'Live',
+      demoUrl: 'https://www.figma.com/proto/Pzp2S98znGClGltdW08lFN/IRENT-2021?t=5mpnV7rcV2jfUrrT-1',
+    }
+  ]
+
   const tabs = [
-    { id: 'web', label: 'Web Apps', icon: Monitor, count: 4 },
+    { id: 'web', label: 'Web Apps', icon: Monitor, count: webProjects.length },
     { id: 'mobile', label: 'Mobile Apps', icon: Smartphone, count: 0 },
-    { id: 'design', label: 'UI/UX Design', icon: Palette, count: 0 }
+    { id: 'design', label: 'UI/UX Design', icon: Palette, count: designProjects.length },
   ];
 
   const ProjectCard = ({ project, index }) => (
@@ -276,13 +300,48 @@ const Projects = () => {
       
       case 'design':
         return (
-          <div className="max-w-2xl mx-auto">
-            <ComingSoonCard
-              title="UI/UX Design Projects"
-              icon={Palette}
-              description="Beautiful design systems, user interface mockups, and user experience case studies will be showcased here soon."
-              gradient="from-pink-500 to-rose-600"
-            />
+          <div className='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>
+            {designProjects.map((project, index) => (
+              <div key={project.id} className={`group relative transition-all duration-700 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`} style={{ transitionDelay: `${index * 150}ms` }}>
+                <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="block">
+                  <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl border border-white/10 overflow-hidden backdrop-blur-sm hover:border-purple-500/30 transition-all duration-500 group-hover:scale-[1.02]">
+                    {/* Project image */}
+                    <div className="relative h-48 overflow-hidden">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        style={{ backgroundImage: `url(${project.image})` }}
+                      />
+                      <div className={`absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-80`} />
+                    </div>
+
+                    {/* Project content */}
+                    <div className="p-6">
+                      <div className="flex items-start justify-between mb-3">
+                        <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                          {project.title}
+                        </h3>
+                        <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      </div>
+
+                      <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                        {project.description}
+                      </p>
+
+                      {/* Tech stack */}
+                      <div className="flex flex-wrap gap-1">
+                        {project.tech.map((tech, idx) => (
+                          <span key={idx} className="text-xs px-2 py-1 bg-cyan-500/10 text-cyan-300 rounded border border-cyan-500/20">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            ))}
           </div>
         );
       
