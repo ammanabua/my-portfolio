@@ -46,10 +46,11 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
             {/* Logo */}
             <div className="group cursor-pointer">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                  <span className="text-white font-bold text-xl">AK</span>
+                <div className="flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                  <button className="ml-3 text-5xl justify-left title-font font-medium text-white mb-4 md:mb-0">
+                    <span className="text-blue-600">A</span><span className="text-yellow-400">k</span><span className="text-red-300">.</span>
+                  </button>
                 </div>
-                <div className="absolute inset-0 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur opacity-30 transform transition-all duration-300 group-hover:opacity-60"></div>
               </div>
             </div>
 

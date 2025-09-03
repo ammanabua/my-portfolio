@@ -51,31 +51,27 @@ const Skills = () => {
 
   const skills = [
     // Frontend
-    { name: 'React', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400/10 to-cyan-400/10', borderColor: 'border-cyan-400/30', icon: '⚛️' },
-    { name: 'Next.js', category: 'frontend', color: '#000000', bgColor: 'from-gray-800/10 to-black/10', borderColor: 'border-gray-400/30', icon: '▲' },
-    { name: 'Vue.js', category: 'frontend', color: '#4FC08D', bgColor: 'from-green-400/10 to-emerald-400/10', borderColor: 'border-green-400/30', icon: '💚' },
+    { name: 'React', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400/10 to-cyan-400/10', borderColor: 'border-cyan-400/30', icon: <img src='/react.svg' className='w-10 h-10' /> },
+    { name: 'Next.js', category: 'frontend', color: '#000000', bgColor: 'from-gray-800/10 to-black/10', borderColor: 'border-gray-400/30', icon: <img src='/nodejs-icon.svg' className='w-10 h-10' /> },
     { name: 'TypeScript', category: 'frontend', color: '#3178C6', bgColor: 'from-blue-600/10 to-indigo-600/10', borderColor: 'border-blue-500/30', icon: '📘' },
-    { name: 'Tailwind CSS', category: 'frontend', color: '#06B6D4', bgColor: 'from-cyan-400/10 to-blue-400/10', borderColor: 'border-cyan-400/30', icon: '🎨' },
-    { name: 'Sass', category: 'frontend', color: '#CC6699', bgColor: 'from-pink-400/10 to-purple-400/10', borderColor: 'border-pink-400/30', icon: '💅' },
+    { name: 'Tailwind CSS', category: 'frontend', color: '#06B6D4', bgColor: 'from-cyan-400/10 to-blue-400/10', borderColor: 'border-cyan-400/30', icon: <img src='/tailwindcss-icon.svg' className='w-10 h-10' /> },
 
     // Backend
-    { name: 'Node.js', category: 'backend', color: '#339933', bgColor: 'from-green-500/10 to-emerald-500/10', borderColor: 'border-green-500/30', icon: '🟢' },
+    { name: 'Node.js', category: 'backend', color: '#339933', bgColor: 'from-green-500/10 to-emerald-500/10', borderColor: 'border-green-500/30', icon: <img src='/nodejs-icon.svg' className='w-10 h-10' /> },
     { name: 'Python', category: 'backend', color: '#3776AB', bgColor: 'from-blue-500/10 to-indigo-500/10', borderColor: 'border-blue-500/30', icon: '🐍' },
     { name: 'Django', category: 'backend', color: '#092E20', bgColor: 'from-green-700/10 to-emerald-800/10', borderColor: 'border-green-600/30', icon: '🎯' },
-    { name: 'Express.js', category: 'backend', color: '#000000', bgColor: 'from-gray-700/10 to-black/10', borderColor: 'border-gray-500/30', icon: '⚡' },
-    { name: 'GraphQL', category: 'backend', color: '#E10098', bgColor: 'from-pink-500/10 to-rose-500/10', borderColor: 'border-pink-500/30', icon: '📊' },
+    { name: 'Express.js', category: 'backend', color: '#000000', bgColor: 'from-gray-700/10 to-black/10', borderColor: 'border-gray-500/30', icon: <img src='/express.svg' className='w-10 h-10' /> },
+    { name: 'GraphQL', category: 'backend', color: '#E10098', bgColor: 'from-pink-500/10 to-rose-500/10', borderColor: 'border-pink-500/30', icon: <img src='/graphql.svg' className='w-10 h-10' /> },
     { name: 'PostgreSQL', category: 'backend', color: '#336791', bgColor: 'from-blue-600/10 to-indigo-700/10', borderColor: 'border-blue-600/30', icon: '🐘' },
-    { name: 'MongoDB', category: 'backend', color: '#47A248', bgColor: 'from-green-500/10 to-emerald-600/10', borderColor: 'border-green-500/30', icon: '🍃' },
+    { name: 'MongoDB', category: 'backend', color: '#47A248', bgColor: 'from-green-500/10 to-emerald-600/10', borderColor: 'border-green-500/30', icon: <img src='/mongodb.svg' className='w-10 h-10' /> },
     { name: 'Redis', category: 'backend', color: '#DC382D', bgColor: 'from-red-500/10 to-rose-600/10', borderColor: 'border-red-500/30', icon: '📦' },
 
     // Mobile
     { name: 'React Native', category: 'mobile', color: '#61DAFB', bgColor: 'from-blue-400/10 to-cyan-400/10', borderColor: 'border-cyan-400/30', icon: '📱' },
-    { name: 'Flutter', category: 'mobile', color: '#02569B', bgColor: 'from-blue-600/10 to-indigo-700/10', borderColor: 'border-blue-600/30', icon: '🦋' },
-    { name: 'Swift', category: 'mobile', color: '#FA7343', bgColor: 'from-orange-400/10 to-red-500/10', borderColor: 'border-orange-500/30', icon: '🍎' },
     { name: 'Kotlin', category: 'mobile', color: '#7F52FF', bgColor: 'from-purple-500/10 to-indigo-600/10', borderColor: 'border-purple-500/30', icon: '🤖' },
 
     // DevOps
-    { name: 'AWS', category: 'devops', color: '#FF9900', bgColor: 'from-orange-400/10 to-yellow-500/10', borderColor: 'border-orange-500/30', icon: '☁️' },
+    { name: 'AWS', category: 'devops', color: '#FF9900', bgColor: 'from-orange-400/10 to-yellow-500/10', borderColor: 'border-orange-500/30', icon: <img src='/aws.svg' className='w-10 h-10' /> },
     { name: 'Docker', category: 'devops', color: '#2496ED', bgColor: 'from-blue-500/10 to-cyan-500/10', borderColor: 'border-blue-500/30', icon: '🐳' },
     { name: 'Kubernetes', category: 'devops', color: '#326CE5', bgColor: 'from-blue-600/10 to-indigo-600/10', borderColor: 'border-blue-600/30', icon: '⚙️' },
     { name: 'Jenkins', category: 'devops', color: '#D33833', bgColor: 'from-red-500/10 to-rose-600/10', borderColor: 'border-red-500/30', icon: '🔧' },
@@ -83,15 +79,15 @@ const Skills = () => {
     { name: 'Nginx', category: 'devops', color: '#009639', bgColor: 'from-green-600/10 to-emerald-700/10', borderColor: 'border-green-600/30', icon: '🌐' },
 
     // Design
-    { name: 'Figma', category: 'design', color: '#F24E1E', bgColor: 'from-red-500/10 to-orange-500/10', borderColor: 'border-red-500/30', icon: '🎨' },
+    { name: 'Figma', category: 'design', color: '#F24E1E', bgColor: 'from-red-500/10 to-orange-500/10', borderColor: 'border-red-500/30', icon: <img src='/figma.svg' className='w-10 h-10' /> },
     { name: 'Adobe XD', category: 'design', color: '#FF61F6', bgColor: 'from-pink-500/10 to-fuchsia-500/10', borderColor: 'border-pink-500/30', icon: '✨' },
     { name: 'Sketch', category: 'design', color: '#F7B500', bgColor: 'from-yellow-500/10 to-orange-500/10', borderColor: 'border-yellow-500/30', icon: '💎' },
     { name: 'Photoshop', category: 'design', color: '#31A8FF', bgColor: 'from-blue-500/10 to-cyan-500/10', borderColor: 'border-blue-500/30', icon: '🖼️' },
 
     // Tools
     { name: 'VS Code', category: 'tools', color: '#007ACC', bgColor: 'from-blue-600/10 to-indigo-600/10', borderColor: 'border-blue-600/30', icon: '📝' },
-    { name: 'Git', category: 'tools', color: '#F05032', bgColor: 'from-red-500/10 to-orange-500/10', borderColor: 'border-red-500/30', icon: '🌳' },
-    { name: 'GitHub', category: 'tools', color: '#181717', bgColor: 'from-gray-700/10 to-black/10', borderColor: 'border-gray-500/30', icon: '🐙' },
+    { name: 'Git', category: 'tools', color: '#F05032', bgColor: 'from-red-500/10 to-orange-500/10', borderColor: 'border-red-500/30', icon: <img src='/git-icon.svg' className='w-10 h-10' /> },
+    { name: 'GitHub', category: 'tools', color: '#181717', bgColor: 'from-gray-700/10 to-black/10', borderColor: 'border-gray-500/30', icon: <img src='/github-icon.svg' className='w-10 h-10' /> },
     { name: 'Postman', category: 'tools', color: '#FF6C37', bgColor: 'from-orange-500/10 to-red-500/10', borderColor: 'border-orange-500/30', icon: '📮' },
     { name: 'Notion', category: 'tools', color: '#000000', bgColor: 'from-gray-800/10 to-black/10', borderColor: 'border-gray-400/30', icon: '📓' },
     { name: 'Slack', category: 'tools', color: '#4A154B', bgColor: 'from-purple-800/10 to-indigo-900/10', borderColor: 'border-purple-600/30', icon: '💬' }

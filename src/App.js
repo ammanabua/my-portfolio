@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Blog from "./components/Blog"
 import Testimonials from "./components/Testimonials";
+import ImageUploader from "./components/ImageUploader";
 
 
 
@@ -19,6 +20,7 @@ export default function App() {
       <About />
       <Projects />
       <Skills />
+      <ImageUploader />
       <Testimonials />
       {/* <Blog /> */}
       <Contact />
