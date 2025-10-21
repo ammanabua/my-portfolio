@@ -51,12 +51,18 @@ const Skills = () => {
 
   const skills = [
     // Frontend
+    { name: 'HTML', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400/10 to-cyan-400/10', borderColor: 'border-cyan-400/30', icon: <img src='/html-5.svg' className='w-10 h-10' /> },
+    { name: 'CSS', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400/10 to-cyan-400/10', borderColor: 'border-cyan-400/30', icon: <img src='/css-3.svg' className='w-10 h-10' /> },
+    { name: 'JavaScript', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400/10 to-cyan-400/10', borderColor: 'border-cyan-400/30', icon: <img src='/javascript.svg' className='w-10 h-10' /> },
     { name: 'React', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400/10 to-cyan-400/10', borderColor: 'border-cyan-400/30', icon: <img src='/react.svg' className='w-10 h-10' /> },
     { name: 'Next.js', category: 'frontend', color: '#000000', bgColor: 'from-gray-800/10 to-black/10', borderColor: 'border-gray-400/30', icon: <img src='/nodejs-icon.svg' className='w-10 h-10' /> },
     { name: 'TypeScript', category: 'frontend', color: '#3178C6', bgColor: 'from-blue-600/10 to-indigo-600/10', borderColor: 'border-blue-500/30', icon: '📘' },
     { name: 'Tailwind CSS', category: 'frontend', color: '#06B6D4', bgColor: 'from-cyan-400/10 to-blue-400/10', borderColor: 'border-cyan-400/30', icon: <img src='/tailwindcss-icon.svg' className='w-10 h-10' /> },
 
     // Backend
+    { name: 'Java', category: 'backend', color: '#339933', bgColor: 'from-green-500/10 to-emerald-500/10', borderColor: 'border-green-500/30', icon: <img src='/java.svg' className='w-10 h-10' /> },
+    { name: 'Spring Boot', category: 'backend', color: '#339933', bgColor: 'from-green-500/10 to-emerald-500/10', borderColor: 'border-green-500/30', icon: <img src='/spring-boot.svg' className='w-10 h-10' /> },
+    { name: 'Hibernate', category: 'backend', color: '#339933', bgColor: 'from-green-500/10 to-emerald-500/10', borderColor: 'border-green-500/30', icon: <img src='/spring-boot.svg' className='w-10 h-10' /> },
     { name: 'Node.js', category: 'backend', color: '#339933', bgColor: 'from-green-500/10 to-emerald-500/10', borderColor: 'border-green-500/30', icon: <img src='/nodejs-icon.svg' className='w-10 h-10' /> },
     { name: 'Python', category: 'backend', color: '#3776AB', bgColor: 'from-blue-500/10 to-indigo-500/10', borderColor: 'border-blue-500/30', icon: '🐍' },
     { name: 'Django', category: 'backend', color: '#092E20', bgColor: 'from-green-700/10 to-emerald-800/10', borderColor: 'border-green-600/30', icon: '🎯' },
