@@ -1,8 +1,4 @@
-import { ArrowRightIcon } from "@heroicons/react/solid";
 import React, { useState, useEffect, useRef } from "react";
-import { Transition } from "@headlessui/react";
-import { Modal, Box, Typography, backdropClasses } from "@mui/material";
-
 import { motion } from "framer-motion";
 
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, User, Briefcase, MessageCircle } from 'lucide-react';
@@ -15,12 +11,26 @@ import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, User, Briefcase, M
 
 export default function Navbar() {
 
-const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      
+      // Set scrolled state for background change
+      setScrolled(currentScrollY > 50);
+      
+      // Hide on scroll down, show on scroll up
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+      
+      lastScrollY.current = currentScrollY;
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -34,13 +44,18 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
   ];
   
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="">
       {/* Navbar */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? 'bg-slate-900/80 backdrop-blur-lg border-b border-white/10 shadow-2xl' 
-          : 'bg-transparent'
-      }`}>
+      <motion.nav 
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: hidden ? -100 : 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          scrolled 
+            ? 'bg-gray-900 opacity-80 backdrop-blur-lg shadow-2xl' 
+            : 'bg-transparent opacity-80 backdrop-blur-sm'
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
@@ -48,7 +63,7 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
               <div className="relative">
                 <div className="flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
                   <button className="ml-3 text-5xl justify-left title-font font-medium text-white mb-4 md:mb-0">
-                    <span className="text-blue-600">A</span><span className="text-yellow-400">k</span><span className="text-red-300">.</span>
+                    <span className="text-blue-600">A</span><span className="text-amber-400">k</span><span className="text-red-300">.</span>
                   </button>
                 </div>
               </div>
@@ -74,7 +89,7 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
               
               {/* CTA Button */}
               <div className="ml-4">
-                <button className="relative group bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105">
+                <button className="relative group bg-amber-400 text-slate-800 px-6 py-2 rounded-full font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105">
                   <span className="relative z-10 flex items-center space-x-2">
                     <span>Hire Me</span>
                     <ExternalLink className="w-4 h-4" />
@@ -113,13 +128,13 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
                   <span className="font-medium">{item.name}</span>
                 </a>
               ))}
-              <button className="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25">
+              <button className="w-full mt-4 bg-amber-400 text-slate-800 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25">
                 Hire Me
               </button>
             </div>
           </div>
         </div>
-      </nav>
+      </motion.nav>
     </div>
   );
 }

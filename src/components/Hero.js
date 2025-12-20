@@ -74,32 +74,32 @@ const Hero = () => {
           style={{ transitionDelay: '200ms' }}
         >
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full blur-lg opacity-75 animate-pulse" />
-            <div className="relative w-32 h-32 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full flex items-center justify-center">
-              <img src='/me.png' alt="Profile" width={120} height={120} className="rounded-full border-4 border-white shadow-lg" />
+            <div className="absolute inset-0 bg-gray-200 rounded-full blur-lg opacity-75 animate-pulse" />
+            <div className="relative w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center">
+              <img src='/me.png' alt="Profile" width={120} height={120} className="rounded-full" />
             </div>
           </div>
         </div>
 
         {/* Main heading */}
         <div 
-          className={`mb-6 transition-all duration-1000 ${
+          className={`my-4 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
           style={{ transitionDelay: '400ms' }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent mb-4">
-            Amman.
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-300">
+            Hi, I'm <span className="text-amber-400">Amman</span><span className='text-red-300'>.</span>
           </h1>
-          <div className="flex items-center justify-center gap-2 text-xl md:text-2xl text-gray-300">
+          {/* <div className="flex items-center justify-center gap-2 text-xl md:text-2xl text-gray-300">
             <span>Full-Stack Developer specializing in</span>
             <span 
-              className="font-semibold text-transparent bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text min-w-[120px] text-left transition-all duration-500"
+              className="font-semibold text-transparent bg-amber-500 bg-clip-text min-w-[120px] text-left transition-all duration-500"
               key={currentSkillIndex}
             >
               {skills[currentSkillIndex]}
             </span>
-          </div>
+          </div> */}
         </div>
 
         {/* Description */}
@@ -110,25 +110,23 @@ const Hero = () => {
           style={{ transitionDelay: '600ms' }}
         >
           <p className="text-gray-300 text-lg leading-relaxed">
-            Passionate about crafting exceptional digital experiences through clean code, 
-            innovative solutions, and cutting-edge technologies. I transform ideas into 
-            scalable applications that make a difference.
+            A product-focused engineer passionate about transforming ideas into scalable applications that make a difference.
           </p>
         </div>
 
         {/* CTA Buttons */}
         <div 
-          className={`mb-12 flex flex-col sm:flex-row gap-4 transition-all duration-1000 ${
+          className={`mb-8 flex sm:flex-row gap-4 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
           style={{ transitionDelay: '800ms' }}
         >
-          <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+          <button className="group relative px-8 py-3 bg-amber-400 rounded-full text-slate-800 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
             <span className="relative z-10">View My Work</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-purple-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
           
-          <button className="group px-8 py-4 border-2 border-gray-600 rounded-full text-white font-semibold transition-all duration-300 hover:border-purple-400 hover:bg-purple-400/10 hover:scale-105">
+          <button className="group px-8 py-3 border-2 border-gray-600 rounded-full text-white font-semibold transition-all duration-300 hover:border-purple-400 hover:bg-purple-400/10 hover:scale-105">
             <span className="flex items-center gap-2">
               <Mail className="w-5 h-5" />
               Get In Touch
@@ -146,7 +144,7 @@ const Hero = () => {
           {[
             { icon: Github, href: 'https://www.github.com/ammanabua', label: 'GitHub' },
             { icon: Linkedin, href: 'https://www.linkedin.com/in/amman-abua', label: 'LinkedIn' },
-            { icon: Mail, href: 'mailto:www.amman.abua93@gmail.com', label: 'Email' }
+            { icon: Mail, href: 'mailto:amman.abua93@gmail.com', label: 'Email' }
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}

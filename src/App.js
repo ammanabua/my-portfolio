@@ -9,6 +9,7 @@ import Skills from "./components/Skills";
 import Blog from "./components/Blog"
 import Testimonials from "./components/Testimonials";
 import ImageUploader from "./components/ImageUploader";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 
@@ -20,11 +21,12 @@ export default function App() {
       <About />
       <Projects />
       <Skills />
-      <ImageUploader />
+      {/* <ImageUploader /> */}
       <Testimonials />
       {/* <Blog /> */}
       <Contact />
       <Footer />
+      <ScrollToTop />
     </main>
   )
 }
