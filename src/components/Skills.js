@@ -169,7 +169,7 @@ const Skills = () => {
             Skills & Toolkit
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A comprehensive arsenal of modern technologies and tools that power exceptional digital experiences.
+            A comprehensive arsenal of modern technologies and tools which I utilize to power exceptional digital experiences.
           </p>
         </div>
 
@@ -184,7 +184,7 @@ const Skills = () => {
                 onClick={() => setActiveCategory(id)}
                 className={`flex items-center gap-2 px-4 py-3 rounded-2xl font-medium transition-all duration-300 ${
                   activeCategory === id
-                    ? `bg-gradient-to-r ${color} text-white shadow-lg scale-105`
+                    ? `bg-amber-300 text-gray-800 shadow-lg scale-105`
                     : 'text-gray-400 hover:text-white hover:bg-white/5'
                 }`}
               >
@@ -193,8 +193,8 @@ const Skills = () => {
                 {id === 'all' && (
                   <span className={`ml-1 px-2 py-0.5 text-xs rounded-full ${
                     activeCategory === id 
-                      ? 'bg-white/20 text-white' 
-                      : 'bg-purple-500/20 text-purple-300'
+                      ? 'bg-white/20 text-gray-800' 
+                      : 'bg-white/20 text-gray-400'
                   }`}>
                     {skills.length}
                   </span>
@@ -226,12 +226,12 @@ const Skills = () => {
             { label: 'Lines of Code', value: '1M+', icon: Terminal }
           ].map(({ label, value, icon: Icon }, index) => (
             <div key={label} className="text-center group">
-              <div className="relative bg-gradient-to-br from-slate-800/30 to-slate-900/30 rounded-2xl border border-white/10 p-6 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300 hover:scale-105">
-                <Icon className="w-8 h-8 text-purple-400 mx-auto mb-3 group-hover:text-cyan-400 transition-colors" />
+              <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-white/10 p-6 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300 hover:scale-105">
+                <Icon className="w-8 h-8 text-amber-300 mx-auto mb-3 group-hover:text-cyan-400 transition-colors" />
                 <div className="text-3xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                   {value}
                 </div>
-                <div className="text-gray-400 text-sm font-medium">
+                <div className="text-amber-300 text-sm font-medium">
                   {label}
                 </div>
               </div>
@@ -243,7 +243,7 @@ const Skills = () => {
         <div className={`text-center mt-16 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`} style={{ transitionDelay: '1000ms' }}>
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full border border-purple-500/20 text-purple-300">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full border border-purple-500/20 text-amber-300">
             <Zap className="w-4 h-4" />
             <span className="text-sm font-medium">Always learning and expanding the toolkit</span>
             <Zap className="w-4 h-4" />

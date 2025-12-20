@@ -42,7 +42,7 @@ const Hero = () => {
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div 
-          className="absolute top-20 left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"
+          className="absolute top-20 left-20 w-72 h-72 bg-amber-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"
           style={{
             transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
           }}
@@ -54,7 +54,7 @@ const Hero = () => {
           }}
         />
         <div 
-          className="absolute -bottom-8 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"
+          className="absolute -bottom-8 left-40 w-80 h-80 bg-gray-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"
           style={{
             transform: `translate(${mousePosition.x * 0.015}px, ${mousePosition.y * 0.015}px)`,
           }}
@@ -121,12 +121,11 @@ const Hero = () => {
           }`}
           style={{ transitionDelay: '800ms' }}
         >
-          <button className="group relative px-8 py-3 bg-amber-400 rounded-full text-slate-800 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+          <button className="group relative px-8 py-3 bg-amber-400 rounded-full text-slate-800 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 hover:bg-gray-800 hover:text-white">
             <span className="relative z-10">View My Work</span>
-            <div className="absolute inset-0 bg-purple-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
           
-          <button className="group px-8 py-3 border-2 border-gray-600 rounded-full text-white font-semibold transition-all duration-300 hover:border-purple-400 hover:bg-purple-400/10 hover:scale-105">
+          <button className="group px-8 py-3 border-2 border-gray-800 rounded-full text-white font-semibold transition-all duration-300 bg-gray-800 hover:border-gray-300 hover:bg-gray-300 hover:text-gray-800 hover:bg-gray-300/10 hover:scale-105">
             <span className="flex items-center gap-2">
               <Mail className="w-5 h-5" />
               Get In Touch

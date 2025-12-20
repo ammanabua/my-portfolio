@@ -1,22 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { 
-  Monitor, 
-  Smartphone, 
-  Palette, 
-  ExternalLink, 
-  Github, 
-  Play,
-  Zap,
-  Shield,
-  Database,
-  Globe,
-  Clock,
-  Sparkles,
-  ArrowUpRight,
-  Code2,
-  Users,
-  TrendingUp
-} from 'lucide-react';
+import { Monitor, Smartphone, Palette, ExternalLink, Github, Play, Zap, Shield, Database, Globe, Clock, Sparkles, ArrowUpRight, Code2, Users, TrendingUp } from 'lucide-react';
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState('web');
@@ -45,6 +28,34 @@ const Projects = () => {
   const webProjects = [
     {
       id: 1,
+      title: 'ScholarsKit AI',
+      description: 'A light-weight AI-powered research assistant/study partner that streamlines academic workflows by automating literature reviews, summarizing papers, and generating citations.',
+      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop',
+      tech: ['React', 'Node.js', 'PostgreSQL', 'D3.js', 'S3', 'Lambda Functions', 'Gemini AI', 'API Gateway'],
+      category: 'Full-Stack',
+      status: 'Live',
+      metrics: { users: '10K+', uptime: '99.9%', performance: '95' },
+      features: ['Real-time Analytics', 'Data Visualization', 'API Integration', 'Mobile Responsive'],
+      demoUrl: 'https://master.d9r77d4102d54.amplifyapp.com/',
+      githubUrl: 'https://www.github.com/ammanabua/ScholarsKit',
+      gradient: 'from-green-500 to-emerald-600'
+    },
+    {
+      id: 2,
+      title: 'Entities Studio',
+      description: 'A collaborative platform for digital artists and designers to create, share, and monetize 3D assets and interactive experiences in a virtual environment.',
+      image: '/entities.png',
+      tech: ['React', 'Node.js', 'PostgreSQL', 'D3.js', 'AWS'],
+      category: 'Full-Stack',
+      status: 'Live',
+      metrics: { users: '10K+', uptime: '99.9%', performance: '95' },
+      features: ['Real-time Analytics', 'Data Visualization', 'API Integration', 'Mobile Responsive'],
+      demoUrl: 'https://www.entities.studio/',
+      githubUrl: 'https://www.github.com/ammanabua/entities-studio',
+      gradient: 'from-green-200 to-emerald-300'
+    },
+    {
+      id: 3,
       title: 'EcoTracker Platform',
       description: 'A comprehensive sustainability tracking platform that helps companies monitor their carbon footprint and environmental impact in real-time.',
       image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop',
@@ -58,7 +69,7 @@ const Projects = () => {
       gradient: 'from-green-500 to-emerald-600'
     },
     {
-      id: 2,
+      id: 4,
       title: 'CryptoFlow Dashboard',
       description: 'Advanced cryptocurrency portfolio management dashboard with real-time market data, trading signals, and portfolio optimization.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
@@ -72,7 +83,7 @@ const Projects = () => {
       gradient: 'from-blue-500 to-purple-600'
     },
     {
-      id: 3,
+      id: 5,
       title: 'TaskFlow Enterprise',
       description: 'Enterprise-grade project management solution with advanced collaboration tools, AI-powered insights, and seamless integrations.',
       image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop',
@@ -86,7 +97,7 @@ const Projects = () => {
       gradient: 'from-purple-500 to-pink-600'
     },
     {
-      id: 4,
+      id: 6,
       title: 'HealthVault API',
       description: 'HIPAA-compliant healthcare data management API with advanced security, patient records, and provider integration capabilities.',
       image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop',
@@ -104,7 +115,7 @@ const Projects = () => {
   const designProjects = [
     // Placeholder for future design projects
     {
-      id: 5,
+      id: 7,
       title: 'Design System for Entities Studio',
       description: 'A comprehensive design system created for Entities Studio, focusing on consistency, scalability, and user experience across all digital products.',
       image: './ent-studio.png',
@@ -114,7 +125,7 @@ const Projects = () => {
       demoUrl: 'https://www.figma.com/proto/PnnMlDjDxbPzJjASOXQ6mN/Entities-Studio?node-id=0-1&t=yIUA5hOs6C8Tnw8E-1',
     },
     {
-      id: 6,
+      id: 8,
       title: 'Mobile App UI for IRent',
       description: 'A sleek and modern mobile app UI design for IRent, focusing on user-friendly navigation and an engaging rental experience.',
       image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&h=600&fit=crop',
@@ -175,15 +186,15 @@ const Projects = () => {
           <div className={`absolute inset-0 bg-black/50 flex items-center justify-center gap-4 transition-opacity duration-300 ${
             hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
           }`}>
-            <button className="p-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all duration-300 hover:scale-110 backdrop-blur-sm">
+            <a href={project.demoUrl} target='_blank' rel="noopener noreferrer" className="p-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all duration-300 hover:scale-110 backdrop-blur-sm">
               <ExternalLink className="w-5 h-5" />
-            </button>
-            <button className="p-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all duration-300 hover:scale-110 backdrop-blur-sm">
+            </a>
+            <a href={project.githubUrl} target='_blank' rel="noopener noreferrer" className="p-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all duration-300 hover:scale-110 backdrop-blur-sm">
               <Github className="w-5 h-5" />
-            </button>
-            <button className="p-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all duration-300 hover:scale-110 backdrop-blur-sm">
+            </a>
+            {/* <button className="p-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all duration-300 hover:scale-110 backdrop-blur-sm">
               <Play className="w-5 h-5" />
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -383,7 +394,7 @@ const Projects = () => {
                 onClick={() => setActiveTab(id)}
                 className={`flex items-center gap-3 px-6 py-4 rounded-xl font-medium transition-all duration-300 relative ${
                   activeTab === id
-                    ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg'
+                    ? 'bg-amber-300 text-gray-800 shadow-lg'
                     : 'text-gray-400 hover:text-white hover:bg-white/5'
                 }`}
               >
@@ -392,7 +403,7 @@ const Projects = () => {
                 {count > 0 && (
                   <span className={`inline-flex items-center justify-center w-5 h-5 text-xs rounded-full ${
                     activeTab === id 
-                      ? 'bg-white/20 text-white' 
+                      ? 'bg-white/20 text-gray-800' 
                       : 'bg-purple-500/20 text-purple-300'
                   }`}>
                     {count}
@@ -418,9 +429,11 @@ const Projects = () => {
           <div className={`text-center mt-16 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`} style={{ transitionDelay: '800ms' }}>
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full border border-purple-500/20 text-purple-300">
-              <TrendingUp className="w-4 h-4" />
-              <span className="text-sm font-medium">More projects available on GitHub</span>
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-purple-500/20 text-amber-300 hover:bg-gray-800 hover:text-white hover:border-gray-800 transition-all duration-300 cursor-pointer">
+              <a className='flex gap-2 items-center' href='https://www.github.com/ammanabua' target='_blank' rel='noopener noreferrer'>
+                <TrendingUp className="w-4 h-4" />
+                <span className="text-sm font-medium">More projects available on GitHub</span>
+              </a>
             </div>
           </div>
         )}

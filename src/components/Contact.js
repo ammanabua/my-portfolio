@@ -106,11 +106,11 @@ const Contact = () => {
       icon: Mail,
       title: 'Email Me',
       subtitle: 'Quick Response',
-      value: 'alex.chen@email.com',
+      value: 'ammanabua@gmail.com',
       description: 'I typically respond within 2-4 hours during business days',
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'from-blue-500/10 to-cyan-500/10',
-      borderColor: 'border-cyan-400/30',
+      color: 'from-amber-500 to-red-500',
+      bgColor: 'from-amber-500/10 to-red-500/10',
+      borderColor: 'border-red-400/30',
       action: 'Send Email',
       responseTime: '2-4 hours'
     },
@@ -144,7 +144,7 @@ const Contact = () => {
       id: 'location',
       icon: MapPin,
       title: 'Meet in Person',
-      subtitle: 'San Francisco Bay Area',
+      subtitle: 'D(M)V Area',
       value: 'Coffee & Code',
       description: 'Available for local meetups and collaboration sessions',
       color: 'from-orange-500 to-red-500',
@@ -174,7 +174,7 @@ const Contact = () => {
       hour: '2-digit',
       minute: '2-digit',
       timeZoneName: 'short',
-      timeZone: 'America/Los_Angeles'
+      timeZone: 'America/New_York'
     });
   };
 
@@ -417,6 +417,7 @@ const Contact = () => {
                         className="w-full px-4 py-3 bg-slate-800/50 border border-white/10 rounded-xl text-white focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                       >
                         <option value="">Select budget range</option>
+                        <option value="3k-5k">Less than $5,000</option>
                         <option value="5k-15k">$5,000 - $15,000</option>
                         <option value="15k-30k">$15,000 - $30,000</option>
                         <option value="30k-50k">$30,000 - $50,000</option>
@@ -514,9 +515,9 @@ const Contact = () => {
         <div className={`text-center mt-16 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`} style={{ transitionDelay: '800ms' }}>
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full border border-purple-500/20 text-purple-300">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-purple-500/20 text-amber-300">
             <Zap className="w-4 h-4" />
-            <span className="text-sm font-medium">Typically respond within 2-4 hours</span>
+            <span className="text-sm font-medium">I typically respond within 2-4 hours</span>
             <Zap className="w-4 h-4" />
           </div>
         </div>

@@ -38,23 +38,23 @@ const About = () => {
 
   const experience = [
     {
-      role: 'Senior Full-Stack Developer',
-      company: 'TechFlow Inc.',
-      period: '2022 - Present',
+      role: 'Software Engineer',
+      company: 'Sparetime Digital Ltd',
+      period: '2022 - 2023',
       description: 'Lead development of microservices architecture serving 100K+ users daily. Built scalable React applications with 99.9% uptime.',
       achievements: ['40% performance improvement', 'Led team of 5 developers', 'Implemented CI/CD pipelines']
     },
     {
-      role: 'Software Engineer',
-      company: 'InnovateLab',
-      period: '2020 - 2022',
+      role: 'Software Developer',
+      company: 'Manyactive App Ltd',
+      period: '2021 - 2022',
       description: 'Developed enterprise SaaS platform using React, Node.js, and PostgreSQL. Collaborated with cross-functional teams.',
       achievements: ['Reduced load time by 60%', 'Built real-time chat system', 'Mentored junior developers']
     },
     {
-      role: 'Frontend Developer',
-      company: 'StartupVenture',
-      period: '2019 - 2020',
+      role: 'Web Developer',
+      company: 'Technology Media Maven',
+      period: '2018 - 2021',
       description: 'Created responsive web applications and implemented modern UI/UX designs. Optimized for mobile-first approach.',
       achievements: ['Improved mobile conversion by 35%', 'Built component library', 'Implemented A/B testing']
     }
@@ -62,7 +62,7 @@ const About = () => {
 
   const tabs = [
     { id: 'overview', label: 'Overview', icon: Globe },
-    { id: 'skills', label: 'Skills', icon: Zap },
+    // { id: 'skills', label: 'Skills', icon: Zap },
     { id: 'experience', label: 'Experience', icon: Award },
     { id: 'journey', label: 'My Journey', icon: Calendar }
   ];
@@ -75,11 +75,11 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-6">
                 <div className="prose prose-invert max-w-none">
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    I'm a passionate full-stack developer with 5+ years of experience crafting digital solutions 
+                  <p className="text-gray-300 md:text-lg leading-relaxed">
+                    I'm a passionate full-stack engineer with 5+ years of experience crafting digital solutions 
                     that bridge the gap between complex technical requirements and intuitive user experiences.
                   </p>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 md:text-lg leading-relaxed">
                     My journey began with curiosity about how websites work, and it evolved into a deep love 
                     for building scalable, performant applications that solve real-world problems. I thrive in 
                     collaborative environments where innovation meets practicality.
@@ -87,13 +87,13 @@ const About = () => {
                 </div>
                 <div className="flex flex-wrap gap-4">
                   {[
-                    { icon: MapPin, text: 'San Francisco, CA' },
+                    { icon: MapPin, text: 'Gaithersburg, MD' },
                     { icon: Coffee, text: '500+ cups of coffee' },
-                    { icon: Code2, text: '50+ projects completed' },
+                    { icon: Code2, text: '30+ projects completed' },
                     { icon: Cpu, text: '1M+ lines of code' }
                   ].map(({ icon: Icon, text }, index) => (
                     <div key={index} className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
-                      <Icon className="w-4 h-4 text-purple-400" />
+                      <Icon className="w-4 h-4 text-amber-300" />
                       <span className="text-sm text-gray-300">{text}</span>
                     </div>
                   ))}
@@ -127,50 +127,50 @@ const About = () => {
           </div>
         );
 
-      case 'skills':
-        return (
-          <div className="space-y-8">
-            <div className="grid gap-6">
-              {skills.map((skill, index) => (
-                <div 
-                  key={skill.name}
-                  className={`group transition-all duration-500 ${
-                    isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-                  }`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                  onMouseEnter={() => setHoveredSkill(skill.name)}
-                  onMouseLeave={() => setHoveredSkill(null)}
-                >
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-3">
-                      <span className="text-white font-medium">{skill.name}</span>
-                      <span className="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">
-                        {skill.category}
-                      </span>
-                    </div>
-                    <span className="text-gray-400 text-sm">{skill.level}%</span>
-                  </div>
-                  <div className="relative h-3 bg-slate-800 rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-slate-800 to-slate-700 rounded-full" />
-                    <div 
-                      className={`absolute top-0 left-0 h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
-                      style={{ 
-                        width: isVisible ? `${skill.level}%` : '0%',
-                        transform: hoveredSkill === skill.name ? 'scaleY(1.2)' : 'scaleY(1)'
-                      }}
-                    />
-                    <div 
-                      className={`absolute top-0 left-0 h-full bg-white/20 rounded-full transition-all duration-300 ${
-                        hoveredSkill === skill.name ? 'opacity-100' : 'opacity-0'
-                      }`}
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        );
+      // case 'skills':
+      //   return (
+      //     <div className="space-y-8">
+      //       <div className="grid gap-6">
+      //         {skills.map((skill, index) => (
+      //           <div 
+      //             key={skill.name}
+      //             className={`group transition-all duration-500 ${
+      //               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+      //             }`}
+      //             style={{ transitionDelay: `${index * 100}ms` }}
+      //             onMouseEnter={() => setHoveredSkill(skill.name)}
+      //             onMouseLeave={() => setHoveredSkill(null)}
+      //           >
+      //             <div className="flex items-center justify-between mb-2">
+      //               <div className="flex items-center gap-3">
+      //                 <span className="text-white font-medium">{skill.name}</span>
+      //                 <span className="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">
+      //                   {skill.category}
+      //                 </span>
+      //               </div>
+      //               <span className="text-gray-400 text-sm">{skill.level}%</span>
+      //             </div>
+      //             <div className="relative h-3 bg-slate-800 rounded-full overflow-hidden">
+      //               <div className="absolute inset-0 bg-gradient-to-r from-slate-800 to-slate-700 rounded-full" />
+      //               <div 
+      //                 className={`absolute top-0 left-0 h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
+      //                 style={{ 
+      //                   width: isVisible ? `${skill.level}%` : '0%',
+      //                   transform: hoveredSkill === skill.name ? 'scaleY(1.2)' : 'scaleY(1)'
+      //                 }}
+      //               />
+      //               <div 
+      //                 className={`absolute top-0 left-0 h-full bg-white/20 rounded-full transition-all duration-300 ${
+      //                   hoveredSkill === skill.name ? 'opacity-100' : 'opacity-0'
+      //                 }`}
+      //                 style={{ width: `${skill.level}%` }}
+      //               />
+      //             </div>
+      //           </div>
+      //         ))}
+      //       </div>
+      //     </div>
+      //   );
 
       case 'experience':
         return (
@@ -223,7 +223,7 @@ const About = () => {
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-4">From Curiosity to Career</h3>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                My path into software development wasn't traditional, but it was driven by genuine passion 
+                My path into software engineering wasn't traditional, but it was driven by genuine passion 
                 and continuous learning.
               </p>
             </div>
@@ -233,9 +233,8 @@ const About = () => {
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-white/10">
                   <h4 className="text-lg font-semibold text-purple-300 mb-3">The Spark ⚡</h4>
                   <p className="text-gray-300">
-                    It all started in college when I built my first website. The moment I saw my code 
-                    come to life in the browser, I was hooked. That feeling of creating something from 
-                    nothing became my driving force.
+                    It all started just after my first college degree, when I built my first website. The moment I saw my code 
+                    come to life in the browser, I was hooked. That feeling of creating something from nothing became my driving force.
                   </p>
                 </div>
                 
@@ -262,8 +261,8 @@ const About = () => {
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-white/10">
                   <h4 className="text-lg font-semibold text-yellow-300 mb-3">The Future 🎯</h4>
                   <p className="text-gray-300">
-                    I'm excited about emerging technologies like AI and Web3. My goal is to stay 
-                    at the forefront of innovation while mentoring the next generation of developers.
+                    I'm excited about emerging technologies like AI and Web3, especially with the recent advancements in AI Agents. My goal is to stay 
+                    at the forefront of innovation, continuously learning while mentoring the next generation of developers.
                   </p>
                 </div>
               </div>
@@ -316,7 +315,7 @@ const About = () => {
                 onClick={() => setActiveTab(id)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                   activeTab === id
-                    ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg'
+                    ? 'bg-amber-300 text-gray-800 shadow-lg'
                     : 'text-gray-400 hover:text-white hover:bg-white/5'
                 }`}
               >
