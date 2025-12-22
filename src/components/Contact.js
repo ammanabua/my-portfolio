@@ -1,27 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
-  Calendar, 
-  MessageSquare,
-  Linkedin,
-  Github,
-  Twitter,
-  Globe,
-  Clock,
-  Zap,
-  CheckCircle,
-  AlertCircle,
-  Coffee,
-  Video,
-  FileText,
-  Download,
-  ExternalLink,
-  Sparkles,
-  Heart
-} from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Calendar, MessageSquare, Linkedin, Github, Twitter, Globe, Clock, Zap, CheckCircle, AlertCircle, Coffee, Video, FileText, Download, ExternalLink, Sparkles, Heart } from 'lucide-react';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -109,23 +87,10 @@ const Contact = () => {
       value: 'ammanabua@gmail.com',
       description: 'I typically respond within 2-4 hours during business days',
       color: 'from-amber-500 to-red-500',
-      bgColor: 'from-amber-500/10 to-red-500/10',
-      borderColor: 'border-red-400/30',
+      bgColor: 'from-amber-500 to-red-500',
+      borderColor: 'border-red-400',
       action: 'Send Email',
       responseTime: '2-4 hours'
-    },
-    {
-      id: 'phone',
-      icon: Phone,
-      title: 'Call Me',
-      subtitle: 'Direct Line',
-      value: '+1 (555) 123-4567',
-      description: 'Available Mon-Fri, 9AM-6PM PST for project discussions',
-      color: 'from-green-500 to-emerald-500',
-      bgColor: 'from-green-500/10 to-emerald-500/10',
-      borderColor: 'border-green-400/30',
-      action: 'Schedule Call',
-      responseTime: 'Immediate'
     },
     {
       id: 'calendar',
@@ -135,8 +100,8 @@ const Contact = () => {
       value: 'Free Strategy Call',
       description: 'Let\'s discuss your project goals and technical requirements',
       color: 'from-purple-500 to-pink-500',
-      bgColor: 'from-purple-500/10 to-pink-500/10',
-      borderColor: 'border-purple-400/30',
+      bgColor: 'from-purple-500 to-pink-500',
+      borderColor: 'border-purple-400',
       action: 'Book Now',
       responseTime: 'Next available'
     },
@@ -147,9 +112,9 @@ const Contact = () => {
       subtitle: 'D(M)V Area',
       value: 'Coffee & Code',
       description: 'Available for local meetups and collaboration sessions',
-      color: 'from-orange-500 to-red-500',
-      bgColor: 'from-orange-500/10 to-red-500/10',
-      borderColor: 'border-orange-400/30',
+      color: 'from-amber-500 to-red-500',
+      bgColor: 'from-amber-500 to-red-500',
+      borderColor: 'border-amber-400',
       action: 'Arrange Meeting',
       responseTime: 'Flexible'
     }
@@ -166,7 +131,7 @@ const Contact = () => {
     { icon: FileText, label: 'View Resume', color: 'from-blue-500 to-purple-500' },
     { icon: Download, label: 'Download CV', color: 'from-green-500 to-emerald-500' },
     { icon: Video, label: 'Video Call', color: 'from-red-500 to-pink-500' },
-    { icon: Coffee, label: 'Coffee Chat', color: 'from-yellow-500 to-orange-500' }
+    { icon: Coffee, label: 'Coffee Chat', color: 'from-yellow-500 to-amber-500' }
   ];
 
   const getCurrentTimeString = () => {
@@ -184,7 +149,7 @@ const Contact = () => {
     
     // Weekend or outside business hours
     if (day === 0 || day === 6 || hour < 9 || hour > 18) {
-      return { status: 'away', message: 'Currently away', color: 'text-orange-400' };
+      return { status: 'away', message: 'Currently away', color: 'text-amber-400' };
     }
     
     return { status: 'available', message: 'Available now', color: 'text-green-400' };
@@ -193,7 +158,7 @@ const Contact = () => {
   const availability = getAvailabilityStatus();
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <section id="contact" ref={sectionRef} className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" />
@@ -203,10 +168,10 @@ const Contact = () => {
 
       {/* Floating elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 text-purple-500/10">
+        <div className="absolute top-20 left-10 text-purple-500">
           <Sparkles className="w-16 h-16 animate-spin-slow" />
         </div>
-        <div className="absolute bottom-20 right-20 text-cyan-500/10">
+        <div className="absolute bottom-20 right-20 text-cyan-500">
           <Heart className="w-12 h-12 animate-pulse" />
         </div>
       </div>
@@ -225,8 +190,8 @@ const Contact = () => {
           </p>
           
           {/* Availability indicator */}
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-slate-800/50 rounded-full border border-white/10 backdrop-blur-sm">
-            <div className={`w-3 h-3 rounded-full ${availability.status === 'available' ? 'bg-green-400 animate-pulse' : 'bg-orange-400'}`} />
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-slate-800/50 rounded-full border border-white backdrop-blur-sm">
+            <div className={`w-3 h-3 rounded-full ${availability.status === 'available' ? 'bg-green-400 animate-pulse' : 'bg-amber-400'}`} />
             <span className={`font-medium ${availability.color}`}>{availability.message}</span>
             <span className="text-gray-400">•</span>
             <Clock className="w-4 h-4 text-gray-400" />
@@ -272,7 +237,7 @@ const Contact = () => {
                         </p>
                         
                         <div className="flex items-center justify-between">
-                          <span className="text-xs px-2 py-1 bg-white/10 rounded-full text-gray-300">
+                          <span className="text-xs px-2 py-1 bg-white rounded-full text-gray-300">
                             {method.responseTime}
                           </span>
                           <button className="text-purple-300 hover:text-purple-200 transition-colors text-sm font-medium flex items-center gap-1">
@@ -310,7 +275,7 @@ const Contact = () => {
                     <a
                       key={social.label}
                       href={social.url}
-                      className={`group p-3 bg-slate-800/50 rounded-xl border border-white/10 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110 backdrop-blur-sm`}
+                      className={`group p-3 bg-slate-800/50 rounded-xl border border-white text-gray-400 ${social.color} transition-all duration-300 hover:scale-110 backdrop-blur-sm`}
                     >
                       <social.icon className="w-6 h-6" />
                     </a>
@@ -330,7 +295,7 @@ const Contact = () => {
             <div className={`lg:col-span-2 transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
             }`} style={{ transitionDelay: '400ms' }}>
-              <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 rounded-3xl border border-white/10 backdrop-blur-sm p-8">
+              <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 rounded-3xl border border-white backdrop-blur-sm p-8">
                 <h3 className="text-2xl font-bold text-white mb-8">Start a Project</h3>
                 
                 <div className="space-y-6">
@@ -346,7 +311,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-white rounded-xl text-white placeholder-gray-400 focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                         placeholder="Your full name"
                       />
                     </div>
@@ -361,7 +326,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-white rounded-xl text-white placeholder-gray-400 focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -378,7 +343,7 @@ const Contact = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-white rounded-xl text-white placeholder-gray-400 focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                         placeholder="Your company name"
                       />
                     </div>
@@ -391,7 +356,7 @@ const Contact = () => {
                         name="projectType"
                         value={formData.projectType}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800/50 border border-white/10 rounded-xl text-white focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-white rounded-xl text-white focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                       >
                         <option value="">Select project type</option>
                         <option value="web-app">Web Application</option>
@@ -414,7 +379,7 @@ const Contact = () => {
                         name="budget"
                         value={formData.budget}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800/50 border border-white/10 rounded-xl text-white focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-white rounded-xl text-white focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                       >
                         <option value="">Select budget range</option>
                         <option value="3k-5k">Less than $5,000</option>
@@ -434,7 +399,7 @@ const Contact = () => {
                         name="timeline"
                         value={formData.timeline}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800/50 border border-white/10 rounded-xl text-white focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-white rounded-xl text-white focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                       >
                         <option value="">Select timeline</option>
                         <option value="asap">ASAP</option>
@@ -457,7 +422,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 resize-none"
+                      className="w-full px-4 py-3 bg-slate-800/50 border border-white rounded-xl text-white placeholder-gray-400 focus:border-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 resize-none"
                       placeholder="Tell me about your project, goals, and any specific requirements..."
                     />
                   </div>
@@ -477,7 +442,7 @@ const Contact = () => {
                     >
                       {isSubmitting ? (
                         <>
-                          <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                          <div className="w-5 h-5 border-2 border-white border-t-white rounded-full animate-spin" />
                           Sending...
                         </>
                       ) : submitStatus === 'success' ? (
@@ -496,7 +461,7 @@ const Contact = () => {
                 </div>
 
                 {submitStatus === 'success' && (
-                  <div className="mt-6 p-4 bg-green-500/20 border border-green-500/30 rounded-xl text-green-300">
+                  <div className="mt-6 p-4 bg-green-500/20 border border-green-500 rounded-xl text-green-300">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-5 h-5" />
                       <span className="font-medium">Thank you for your message!</span>

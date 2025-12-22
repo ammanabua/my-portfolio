@@ -42,6 +42,15 @@ export default function Navbar() {
     { name: 'Experience', href: '#experience', icon: Briefcase },
     { name: 'Contact', href: '#contact', icon: MessageCircle },
   ];
+
+  const scrollToSection = (e, href) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   return (
     <div className="">
@@ -75,11 +84,12 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="relative group px-4 py-2 rounded-full transition-all duration-300 hover:bg-white/10"
+                  onClick={(e) => scrollToSection(e, item.href)}
+                  className="relative group px-4 py-2 rounded-full transition-all duration-300 hover:bg-white"
                 >
                   <div className="flex items-center space-x-2">
-                    <item.icon className="w-4 h-4 text-gray-300 group-hover:text-white transition-colors" />
-                    <span className="text-gray-300 group-hover:text-white font-medium transition-colors">
+                    <item.icon className="w-4 h-4 text-gray-300 group-hover:text-gray-800 transition-colors" />
+                    <span className="text-gray-300 group-hover:text-gray-800 font-medium transition-colors">
                       {item.name}
                     </span>
                   </div>
@@ -89,12 +99,11 @@ export default function Navbar() {
               
               {/* CTA Button */}
               <div className="ml-4">
-                <button className="relative group bg-amber-400 text-slate-800 px-6 py-2 rounded-full font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105">
+                <button className="relative group bg-amber-400 hover:bg-gray-200 hover:text-gray-800 text-slate-800 px-6 py-2 rounded-full font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105">
                   <span className="relative z-10 flex items-center space-x-2">
                     <span>Hire Me</span>
                     <ExternalLink className="w-4 h-4" />
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
               </div>
             </div>
@@ -121,8 +130,11 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
+                  onClick={(e) => {
+                    scrollToSection(e, item.href);
+                    setIsMenuOpen(false);
+                  }}
                   className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-300 py-2"
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   <item.icon className="w-5 h-5" />
                   <span className="font-medium">{item.name}</span>

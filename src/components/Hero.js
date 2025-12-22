@@ -121,11 +121,11 @@ const Hero = () => {
           }`}
           style={{ transitionDelay: '800ms' }}
         >
-          <button className="group relative px-8 py-3 bg-amber-400 rounded-full text-slate-800 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 hover:bg-gray-800 hover:text-white">
+          <button className="group relative px-8 py-3 bg-amber-400 rounded-full text-slate-800 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 hover:bg-gray-300 hover:text-gray-800">
             <span className="relative z-10">View My Work</span>
           </button>
           
-          <button className="group px-8 py-3 border-2 border-gray-800 rounded-full text-white font-semibold transition-all duration-300 bg-gray-800 hover:border-gray-300 hover:bg-gray-300 hover:text-gray-800 hover:bg-gray-300/10 hover:scale-105">
+          <button className="group px-8 py-3 border-2 border-gray-800 rounded-full text-white font-semibold transition-all duration-300 bg-gray-800 hover:border-gray-300 hover:bg-gray-300 hover:text-gray-800 hover:bg-gray-300 hover:scale-105">
             <span className="flex items-center gap-2">
               <Mail className="w-5 h-5" />
               Get In Touch
@@ -135,7 +135,7 @@ const Hero = () => {
 
         {/* Social links */}
         <div 
-          className={`mb-16 flex gap-6 transition-all duration-1000 ${
+          className={`mb-12 mt-4 flex gap-6 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
           style={{ transitionDelay: '1000ms' }}
@@ -148,7 +148,9 @@ const Hero = () => {
             <a
               key={label}
               href={href}
-              className="group p-3 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-purple-400 hover:bg-purple-400/10 transition-all duration-300 hover:scale-110"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-3 rounded-full bg-gray-300 border border-white text-gray-800 hover:text-white hover:border-gray-800 hover:bg-gray-800 transition-all duration-300 hover:scale-110"
               aria-label={label}
             >
               <Icon className="w-6 h-6" />

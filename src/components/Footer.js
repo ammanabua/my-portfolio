@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, User, Briefcase, MessageCircle } from 'lucide-react';
+import PrivacyPolicy from './PrivacyPolicy';
+import TermsOfService from './TermsOfService';
 
 
 export default function Footer(){
+
+    const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+    const [isTermsOpen, setIsTermsOpen] = useState(false);
 
     const navItems = [
         { name: 'About', href: '#about', icon: User },
@@ -58,6 +63,8 @@ export default function Footer(){
                   <a
                     key={item.name}
                     href={item.href}
+                    target='_blank'
+                    rel='noopener noreferrer'
                     className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300 group"
                   >
                     <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
@@ -75,6 +82,8 @@ export default function Footer(){
                   <a
                     key={social.name}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center text-gray-400 ${social.color} transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:shadow-lg group`}
                   >
                     <social.icon className="w-5 h-5" />
@@ -90,12 +99,18 @@ export default function Footer(){
               © 2025 Amman Abua. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
+              <button 
+                onClick={() => setIsPrivacyOpen(true)}
+                className="text-gray-400 hover:text-white transition-colors duration-300"
+              >
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
+              </button>
+              <button 
+                onClick={() => setIsTermsOpen(true)}
+                className="text-gray-400 hover:text-white transition-colors duration-300"
+              >
                 Terms of Service
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -105,6 +120,10 @@ export default function Footer(){
           <div className="absolute top-1/2 left-0 w-2 h-40 bg-gray-800"></div>
           <div className="absolute top-1/4 right-0 w-2 h-56 bg-gradient-to-b from-transparent via-pink-500/60 to-transparent"></div>
         </div>
+
+        {/* Modals */}
+        <PrivacyPolicy isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />
+        <TermsOfService isOpen={isTermsOpen} onClose={() => setIsTermsOpen(false)} />
       </footer>
     )
 }

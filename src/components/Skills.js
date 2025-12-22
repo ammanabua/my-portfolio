@@ -51,52 +51,53 @@ const Skills = () => {
 
   const skills = [
     // Frontend
-    { name: 'HTML', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400/10 to-cyan-400/10', borderColor: 'border-cyan-400/30', icon: <img src='/html-5.svg' className='w-10 h-10' /> },
-    { name: 'CSS', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400/10 to-cyan-400/10', borderColor: 'border-cyan-400/30', icon: <img src='/css-3.svg' className='w-10 h-10' /> },
-    { name: 'JavaScript', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400/10 to-cyan-400/10', borderColor: 'border-cyan-400/30', icon: <img src='/javascript.svg' className='w-10 h-10' /> },
-    { name: 'React', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400/10 to-cyan-400/10', borderColor: 'border-cyan-400/30', icon: <img src='/react.svg' className='w-10 h-10' /> },
-    { name: 'Next.js', category: 'frontend', color: '#000000', bgColor: 'from-gray-800/10 to-black/10', borderColor: 'border-gray-400/30', icon: <img src='/nodejs-icon.svg' className='w-10 h-10' /> },
-    { name: 'TypeScript', category: 'frontend', color: '#3178C6', bgColor: 'from-blue-600/10 to-indigo-600/10', borderColor: 'border-blue-500/30', icon: '📘' },
-    { name: 'Tailwind CSS', category: 'frontend', color: '#06B6D4', bgColor: 'from-cyan-400/10 to-blue-400/10', borderColor: 'border-cyan-400/30', icon: <img src='/tailwindcss-icon.svg' className='w-10 h-10' /> },
+    { name: 'HTML', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400 to-cyan-400', borderColor: 'border-cyan-400', icon: <img src='/html-5.svg' className='w-10 h-10' /> },
+    { name: 'CSS', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400 to-cyan-400', borderColor: 'border-cyan-400', icon: <img src='/css-3.svg' className='w-10 h-10' /> },
+    { name: 'JavaScript', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400 to-cyan-400', borderColor: 'border-cyan-400', icon: <img src='/javascript.svg' className='w-10 h-10' /> },
+    { name: 'React', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400 to-cyan-400', borderColor: 'border-cyan-400', icon: <img src='/react.svg' className='w-10 h-10' /> },
+    { name: 'Next.js', category: 'frontend', color: '#000000', bgColor: 'from-gray-800 to-black', borderColor: 'border-gray-400', icon: <img src='/Nextjs.svg' className='w-10 h-10' /> },
+    { name: 'TypeScript', category: 'frontend', color: '#3178C6', bgColor: 'from-blue-600 to-indigo-600', borderColor: 'border-blue-500', icon: <img src='/TypeScript.svg' className='w-10 h-10' /> },
+    { name: 'Redux', category: 'frontend', color: '#3178C6', bgColor: 'from-blue-600 to-indigo-600', borderColor: 'border-blue-500', icon: <img src='/Redux.svg' className='w-10 h-10' /> },
+    { name: 'Tailwind CSS', category: 'frontend', color: '#06B6D4', bgColor: 'from-cyan-400 to-blue-400', borderColor: 'border-cyan-400', icon: <img src='/tailwindcss-icon.svg' className='w-10 h-10' /> },
 
     // Backend
-    { name: 'Java', category: 'backend', color: '#339933', bgColor: 'from-green-500/10 to-emerald-500/10', borderColor: 'border-green-500/30', icon: <img src='/java.svg' className='w-10 h-10' /> },
-    { name: 'Spring Boot', category: 'backend', color: '#339933', bgColor: 'from-green-500/10 to-emerald-500/10', borderColor: 'border-green-500/30', icon: <img src='/spring-boot.svg' className='w-10 h-10' /> },
-    { name: 'Hibernate', category: 'backend', color: '#339933', bgColor: 'from-green-500/10 to-emerald-500/10', borderColor: 'border-green-500/30', icon: <img src='/spring-boot.svg' className='w-10 h-10' /> },
-    { name: 'Node.js', category: 'backend', color: '#339933', bgColor: 'from-green-500/10 to-emerald-500/10', borderColor: 'border-green-500/30', icon: <img src='/nodejs-icon.svg' className='w-10 h-10' /> },
-    { name: 'Python', category: 'backend', color: '#3776AB', bgColor: 'from-blue-500/10 to-indigo-500/10', borderColor: 'border-blue-500/30', icon: '🐍' },
-    { name: 'Django', category: 'backend', color: '#092E20', bgColor: 'from-green-700/10 to-emerald-800/10', borderColor: 'border-green-600/30', icon: '🎯' },
-    { name: 'Express.js', category: 'backend', color: '#000000', bgColor: 'from-gray-700/10 to-black/10', borderColor: 'border-gray-500/30', icon: <img src='/express.svg' className='w-10 h-10' /> },
-    { name: 'GraphQL', category: 'backend', color: '#E10098', bgColor: 'from-pink-500/10 to-rose-500/10', borderColor: 'border-pink-500/30', icon: <img src='/graphql.svg' className='w-10 h-10' /> },
-    { name: 'PostgreSQL', category: 'backend', color: '#336791', bgColor: 'from-blue-600/10 to-indigo-700/10', borderColor: 'border-blue-600/30', icon: '🐘' },
-    { name: 'MongoDB', category: 'backend', color: '#47A248', bgColor: 'from-green-500/10 to-emerald-600/10', borderColor: 'border-green-500/30', icon: <img src='/mongodb.svg' className='w-10 h-10' /> },
-    { name: 'Redis', category: 'backend', color: '#DC382D', bgColor: 'from-red-500/10 to-rose-600/10', borderColor: 'border-red-500/30', icon: '📦' },
+    { name: 'Java', category: 'backend', color: '#339933', bgColor: 'from-green-500 to-emerald-500', borderColor: 'border-green-500', icon: <img src='/java.svg' className='w-10 h-10' /> },
+    { name: 'Spring Boot', category: 'backend', color: '#339933', bgColor: 'from-green-500 to-emerald-500', borderColor: 'border-green-500', icon: <img src='/spring-boot.svg' className='w-10 h-10' /> },
+    { name: 'Hibernate', category: 'backend', color: '#339933', bgColor: 'from-green-500 to-emerald-500', borderColor: 'border-green-500', icon: <img src='/hibernate.svg' className='w-10 h-10' /> },
+    { name: 'Node.js', category: 'backend', color: '#339933', bgColor: 'from-green-500 to-emerald-500', borderColor: 'border-green-500', icon: <img src='/nodejs-icon.svg' className='w-10 h-10' /> },
+    { name: 'Python', category: 'backend', color: '#3776AB', bgColor: 'from-blue-500 to-indigo-500', borderColor: 'border-blue-500', icon: <img src='/Python.svg' className='w-10 h-10' /> },
+    { name: 'Django', category: 'backend', color: '#092E20', bgColor: 'from-green-700 to-emerald-800', borderColor: 'border-green-600', icon: '🎯' },
+    { name: 'Express.js', category: 'backend', color: '#000000', bgColor: 'from-gray-700 to-black', borderColor: 'border-gray-500', icon: <img src='/express.svg' className='w-10 h-10' /> },
+    { name: 'GraphQL', category: 'backend', color: '#E10098', bgColor: 'from-pink-500 to-rose-500', borderColor: 'border-pink-500', icon: <img src='/graphql.svg' className='w-10 h-10' /> },
+    { name: 'PostgresSQL', category: 'backend', color: '#336791', bgColor: 'from-blue-600 to-indigo-700', borderColor: 'border-blue-600', icon: <img src='/PostgresSQL.svg' className='w-10 h-10' /> },
+    { name: 'MongoDB', category: 'backend', color: '#47A248', bgColor: 'from-green-500 to-emerald-600', borderColor: 'border-green-500', icon: <img src='/mongodb.svg' className='w-10 h-10' /> },
+    { name: 'Redis', category: 'backend', color: '#DC382D', bgColor: 'from-red-500 to-rose-600', borderColor: 'border-red-500', icon: <img src='/Redis.svg' className='w-10 h-10' /> },
 
     // Mobile
-    { name: 'React Native', category: 'mobile', color: '#61DAFB', bgColor: 'from-blue-400/10 to-cyan-400/10', borderColor: 'border-cyan-400/30', icon: '📱' },
-    { name: 'Kotlin', category: 'mobile', color: '#7F52FF', bgColor: 'from-purple-500/10 to-indigo-600/10', borderColor: 'border-purple-500/30', icon: '🤖' },
+    { name: 'React Native', category: 'mobile', color: '#61DAFB', bgColor: 'from-blue-400 to-cyan-400', borderColor: 'border-cyan-400', icon: '📱' },
+    { name: 'Kotlin', category: 'mobile', color: '#7F52FF', bgColor: 'from-purple-500 to-indigo-600', borderColor: 'border-purple-500', icon: '🤖' },
 
     // DevOps
-    { name: 'AWS', category: 'devops', color: '#FF9900', bgColor: 'from-orange-400/10 to-yellow-500/10', borderColor: 'border-orange-500/30', icon: <img src='/aws.svg' className='w-10 h-10' /> },
-    { name: 'Docker', category: 'devops', color: '#2496ED', bgColor: 'from-blue-500/10 to-cyan-500/10', borderColor: 'border-blue-500/30', icon: '🐳' },
-    { name: 'Kubernetes', category: 'devops', color: '#326CE5', bgColor: 'from-blue-600/10 to-indigo-600/10', borderColor: 'border-blue-600/30', icon: '⚙️' },
-    { name: 'Jenkins', category: 'devops', color: '#D33833', bgColor: 'from-red-500/10 to-rose-600/10', borderColor: 'border-red-500/30', icon: '🔧' },
-    { name: 'Terraform', category: 'devops', color: '#623CE4', bgColor: 'from-purple-600/10 to-indigo-700/10', borderColor: 'border-purple-600/30', icon: '🏗️' },
-    { name: 'Nginx', category: 'devops', color: '#009639', bgColor: 'from-green-600/10 to-emerald-700/10', borderColor: 'border-green-600/30', icon: '🌐' },
+    { name: 'AWS', category: 'devops', color: '#FF9900', bgColor: 'from-orange-400 to-yellow-500', borderColor: 'border-orange-500', icon: <img src='/aws.svg' className='w-10 h-10' /> },
+    { name: 'Docker', category: 'devops', color: '#2496ED', bgColor: 'from-blue-500 to-cyan-500', borderColor: 'border-blue-500', icon: <img src='/Docker.svg' className='w-10 h-10' /> },
+    { name: 'Kubernetes', category: 'devops', color: '#326CE5', bgColor: 'from-blue-600 to-indigo-600', borderColor: 'border-blue-600', icon: <img src='/Kubernetes.svg' className='w-10 h-10' /> },
+    { name: 'Jenkins', category: 'devops', color: '#D33833', bgColor: 'from-red-500 to-rose-600', borderColor: 'border-red-500', icon: '🔧' },
+    { name: 'Terraform', category: 'devops', color: '#623CE4', bgColor: 'from-purple-600 to-indigo-700', borderColor: 'border-purple-600', icon: '🏗️' },
+    { name: 'Nginx', category: 'devops', color: '#009639', bgColor: 'from-green-600 to-emerald-700', borderColor: 'border-green-600', icon: '🌐' },
 
     // Design
-    { name: 'Figma', category: 'design', color: '#F24E1E', bgColor: 'from-red-500/10 to-orange-500/10', borderColor: 'border-red-500/30', icon: <img src='/figma.svg' className='w-10 h-10' /> },
-    { name: 'Adobe XD', category: 'design', color: '#FF61F6', bgColor: 'from-pink-500/10 to-fuchsia-500/10', borderColor: 'border-pink-500/30', icon: '✨' },
-    { name: 'Sketch', category: 'design', color: '#F7B500', bgColor: 'from-yellow-500/10 to-orange-500/10', borderColor: 'border-yellow-500/30', icon: '💎' },
-    { name: 'Photoshop', category: 'design', color: '#31A8FF', bgColor: 'from-blue-500/10 to-cyan-500/10', borderColor: 'border-blue-500/30', icon: '🖼️' },
+    { name: 'Figma', category: 'design', color: '#F24E1E', bgColor: 'from-red-500 to-orange-500', borderColor: 'border-red-500', icon: <img src='/figma.svg' className='w-10 h-10' /> },
+    { name: 'Adobe XD', category: 'design', color: '#FF61F6', bgColor: 'from-pink-500 to-fuchsia-500', borderColor: 'border-pink-500', icon: '✨' },
+    { name: 'Sketch', category: 'design', color: '#F7B500', bgColor: 'from-yellow-500 to-orange-500', borderColor: 'border-yellow-500', icon: '💎' },
+    { name: 'Photoshop', category: 'design', color: '#31A8FF', bgColor: 'from-blue-500 to-cyan-500', borderColor: 'border-blue-500', icon: '🖼️' },
 
     // Tools
-    { name: 'VS Code', category: 'tools', color: '#007ACC', bgColor: 'from-blue-600/10 to-indigo-600/10', borderColor: 'border-blue-600/30', icon: '📝' },
-    { name: 'Git', category: 'tools', color: '#F05032', bgColor: 'from-red-500/10 to-orange-500/10', borderColor: 'border-red-500/30', icon: <img src='/git-icon.svg' className='w-10 h-10' /> },
-    { name: 'GitHub', category: 'tools', color: '#181717', bgColor: 'from-gray-700/10 to-black/10', borderColor: 'border-gray-500/30', icon: <img src='/github-icon.svg' className='w-10 h-10' /> },
-    { name: 'Postman', category: 'tools', color: '#FF6C37', bgColor: 'from-orange-500/10 to-red-500/10', borderColor: 'border-orange-500/30', icon: '📮' },
-    { name: 'Notion', category: 'tools', color: '#000000', bgColor: 'from-gray-800/10 to-black/10', borderColor: 'border-gray-400/30', icon: '📓' },
-    { name: 'Slack', category: 'tools', color: '#4A154B', bgColor: 'from-purple-800/10 to-indigo-900/10', borderColor: 'border-purple-600/30', icon: '💬' }
+    { name: 'VS Code', category: 'tools', color: '#007ACC', bgColor: 'from-blue-600 to-indigo-600', borderColor: 'border-blue-600', icon: <img src='/vscode.svg' className='w-10 h-10' /> },
+    { name: 'Git', category: 'tools', color: '#F05032', bgColor: 'from-red-500 to-orange-500', borderColor: 'border-red-500', icon: <img src='/git-icon.svg' className='w-10 h-10' /> },
+    { name: 'GitHub', category: 'tools', color: '#181717', bgColor: 'from-gray-700 to-black', borderColor: 'border-gray-500', icon: <img src='/github-icon.svg' className='w-10 h-10' /> },
+    { name: 'Postman', category: 'tools', color: '#FF6C37', bgColor: 'from-orange-500 to-red-500', borderColor: 'border-orange-500', icon: <img src='/Postman.svg' className='w-10 h-10' /> },
+    { name: 'Notion', category: 'tools', color: '#000000', bgColor: 'from-gray-800 to-black', borderColor: 'border-gray-400', icon: '📓' },
+    { name: 'Slack', category: 'tools', color: '#4A154B', bgColor: 'from-purple-800 to-indigo-900', borderColor: 'border-purple-600', icon: '💬' }
   ];
 
   const filteredSkills = activeCategory === 'all' 
@@ -112,7 +113,7 @@ const Skills = () => {
       onMouseEnter={() => setHoveredSkill(skill.name)}
       onMouseLeave={() => setHoveredSkill(null)}
     >
-      <div className={`relative bg-gradient-to-br ${skill.bgColor} rounded-2xl border ${skill.borderColor} p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 cursor-pointer group-hover:border-opacity-60`}>
+      <div className={`relative bg-gradient-to-br ${skill.bgColor} rounded-2xl border ${skill.borderColor} p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500 cursor-pointer group-hover:border-opacity-60`}>
         {/* Glow effect */}
         <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${skill.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl -z-10`} />
         
@@ -144,7 +145,7 @@ const Skills = () => {
   );
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <section id="experience" ref={sectionRef} className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" />
@@ -177,7 +178,7 @@ const Skills = () => {
         <div className={`flex justify-center mb-16 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`} style={{ transitionDelay: '200ms' }}>
-          <div className="flex flex-wrap gap-2 p-2 bg-slate-800/30 rounded-3xl border border-white/10 backdrop-blur-sm">
+          <div className="flex flex-wrap gap-2 p-2 bg-slate-800 rounded-3xl border border-white backdrop-blur-sm">
             {skillCategories.map(({ id, label, icon: Icon, color }) => (
               <button
                 key={id}
@@ -226,7 +227,7 @@ const Skills = () => {
             { label: 'Lines of Code', value: '1M+', icon: Terminal }
           ].map(({ label, value, icon: Icon }, index) => (
             <div key={label} className="text-center group">
-              <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-white/10 p-6 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300 hover:scale-105">
+              <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-white p-6 backdrop-blur-sm hover:border-purple-500 transition-all duration-300 hover:scale-105">
                 <Icon className="w-8 h-8 text-amber-300 mx-auto mb-3 group-hover:text-cyan-400 transition-colors" />
                 <div className="text-3xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                   {value}
@@ -243,7 +244,7 @@ const Skills = () => {
         <div className={`text-center mt-16 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`} style={{ transitionDelay: '1000ms' }}>
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full border border-purple-500/20 text-amber-300">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full border border-purple-500/20 text-amber-300">
             <Zap className="w-4 h-4" />
             <span className="text-sm font-medium">Always learning and expanding the toolkit</span>
             <Zap className="w-4 h-4" />
