@@ -2,49 +2,41 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
   "dependencies": {
-    "@craco/craco": "^5.9.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.16",
-    "@headlessui/react": "^1.6.5",
-    "@heroicons/react": "^1.0.1",
-    "@mui/material": "^5.13.7",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.1.1",
+    "@mui/material": "^5.15.6",
     "axios": "^1.11.0",
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "framer-motion": "4.1.17",
-    "ityped": "^1.0.3",
+    "framer-motion": "^11.0.3",
     "lucide-react": "^0.536.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "2.1.8",
-    "react-social-icons": "^5.5.1",
-    "react-transition-group": "^4.4.2"
-  },
-  "scripts": {
-    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "react-social-icons": "^6.16.0",
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "postcss": "^7.0.36",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/react-transition-group": "^4.4.10",
+    "typescript": "^5.7.2",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.1.0"
+  }
 }
