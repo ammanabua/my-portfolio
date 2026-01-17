@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
   images: {
-    domains: ['images.unsplash.com', 'randomuser.me'],
+    unoptimized: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
