@@ -1,5 +1,5 @@
 import React from "react";
-import { Zap, Globe, Mail, Calendar, MapPin, Linkedin, Github, Twitter, FileText, Video, Coffee, Database, Smartphone, Cloud, Palette, Wrench } from "lucide-react";
+import { Zap, Globe, Mail, Calendar, MapPin, Linkedin, Github, Twitter, FileText, Video, Coffee, Database, Cloud, Palette, Wrench } from "lucide-react";
 
 
 
@@ -16,7 +16,7 @@ export const webProjects = [
     features: ['Context-Aware AI Chat', 'Serverless Architecture', 'API Integration', 'Mobile Responsive'],
     demoUrl: 'https://master.d9r77d4102d54.amplifyapp.com/',
     githubUrl: 'https://www.github.com/ammanabua/ScholarsKit',
-    gradient: 'from-purple-500 to-indigo-600'
+    gradient: 'from-gray-700 to-indigo-600'
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ export const webProjects = [
     metrics: { uptime: '99.9%', performance: '95' },
     features: ['AI -Driven Insights', 'Secure Payment Processing', 'Real-time ESG Analytics', 'Data Visualization', 'API Integration', 'Mobile Responsive'],
     demoUrl: 'https://www.greenbaq.ai/',
-    gradient: 'from-green-200 to-emerald-300'
+    gradient: 'from-gray-700 to-emerald-300'
   },
   {
     id: 3,
@@ -37,12 +37,13 @@ export const webProjects = [
     description: 'Developed multi-step onboarding flows and supporting backend services with secure authentication, validation, and conditional logic. Emphasized clean APIs, async workflows, and production-ready state management. I also integrated AI workflows to automate user interview preparation and personalized content generation, enhancing user engagement and platform value.',
     image: '/pc.png',
     tech: ['Next.js', 'TypeScript', 'Chartjs', 'Firebase', 'Claude LLM'],
+    tools: [{title: 'HTML', image: './html-5.svg'}, {title: 'React', image: './react.svg'}, {title: "Tailwind CSS", image: './tailwindcss-icon.svg'}, {title: "Node.js", image: './nodejs-icon.svg'}, {title: "Git", image: './git-icon.svg'}],
     category: 'Full-Stack',
     status: 'Live',
     metrics: { uptime: '99.9%', performance: '95' },
     features: ['Real-time Analytics for Job Applicants', 'Data Visualization', 'API Integration', 'AI integrated interview prep'],
     demoUrl: 'https://www.purposeconnect.io/',
-    gradient: 'from-blue-200 to-cyan-300'
+    gradient: 'from-gray-700 to-cyan-300'
   },
   {
     id: 4,
@@ -50,13 +51,14 @@ export const webProjects = [
     description: 'A marketplace and collaborative platform for digital artists and designers to create, share, and monetize their digital assets and interactive experiences in a virtual environment.',
     image: '/entities.png',
     tech: ['Next.js', 'TypeScript', 'Stripe', 'Chartjs', 'Firebase'],
+    tools: [{title: 'HTML', image: './html-5.svg'}, {title: 'React', image: './react.svg'}, {title: "Tailwind CSS", image: './tailwindcss-icon.svg'}, {title: "Node.js", image: './nodejs-icon.svg'}, {title: "Git", image: './git-icon.svg'}],
     category: 'Full-Stack',
     status: 'Live',
     metrics: { uptime: '99.9%', performance: '95' },
     features: ['Real-time Analytics', 'Data Visualization', 'API Integration', 'Mobile Responsive'],
     demoUrl: 'https://www.entities.studio/',
     githubUrl: 'https://www.github.com/ammanabua/entities-studio',
-    gradient: 'from-yellow-200 to-amber-300'
+    gradient: 'from-gray-700 to-amber-300'
   },
   // {
   //   id: 3,
@@ -322,64 +324,64 @@ export const blogs = [
 
 
 export const skillCategories = [
-  { id: 'all', label: 'Stack', icon: Zap, color: 'from-purple-500 to-cyan-500' },
-  { id: 'frontend', label: 'Frontend', icon: Globe, color: 'from-blue-500 to-cyan-500' },
-  { id: 'backend', label: 'Backend', icon: Database, color: 'from-green-500 to-emerald-500' },
+  { id: 'all', label: 'Stack', icon: Zap },
+  { id: 'frontend', label: 'Frontend', icon: Globe },
+  { id: 'backend', label: 'Backend', icon: Database },
   // { id: 'mobile', label: 'Mobile', icon: Smartphone, color: 'from-purple-500 to-pink-500' },
-  { id: 'devops', label: 'DevOps', icon: Cloud, color: 'from-orange-500 to-red-500' },
-  { id: 'design', label: 'Design', icon: Palette, color: 'from-pink-500 to-rose-500' },
-  { id: 'tools', label: 'Tools', icon: Wrench, color: 'from-gray-500 to-slate-600' }
+  { id: 'devops', label: 'DevOps', icon: Cloud },
+  { id: 'design', label: 'Design', icon: Palette },
+  { id: 'tools', label: 'Tools', icon: Wrench }
 ];
 
 export const skills = [
   //Featured Row
-  { name: 'React', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400 to-cyan-400', borderColor: 'border-cyan-400', icon: <img src='/react.svg' className='w-10 h-10' /> },
-  { name: 'Next.js', category: 'frontend', color: '#000000', bgColor: 'from-gray-800 to-black', borderColor: 'border-gray-400', icon: <img src='/Nextjs.svg' className='w-10 h-10' /> },
-  { name: 'TypeScript', category: 'frontend', color: '#3178C6', bgColor: 'from-blue-600 to-indigo-600', borderColor: 'border-blue-500', icon: <img src='/TypeScript.svg' className='w-10 h-10' /> },
-  { name: 'Node.js', category: 'backend', color: '#339933', bgColor: 'from-green-500 to-emerald-500', borderColor: 'border-green-500', icon: <img src='/nodejs-icon.svg' className='w-10 h-10' /> },
-  { name: 'Python', category: 'backend', color: '#3776AB', bgColor: 'from-blue-500 to-indigo-500', borderColor: 'border-blue-500', icon: <img src='/Python.svg' className='w-10 h-10' /> },
-  { name: 'AWS', category: 'devops', color: '#FF9900', bgColor: 'from-orange-400 to-yellow-500', borderColor: 'border-orange-500', icon: <img src='/aws.svg' className='w-10 h-10' /> },
-  { name: 'GitHub', category: 'tools', color: '#181717', bgColor: 'from-gray-700 to-black', borderColor: 'border-gray-500', icon: <img src='/github-icon.svg' className='w-10 h-10' /> },
-  { name: 'Postman', category: 'tools', color: '#FF6C37', bgColor: 'from-orange-500 to-red-500', borderColor: 'border-orange-500', icon: <img src='/Postman.svg' className='w-10 h-10' /> },
+  { name: 'React', category: 'frontend', color: '#61DAFB', bgColor: 'bg-blue-500', borderColor: 'border-cyan-400', icon: <img src='/react.svg' className='w-10 h-10' /> },
+  { name: 'Next.js', category: 'frontend', color: '#000000', bgColor: 'bg-gray-900', borderColor: 'border-gray-600', icon: <img src='/Nextjs.svg' className='w-10 h-10' /> },
+  { name: 'TypeScript', category: 'frontend', color: '#3178C6', bgColor: 'bg-blue-600', borderColor: 'border-blue-500', icon: <img src='/TypeScript.svg' className='w-10 h-10' /> },
+  { name: 'Node.js', category: 'backend', color: '#339933', bgColor: 'bg-green-600', borderColor: 'border-green-500', icon: <img src='/nodejs-icon.svg' className='w-10 h-10' /> },
+  { name: 'Python', category: 'backend', color: '#3776AB', bgColor: 'bg-blue-600', borderColor: 'border-blue-500', icon: <img src='/Python.svg' className='w-10 h-10' /> },
+  { name: 'AWS', category: 'devops', color: '#FF9900', bgColor: 'bg-amber-600', borderColor: 'border-orange-400', icon: <img src='/aws.svg' className='w-10 h-10' /> },
+  { name: 'GitHub', category: 'tools', color: '#181717', bgColor: 'bg-gray-900', borderColor: 'border-gray-600', icon: <img src='/github-icon.svg' className='w-10 h-10' /> },
+  { name: 'Postman', category: 'tools', color: '#FF6C37', bgColor: 'bg-amber-600', borderColor: 'border-orange-500', icon: <img src='/Postman.svg' className='w-10 h-10' /> },
   
   // Frontend
-  { name: 'HTML', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400 to-cyan-400', borderColor: 'border-cyan-400', icon: <img src='/html-5.svg' className='w-10 h-10' /> },
-  { name: 'CSS', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400 to-cyan-400', borderColor: 'border-cyan-400', icon: <img src='/css-3.svg' className='w-10 h-10' /> },
-  { name: 'JavaScript', category: 'frontend', color: '#61DAFB', bgColor: 'from-blue-400 to-cyan-400', borderColor: 'border-cyan-400', icon: <img src='/javascript.svg' className='w-10 h-10' /> },
-  { name: 'Redux', category: 'frontend', color: '#3178C6', bgColor: 'from-blue-600 to-indigo-600', borderColor: 'border-blue-500', icon: <img src='/Redux.svg' className='w-10 h-10' /> },
-  { name: 'Tailwind CSS', category: 'frontend', color: '#06B6D4', bgColor: 'from-cyan-400 to-blue-400', borderColor: 'border-cyan-400', icon: <img src='/tailwindcss-icon.svg' className='w-10 h-10' /> },
+  { name: 'HTML', category: 'frontend', color: '#E34F26', bgColor: 'bg-amber-600', borderColor: 'border-orange-500', icon: <img src='/html-5.svg' className='w-10 h-10' /> },
+  { name: 'CSS', category: 'frontend', color: '#1572B6', bgColor: 'bg-blue-600', borderColor: 'border-blue-500', icon: <img src='/css-3.svg' className='w-10 h-10' /> },
+  { name: 'JavaScript', category: 'frontend', color: '#F7DF1E', bgColor: 'bg-yellow-400', borderColor: 'border-yellow-400', icon: <img src='/javascript.svg' className='w-10 h-10' /> },
+  { name: 'Redux', category: 'frontend', color: '#764ABC', bgColor: 'bg-purple-600', borderColor: 'border-purple-500', icon: <img src='/Redux.svg' className='w-10 h-10' /> },
+  { name: 'Tailwind CSS', category: 'frontend', color: '#06B6D4', bgColor: 'bg-blue-500', borderColor: 'border-cyan-400', icon: <img src='/tailwindcss-icon.svg' className='w-10 h-10' /> },
 
   // Backend
   // { name: 'Java', category: 'backend', color: '#339933', bgColor: 'from-green-500 to-emerald-500', borderColor: 'border-green-500', icon: <img src='/java.svg' className='w-10 h-10' /> },
   // { name: 'Spring Boot', category: 'backend', color: '#339933', bgColor: 'from-green-500 to-emerald-500', borderColor: 'border-green-500', icon: <img src='/spring-boot.svg' className='w-10 h-10' /> },
   // { name: 'Hibernate', category: 'backend', color: '#339933', bgColor: 'from-green-500 to-emerald-500', borderColor: 'border-green-500', icon: <img src='/hibernate.svg' className='w-10 h-10' /> },
   // { name: 'Django', category: 'backend', color: '#092E20', bgColor: 'from-green-700 to-emerald-800', borderColor: 'border-green-600', icon: '🎯' },
-  { name: 'Express.js', category: 'backend', color: '#000000', bgColor: 'from-gray-700 to-black', borderColor: 'border-gray-500', icon: <img src='/express.svg' className='w-10 h-10' /> },
-  { name: 'GraphQL', category: 'backend', color: '#E10098', bgColor: 'from-pink-500 to-rose-500', borderColor: 'border-pink-500', icon: <img src='/graphql.svg' className='w-10 h-10' /> },
-  { name: 'PostgresSQL', category: 'backend', color: '#336791', bgColor: 'from-blue-600 to-indigo-700', borderColor: 'border-blue-600', icon: <img src='/PostgresSQL.svg' className='w-10 h-10' /> },
-  { name: 'MongoDB', category: 'backend', color: '#47A248', bgColor: 'from-green-500 to-emerald-600', borderColor: 'border-green-500', icon: <img src='/mongodb.svg' className='w-10 h-10' /> },
-  { name: 'Redis', category: 'backend', color: '#DC382D', bgColor: 'from-red-500 to-rose-600', borderColor: 'border-red-500', icon: <img src='/Redis.svg' className='w-10 h-10' /> },
+  { name: 'Express.js', category: 'backend', color: '#000000', bgColor: 'bg-gray-800', borderColor: 'border-gray-600', icon: <img src='/express.svg' className='w-10 h-10' /> },
+  { name: 'GraphQL', category: 'backend', color: '#E10098', bgColor: 'bg-pink-600', borderColor: 'border-pink-500', icon: <img src='/graphql.svg' className='w-10 h-10' /> },
+  { name: 'PostgresSQL', category: 'backend', color: '#336791', bgColor: 'bg-blue-700', borderColor: 'border-blue-600', icon: <img src='/PostgresSQL.svg' className='w-10 h-10' /> },
+  { name: 'MongoDB', category: 'backend', color: '#47A248', bgColor: 'bg-green-600', borderColor: 'border-green-500', icon: <img src='/mongodb.svg' className='w-10 h-10' /> },
+  { name: 'Redis', category: 'backend', color: '#DC382D', bgColor: 'bg-red-600', borderColor: 'border-red-500', icon: <img src='/Redis.svg' className='w-10 h-10' /> },
 
   // Mobile
   // { name: 'React Native', category: 'mobile', color: '#61DAFB', bgColor: 'from-blue-400 to-cyan-400', borderColor: 'border-cyan-400', icon: '📱' },
   // { name: 'Kotlin', category: 'mobile', color: '#7F52FF', bgColor: 'from-purple-500 to-indigo-600', borderColor: 'border-purple-500', icon: '🤖' },
 
   // DevOps
-  { name: 'Docker', category: 'devops', color: '#2496ED', bgColor: 'from-blue-500 to-cyan-500', borderColor: 'border-blue-500', icon: <img src='/Docker.svg' className='w-10 h-10' /> },
-  { name: 'Kubernetes', category: 'devops', color: '#326CE5', bgColor: 'from-blue-600 to-indigo-600', borderColor: 'border-blue-600', icon: <img src='/Kubernetes.svg' className='w-10 h-10' /> },
+  { name: 'Docker', category: 'devops', color: '#2496ED', bgColor: 'bg-blue-500', borderColor: 'border-blue-400', icon: <img src='/Docker.svg' className='w-10 h-10' /> },
+  { name: 'Kubernetes', category: 'devops', color: '#326CE5', bgColor: 'bg-blue-600', borderColor: 'border-blue-500', icon: <img src='/Kubernetes.svg' className='w-10 h-10' /> },
   // { name: 'Jenkins', category: 'devops', color: '#D33833', bgColor: 'from-red-500 to-rose-600', borderColor: 'border-red-500', icon: '🔧' },
   // { name: 'Terraform', category: 'devops', color: '#623CE4', bgColor: 'from-purple-600 to-indigo-700', borderColor: 'border-purple-600', icon: '🏗️' },
-  { name: 'Nginx', category: 'devops', color: '#009639', bgColor: 'from-green-600 to-emerald-700', borderColor: 'border-green-600', icon: '🌐' },
+  { name: 'Nginx', category: 'devops', color: '#009639', bgColor: 'bg-green-700', borderColor: 'border-green-600', icon: '🌐' },
 
   // Design
-  { name: 'Figma', category: 'design', color: '#F24E1E', bgColor: 'from-red-500 to-orange-500', borderColor: 'border-red-500', icon: <img src='/figma.svg' className='w-10 h-10' /> },
+  { name: 'Figma', category: 'design', color: '#F24E1E', bgColor: 'bg-amber-600', borderColor: 'border-amber-500', icon: <img src='/figma.svg' className='w-10 h-10' /> },
   // { name: 'Adobe XD', category: 'design', color: '#FF61F6', bgColor: 'from-pink-500 to-fuchsia-500', borderColor: 'border-pink-500', icon: '✨' },
   // { name: 'Sketch', category: 'design', color: '#F7B500', bgColor: 'from-yellow-500 to-orange-500', borderColor: 'border-yellow-500', icon: '💎' },
   // { name: 'Photoshop', category: 'design', color: '#31A8FF', bgColor: 'from-blue-500 to-cyan-500', borderColor: 'border-blue-500', icon: '🖼️' },
 
   // Tools
-  { name: 'VS Code', category: 'tools', color: '#007ACC', bgColor: 'from-blue-600 to-indigo-600', borderColor: 'border-blue-600', icon: <img src='/vscode.svg' className='w-10 h-10' /> },
-  { name: 'Git', category: 'tools', color: '#F05032', bgColor: 'from-red-500 to-orange-500', borderColor: 'border-red-500', icon: <img src='/git-icon.svg' className='w-10 h-10' /> },
+  { name: 'VS Code', category: 'tools', color: '#007ACC', bgColor: 'bg-blue-600', borderColor: 'border-blue-500', icon: <img src='/vscode.svg' className='w-10 h-10' /> },
+  { name: 'Git', category: 'tools', color: '#F05032', bgColor: 'bg-amber-600', borderColor: 'border-amber-500', icon: <img src='/git-icon.svg' className='w-10 h-10' /> },
   // { name: 'Notion', category: 'tools', color: '#000000', bgColor: 'from-gray-800 to-black', borderColor: 'border-gray-400', icon: '📓' },
   // { name: 'Slack', category: 'tools', color: '#4A154B', bgColor: 'from-purple-800 to-indigo-900', borderColor: 'border-purple-600', icon: '💬' }
 ];
@@ -392,9 +394,6 @@ export const contactMethods = [
     subtitle: 'Quick Response',
     value: 'ammanabua@gmail.com',
     description: 'I typically respond within 2-4 hours during business days',
-    color: 'from-gray-700 to-gray-900',
-    bgColor: 'bg-emerald-400',
-    borderColor: 'border-transparent',
     action: 'Send Email',
     responseTime: '2-4 hours',
     url: 'mailto:ammanabua@gmail.com'
@@ -406,9 +405,6 @@ export const contactMethods = [
     subtitle: '30min Consultation',
     value: 'Free Strategy Call',
     description: 'Let\'s discuss your project goals and technical requirements',
-    color: 'from-gray-700 to-gray-900',
-    bgColor: 'bg-blue-500',
-    borderColor: 'border-transparent',
     action: 'Book Now',
     responseTime: 'Next available',
     url: 'https://calendly.com/ammanabua/30min'
@@ -420,9 +416,6 @@ export const contactMethods = [
     subtitle: 'D(M)V Area',
     value: 'Coffee & Code',
     description: 'Available for local meetups and collaboration sessions',
-    color: 'from-gray-700 to-gray-900',
-    bgColor: 'bg-amber-500',
-    borderColor: 'border-transparent',
     action: 'Arrange Meeting',
     responseTime: 'Flexible',
     url: 'https://calendly.com/ammanabua/30min'
@@ -437,7 +430,7 @@ export const socialLinks = [
 ];
 
 export const quickActions = [
-  { icon: FileText, label: 'View Resume', color: 'from-blue-500 to-purple-500', url: '/cv.pdf' },
-  { icon: Video, label: 'Video Call', color: 'from-red-500 to-pink-500', url: 'https://calendly.com/ammanabua/30min' },
-  { icon: Coffee, label: 'Coffee Chat', color: 'from-yellow-500 to-amber-500', url: 'https://calendly.com/ammanabua/30min' }
+  { icon: FileText, label: 'View Resume', color: 'blue-500', url: '/cv.pdf' },
+  { icon: Video, label: 'Video Call', color: 'red-500', url: 'https://calendly.com/ammanabua/30min' },
+  { icon: Coffee, label: 'Coffee Chat', color: 'yellow-500', url: 'https://calendly.com/ammanabua/30min' }
 ];

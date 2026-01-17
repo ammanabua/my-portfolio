@@ -156,28 +156,28 @@ const Contact = () => {
                 {contactMethods.map((method, index) => (
                   <div
                     key={method.id}
-                    className={`group relative ${method.bgColor} rounded-2xl border ${method.borderColor} p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 cursor-pointer`}
+                    className={`group relative bg-gray-300 rounded-2xl border p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 cursor-pointer`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                     onMouseEnter={() => setActiveCard(method.id)}
                     onMouseLeave={() => setActiveCard(null)}
                   >
                     {/* Glow effect */}
                     {activeCard === method.id && (
-                      <div className={`absolute inset-0 rounded-2xl ${method.bgColor} opacity-50 blur-xl -z-10`} />
+                      <div className={`absolute inset-0 rounded-2xl bg-gray-400 opacity-50 blur-xl -z-10`} />
                     )}
                     <a href={method.url} target='_blank' rel='noreferrer noopener' className='absolute inset-0 w-full h-full z-10'></a>
                     <div className="flex items-start gap-4">
-                      <div className={`p-3 rounded-xl bg-gradient-to-r ${method.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                        <method.icon className="w-6 h-6 text-white" />
+                      <div className={`p-3 rounded-xl bg-gray-300 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                        <method.icon className="w-6 h-6 text-gray-700" />
                       </div>
                       
                       <div className="flex-1">
-                        <h4 className="text-white font-semibold mb-1 group-hover:text-purple-200 transition-colors">
+                        <h4 className="text-gray-700 font-semibold mb-1 group-hover:text-gray-600 transition-colors">
                           {method.title}
                         </h4>
-                        <p className="text-purple-300 text-sm mb-2">{method.subtitle}</p>
-                        <p className="text-white font-medium mb-2">{method.value}</p>
-                        <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                        <p className="text-gray-500 text-sm mb-2">{method.subtitle}</p>
+                        <p className="text-gray-500 font-medium mb-2">{method.value}</p>
+                        <p className="text-gray-500 text-sm leading-relaxed mb-3">
                           {method.description}
                         </p>
                         
@@ -206,7 +206,7 @@ const Contact = () => {
                       href={action.url}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className={`group p-4 bg-gradient-to-r ${action.color} rounded-xl text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg`}
+                      className={`group p-4 bg-${action.color} rounded-xl text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg`}
                     >
                       <action.icon className="w-5 h-5 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                       <span className="text-sm">{action.label}</span>

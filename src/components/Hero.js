@@ -37,6 +37,15 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const scrollToSection = (e, href) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated background elements */}
@@ -91,17 +100,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-300">
             Hi, I'm <span className="text-amber-400">Amman</span><span className='text-red-300'>.</span>
           </h1>
-          {/* <div className="flex items-center justify-center gap-2 text-xl md:text-2xl text-gray-300">
-            <span>Full-Stack Developer specializing in</span>
-            <span 
-              className="font-semibold text-transparent bg-amber-500 bg-clip-text min-w-[120px] text-left transition-all duration-500"
-              key={currentSkillIndex}
-            >
-              {skills[currentSkillIndex]}
-            </span>
-          </div> */}
         </div>
-
         {/* Description */}
         <div 
           className={`mb-8 max-w-2xl transition-all duration-1000 ${
@@ -121,16 +120,16 @@ const Hero = () => {
           }`}
           style={{ transitionDelay: '800ms' }}
         >
-          <button className="group relative px-8 py-3 bg-amber-400 rounded-full text-slate-800 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 hover:bg-gray-300 hover:text-gray-800">
+          <button onClick={(e) => scrollToSection(e, '#projects')}className="group relative px-8 py-3 bg-amber-400 rounded-full text-slate-800 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 hover:bg-gray-300 hover:text-gray-800">
             <span className="relative z-10">View My Work</span>
           </button>
           
-          <button className="group px-8 py-3 border-2 border-gray-800 rounded-full text-white font-semibold transition-all duration-300 bg-gray-800 hover:border-gray-300 hover:bg-gray-300 hover:text-gray-800 hover:bg-gray-300 hover:scale-105">
+          <a href="mailto: ammanabua@gmail.com" className="group px-8 py-3 border-2 border-gray-800 rounded-full text-white font-semibold transition-all duration-300 bg-gray-800 hover:border-gray-300 hover:bg-gray-300 hover:text-gray-800 hover:bg-gray-300 hover:scale-105">
             <span className="flex items-center gap-2">
               <Mail className="w-5 h-5" />
               Get In Touch
             </span>
-          </button>
+          </a>
         </div>
 
         {/* Social links */}

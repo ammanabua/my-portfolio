@@ -1,34 +1,29 @@
 import React, { useState } from 'react';
 
-import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, User, Briefcase, MessageCircle } from 'lucide-react';
+import { Github, Linkedin, Mail, Code, User, Briefcase, MessageCircle } from 'lucide-react';
 import PrivacyPolicy from './PrivacyPolicy';
 import TermsOfService from './TermsOfService';
 
 
 export default function Footer(){
 
-    const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
-    const [isTermsOpen, setIsTermsOpen] = useState(false);
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
 
-    const navItems = [
-        { name: 'About', href: '#about', icon: User },
-        { name: 'Projects', href: '#projects', icon: Code },
-        { name: 'Experience', href: '#experience', icon: Briefcase },
-        { name: 'Contact', href: '#contact', icon: MessageCircle },
-      ];
-    
-      const socialLinks = [
-        { name: 'GitHub', href: 'https://www.github.com/ammanabua', icon: Github, color: 'hover:text-purple-400' },
-        { name: 'LinkedIn', href: 'https://www.linkedin.com/in/amman-abua', icon: Linkedin, color: 'hover:text-blue-400' },
-        { name: 'Email', href: 'mailto:amman.abua93@gmail.com', icon: Mail, color: 'hover:text-green-400' },
-      ];
+  const navItems = [
+    { name: 'About', href: '#about', icon: User },
+    { name: 'Projects', href: '#projects', icon: Code },
+    { name: 'Experience', href: '#experience', icon: Briefcase },
+    { name: 'Contact', href: '#contact', icon: MessageCircle },
+  ];
+  
+  const socialLinks = [
+    { name: 'GitHub', href: 'https://www.github.com/ammanabua', icon: Github, color: 'hover:text-purple-400' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/amman-abua', icon: Linkedin, color: 'hover:text-blue-400' },
+    { name: 'Email', href: 'mailto:ammanabua@gmail.com', icon: Mail, color: 'hover:text-green-400' },
+  ];
     
     return(
-        // <footer
-        // className="bg-gray-800 bottom-0 z-10 py-5">
-        //     <p className="text-center">Copyright<sup>&copy;</sup> {new Date().getFullYear()} Amman Abua &reg; </p>
-        // </footer>
-
       <footer className="relative bg-slate-900/50 backdrop-blur-lg border-t border-white/10">
         {/* Gradient Orbs */}
         <div className="absolute top-0 left-1/4 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl"></div>
@@ -94,7 +89,7 @@ export default function Footer(){
           {/* Bottom Bar */}
           <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2025 Amman Abua. All rights reserved.
+              © {new Date().getFullYear()} Amman Abua. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <button 

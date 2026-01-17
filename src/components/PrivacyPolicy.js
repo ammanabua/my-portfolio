@@ -10,7 +10,7 @@ export default function PrivacyPolicy({ isOpen, onClose }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm overflow-y-auto"
+          className="fixed inset-0 z-50 bg-black backdrop-blur-sm overflow-y-auto"
           onClick={onClose}
         >
           <div className="min-h-full py-8 px-4 flex items-start justify-center">
@@ -154,12 +154,12 @@ export default function PrivacyPolicy({ isOpen, onClose }) {
                   <Mail className="w-5 h-5 text-blue-400" />
                   <h3 className="text-xl font-semibold text-white">Contact Me</h3>
                 </div>
-                <div className="bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl p-6 border border-purple-500">
+                <div className="bg-purple-500 rounded-xl p-6 border border-purple-500">
                   <p className="text-gray-300 leading-relaxed">
                     If you have any questions about this Privacy Policy or wish to exercise your rights, 
                     please contact me at:{' '}
-                    <a href="mailto:amman.abua93@gmail.com" className="text-purple-400 hover:text-purple-300 transition-colors">
-                      amman.abua93@gmail.com
+                    <a href="mailto:ammanabua@gmail.com" className="text-gray-700 hover:text-gray-900 transition-colors">
+                      ammanabua@gmail.com
                     </a>
                   </p>
                 </div>

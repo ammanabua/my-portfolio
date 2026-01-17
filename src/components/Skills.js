@@ -61,31 +61,36 @@ const Skills = () => {
       onMouseEnter={() => setHoveredSkill(skill.name)}
       onMouseLeave={() => setHoveredSkill(null)}
     >
-      <div className={`relative bg-gradient-to-br ${skill.bgColor} rounded-2xl border ${skill.borderColor} p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500 cursor-pointer group-hover:border-opacity-60`}>
-        {/* Glow effect */}
-        <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${skill.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl -z-10`} />
+      <div className={`relative ${skill.bgColor} rounded-xl border-4 ${skill.borderColor} p-6 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:-translate-y-2 cursor-pointer overflow-hidden`}>
+        {/* Bold accent bar */}
+        <div className={`absolute top-0 left-0 right-0 h-1.5 ${skill.borderColor.replace('border-', 'bg-')} opacity-80`} />
+        
+        {/* Glow effect on hover */}
+        <div className={`absolute inset-0 ${skill.bgColor} opacity-0 group-hover:opacity-40 transition-opacity duration-300 blur-2xl -z-10`} />
         
         {/* Icon/Logo */}
-        <div className="flex flex-col items-center text-center">
-          <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-            {skill.icon}
+        <div className="flex flex-col items-center text-center relative z-10">
+          <div className="mb-4 p-3 bg-white rounded-xl backdrop-blur-sm group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300 shadow-lg">
+            <div className="text-4xl">
+              {skill.icon}
+            </div>
           </div>
           
           {/* Skill name */}
-          <h3 className="text-white font-semibold text-sm group-hover:text-purple-200 transition-colors">
+          <h3 className="text-white font-bold text-sm tracking-wide drop-shadow-lg">
             {skill.name}
           </h3>
-          
-          {/* Animated underline */}
-          <div className="w-0 h-0.5 bg-gradient-to-r from-purple-400 to-cyan-400 group-hover:w-full transition-all duration-300 mt-2 rounded-full" />
         </div>
 
-        {/* Floating particles effect */}
+        {/* Corner accent */}
         {hoveredSkill === skill.name && (
           <>
-            <div className="absolute top-2 right-2 w-1 h-1 bg-purple-400 rounded-full animate-ping" />
-            <div className="absolute bottom-3 left-3 w-1 h-1 bg-cyan-400 rounded-full animate-ping animation-delay-300" />
-            <div className="absolute top-1/2 left-1 w-0.5 h-0.5 bg-pink-400 rounded-full animate-ping animation-delay-500" />
+            <div className="absolute top-0 right-0 w-8 h-8">
+              <div className={`absolute top-0 right-0 w-full h-full ${skill.borderColor.replace('border-', 'bg-')} opacity-30 transform rotate-45 translate-x-4 -translate-y-4`} />
+            </div>
+            <div className="absolute bottom-0 left-0 w-6 h-6">
+              <div className={`absolute bottom-0 left-0 w-full h-full ${skill.borderColor.replace('border-', 'bg-')} opacity-30 transform rotate-45 -translate-x-3 translate-y-3`} />
+            </div>
           </>
         )}
       </div>
@@ -93,7 +98,7 @@ const Skills = () => {
   );
 
   return (
-    <section id="experience" ref={sectionRef} className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <section id="skills" ref={sectionRef} className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" />

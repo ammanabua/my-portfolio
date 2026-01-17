@@ -5,7 +5,7 @@ import { experience } from '../data';
 const Experience = ({ isVisible}) => {
   return (
     <>
-        <div className="space-y-6">
+        <div className="space-y-6" id='experience'>
             {experience.map((exp, index) => (
               <div 
                 key={index}

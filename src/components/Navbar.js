@@ -39,7 +39,7 @@ export default function Navbar() {
   const navItems = [
     { name: 'About', href: '#about', icon: User },
     { name: 'Projects', href: '#projects', icon: Code },
-    { name: 'Experience', href: '#experience', icon: Briefcase },
+    { name: 'Experience', href: '#about', icon: Briefcase },
     { name: 'Contact', href: '#contact', icon: MessageCircle },
   ];
 
@@ -98,13 +98,13 @@ export default function Navbar() {
               ))}
               
               {/* CTA Button */}
-              <div className="ml-4">
-                <button className="relative group bg-amber-400 hover:bg-gray-200 hover:text-gray-800 text-slate-800 px-6 py-2 rounded-full font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105">
+              <div className="flex ml-4">
+                <a href="mailto: ammanabua@gmail.com" className="relative group bg-amber-400 hover:bg-gray-200 hover:text-gray-800 text-slate-800 px-6 py-2 rounded-full font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105">
                   <span className="relative z-10 flex items-center space-x-2">
                     <span>Hire Me</span>
                     <ExternalLink className="w-4 h-4" />
                   </span>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -140,9 +140,9 @@ export default function Navbar() {
                   <span className="font-medium">{item.name}</span>
                 </a>
               ))}
-              <button className="w-full mt-4 bg-amber-400 text-slate-800 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25">
+              <a href="mailto: ammanabua@gmail.com" className="w-full mt-4 bg-amber-400 text-slate-800 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25">
                 Hire Me
-              </button>
+              </a>
             </div>
           </div>
         </div>

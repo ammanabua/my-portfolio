@@ -10,7 +10,7 @@ export default function TermsOfService({ isOpen, onClose }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm overflow-y-auto"
+          className="fixed inset-0 z-50 bg-black backdrop-blur-sm overflow-y-auto"
           onClick={onClose}
         >
           <div className="min-h-full py-8 px-4 flex items-start justify-center">
@@ -171,12 +171,12 @@ export default function TermsOfService({ isOpen, onClose }) {
 
               {/* Contact */}
               <section className="space-y-4">
-                <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-xl p-6 border border-amber-500">
+                <div className="bg-amber-500 rounded-xl p-6 border border-amber-500">
                   <h4 className="text-white font-semibold mb-3">Questions About These Terms?</h4>
                   <p className="text-gray-300 leading-relaxed">
                     If you have any questions about these Terms of Service, please contact me at:{' '}
-                    <a href="mailto:amman.abua93@gmail.com" className="text-amber-400 hover:text-amber-300 transition-colors">
-                      amman.abua93@gmail.com
+                    <a href="mailto:ammanabua@gmail.com" className="text-gray-700 hover:text-gray-900 transition-colors">
+                      ammanabua@gmail.com
                     </a>
                   </p>
                 </div>
