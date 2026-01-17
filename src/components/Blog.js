@@ -1,10 +1,22 @@
 import { React, useEffect } from 'react'
 import { blogs } from '../data'
+import ImageUploader from './ImageUploader'
 
 
-const getBlogs = {
-  
-}
+// const getBlogs = {
+//   // Function to fetch blog posts
+//   fetchPosts: async () => {
+//     try {
+//       const response = await fetch('/api/blogs');
+//       if (!response.ok) throw new Error('Network response was not ok');
+//       const data = await response.json();
+//       return data;
+//     } catch (error) {
+//       console.error('Error fetching blog posts:', error);
+//       return [];
+//     }
+//   }
+// }
 
 const Blog = () => {
   return (
@@ -15,13 +27,16 @@ const Blog = () => {
         </h2>
 
         <div className='grid blog-grid grid-cols-2 w-full'>
-        {blogs.map((post) => (
+        {/* {blogs.map((post) => (
             <div key={post.image} className="p-2 w-full">
               <div className="mx-auto mb-5 flex align-center justify-center" style={{height: "5rem"}}>
                 <img src={post.image} alt={post.title} />
+                
               </div>
             </div>
-          ))}
+          ))} */}
+
+          {/* <ImageUploader /> */}
         </div>
       </div>
     </section>

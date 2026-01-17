@@ -1,139 +1,152 @@
-import { ArrowRightIcon } from "@heroicons/react/solid";
 import React, { useState, useEffect, useRef } from "react";
-import { Transition } from "@headlessui/react";
-import { Modal, Box, Typography, backdropClasses } from "@mui/material";
-
 import { motion } from "framer-motion";
+
+import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, User, Briefcase, MessageCircle } from 'lucide-react';
+
+
+
 
 
 
 
 export default function Navbar() {
 
-  const [open, setOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("");
-
-
-  const sectionRefs = useRef([]);
-
-  const handleOpen = () => setOpen(true)
-
-  const handleClose = () => setOpen(false)
-
-  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveLink(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    sectionRefs.current.forEach((ref) => {
-      observer.observe(ref);
-    });
-
-    return () => {
-      observer.disconnect();
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Set scrolled state for background change
+      setScrolled(currentScrollY > 50);
+      
+      // Hide on scroll down, show on scroll up
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+      
+      lastScrollY.current = currentScrollY;
     };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    section.scrollIntoView({ behavior: "smooth" });
-  };
+  const navItems = [
+    { name: 'About', href: '#about', icon: User },
+    { name: 'Projects', href: '#projects', icon: Code },
+    { name: 'Experience', href: '#about', icon: Briefcase },
+    { name: 'Contact', href: '#contact', icon: MessageCircle },
+  ];
 
+  const scrollToSection = (e, href) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   return (
-    <header className="md:fixed w-full top-0 z-50">
-      <motion.div
-       initial={{ opacity: 0 }}
-       animate={{ opacity: 1, backgroundColor: "rgba(0, 0, 0, 0.5)" }}
-        transition={{
-        ease: [0.1, 0.25, 0.3, 1],
-        duration: 2,
-        delay: 1
-        }}
-      
-       className="container mx-auto flex p-5 items-center justify-between">
-        
-        <div>
-            <button onClick={() => scrollToSection("home")} className="ml-3 text-5xl justify-left title-font font-medium text-white mb-4 md:mb-0">
-              <span className="text-blue-600">A</span><span className="text-yellow-400">k</span><span className="text-red-300">.</span>
+    <div className="">
+      {/* Navbar */}
+      <motion.nav 
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: hidden ? -100 : 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          scrolled 
+            ? 'bg-gray-900 opacity-80 backdrop-blur-lg shadow-2xl' 
+            : 'bg-transparent opacity-80 backdrop-blur-sm'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            {/* Logo */}
+            <div className="group cursor-pointer">
+              <div className="relative">
+                <div className="flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                  <button className="ml-3 text-5xl justify-left title-font font-medium text-white mb-4 md:mb-0">
+                    <span className="text-blue-600">A</span><span className="text-amber-400">k</span><span className="text-red-300">.</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-1">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => scrollToSection(e, item.href)}
+                  className="relative group px-4 py-2 rounded-full transition-all duration-300 hover:bg-white"
+                >
+                  <div className="flex items-center space-x-2">
+                    <item.icon className="w-4 h-4 text-gray-300 group-hover:text-gray-800 transition-colors" />
+                    <span className="text-gray-300 group-hover:text-gray-800 font-medium transition-colors">
+                      {item.name}
+                    </span>
+                  </div>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+              ))}
+              
+              {/* CTA Button */}
+              <div className="flex ml-4">
+                <a href="mailto: ammanabua@gmail.com" className="relative group bg-amber-400 hover:bg-gray-200 hover:text-gray-800 text-slate-800 px-6 py-2 rounded-full font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105">
+                  <span className="relative z-10 flex items-center space-x-2">
+                    <span>Hire Me</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 rounded-lg bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all duration-300"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
+          </div>
         </div>
-        <div>
-          <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 flex items-center text-gray-200 justify-center">
-            <div className="hidden md:block text-lg">
-              <a className={`${activeLink === "home" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("home")}>
-                Home
-              </a>
-              <a className={`${activeLink === "about" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("about")}>
-                About
-              </a>
-              <a className={`${activeLink === "projects" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("projects")}>
-                Past Work
-              </a>
-              <a className={`${activeLink === "skills" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("skills")}>
-                Skills
-              </a>
-              {/*<a className={`${activeLink === "blog" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("blog")}>*/}
-              {/*  Blog*/}
-              {/*</a>*/}
-              <a className={`${activeLink === "contact" ? "active" : ""} ${"mr-5 hover:text-yellow-400"} cursor-pointer`} onClick={() => scrollToSection("contact")}>
-                Contact
+
+        {/* Mobile Navigation */}
+        <div className={`md:hidden transition-all duration-500 ease-in-out ${
+          isMenuOpen 
+            ? 'max-h-96 opacity-100' 
+            : 'max-h-0 opacity-0 overflow-hidden'
+        }`}>
+          <div className="bg-slate-900/95 backdrop-blur-lg border-t border-white/10">
+            <div className="px-4 py-6 space-y-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => {
+                    scrollToSection(e, item.href);
+                    setIsMenuOpen(false);
+                  }}
+                  className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-300 py-2"
+                >
+                  <item.icon className="w-5 h-5" />
+                  <span className="font-medium">{item.name}</span>
+                </a>
+              ))}
+              <a href="mailto: ammanabua@gmail.com" className="w-full mt-4 bg-amber-400 text-slate-800 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25">
+                Hire Me
               </a>
             </div>
-            
-          </nav>
+          </div>
         </div>
-        <div className="md:hidden">
-          <button className="outline-none mobile-menu-button" onClick={handleOpen}>
-            <svg
-              className="w-8 h-8 text-white"
-              x-show="!showMenu"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-            <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </motion.div>
-      
-      <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-            >
-            <Box className="absolute w-full h-screen bg-white px-12 py-4">
-                <Box className="flex justify-between items-center">
-                    <a href='/' onClick={handleClose}>
-  
-                    </a>
-                    <Typography className="text-center" onClick={handleClose}>
-                        X
-                    </Typography>
-                </Box>
-                <ul className="bg-transparent pt-36 font-rubik text-3xl font-light">
-                    <a href="#home" className="block px-2 py-4" onClick={handleClose}>Home</a>
-                    <a href="#about" className="block px-2 py-4 hover:underline" onClick={handleClose}>About</a>
-                    <a href="#projects" className="block px-2 py-4 hover:underline" onClick={handleClose}>Past Work</a>
-                    <a href="#skills" className="block px-2 py-4 hover:underline" onClick={handleClose}>Skills</a>
-                    <a className="block px-2 py-4 hover:underline" onClick={handleClose}>Contact</a>
-                </ul>
-            </Box>
-            </Modal>
-    </header>
+      </motion.nav>
+    </div>
   );
 }

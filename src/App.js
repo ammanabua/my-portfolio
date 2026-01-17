@@ -8,21 +8,25 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Blog from "./components/Blog"
 import Testimonials from "./components/Testimonials";
+import ImageUploader from "./components/ImageUploader";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 
 export default function App() {
   return (
-    <main className="text-gray-400 bg-gray-900 body-font">
+    <main className="text-gray-900 bg-gray-700 body-font">
       <Navbar />
       <Hero />
       <About />
       <Projects />
       <Skills />
-      <Testimonials />
+      {/* <ImageUploader /> */}
+      {/* <Testimonials /> */}
       {/* <Blog /> */}
       <Contact />
       <Footer />
+      <ScrollToTop />
     </main>
   )
 }
