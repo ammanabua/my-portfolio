@@ -1,99 +1,28 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Calendar, Globe, Award, Play, GraduationCap } from 'lucide-react';
-import Overview from './Overview';
-import Experience from './Experience';
-import { education } from '../data';
-import Education from './Education';
+import React from "react";
+import { SocialIcon } from "react-social-icons";
+import { motion } from "framer-motion";
 
-const About = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
-  const [hoveredSkill, setHoveredSkill] = useState(null);
-  const sectionRef = useRef(null);
 
-  // Intersection observer for animations
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+export default function About() {
 
-    return () => observer.disconnect();
-  }, []);
-
-  
-  const tabs = [
-    { id: 'overview', label: 'Overview', icon: Globe },
-    // { id: 'skills', label: 'Skills', icon: Zap },
-    { id: 'experience', label: 'Experience', icon: Award },
-    { id: 'education', label: 'Education', icon: GraduationCap },
-    { id: 'journey', label: 'My Journey', icon: Calendar }
-  ];
-
-  const TabContent = () => {
-    switch (activeTab) {
-      case 'overview':
-        return (
-          <Overview isVisible={isVisible} />
-        );
-
-      case 'experience':
-        return (
-          <Experience isVisible={isVisible} />
-        );
-
-      case 'education':
-        return (
-          <Education isVisible={isVisible} />
-        );
-
-      case 'journey':
-        return (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">From Curiosity to Career</h3>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                My path into software engineering wasn't traditional, but it was driven by genuine passion 
-                and continuous learning.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-white/10">
-                  <h4 className="text-lg font-semibold text-purple-300 mb-3">The Spark ⚡</h4>
-                  <p className="text-gray-300">
-                    It all started just after my first college degree, when I built my first website. The moment I saw my code 
-                    come to life in the browser, I was hooked. That feeling of creating something from nothing became my driving force.
-                  </p>
-                </div>
-                
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-white/10">
-                  <h4 className="text-lg font-semibold text-cyan-300 mb-3">The Growth 📈</h4>
-                  <p className="text-gray-300">
-                    I spent countless nights learning new frameworks, contributing to open source, 
-                    and building side projects. Each challenge taught me something new and pushed 
-                    me to become a better developer.
-                  </p>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-white/10">
-                  <h4 className="text-lg font-semibold text-green-300 mb-3">The Impact 🚀</h4>
-                  <p className="text-gray-300">
-                    Today, I focus on building applications that make a real difference. Whether it's 
-                    improving user experience or solving complex technical challenges, I'm motivated 
-                    by the positive impact technology can have.
-                  </p>
+    return (
+        <section id="about" className="container-fluid flex items-center justify-center bg-white w-full md:mb-0 md:h-screen">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col md:flex-row p-4 items-center justify-center md:w-5/6 md:px-8 bg-card-bg rounded">
+                <div className="flex-col flex lg:flex-grow md:w-1/2 md:items-start md:text-left my-5 md:mb-0  items-center">
+                    <h2 className="font-title text-4xl mb-5 text-card-heading">About Me</h2>
+                    <div className="prose prose-invert max-w-none">
+                        <p className="text-gray-300 text-lg leading-relaxed">
+                            I'm a passionate full-stack developer with 5+ years of experience crafting digital solutions 
+                            that bridge the gap between complex technical requirements and intuitive user experiences.
+                        </p>
+                        <p className="text-gray-300 leading-relaxed mt-4">
+                            My journey began with curiosity about how websites work, and it evolved into a deep love 
+                            for building scalable, performant applications that solve real-world problems. I thrive in 
+                            collaborative environments where innovation meets practicality.
+                        </p>
+                    </div>
+                    
                 </div>
 
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-white/10">

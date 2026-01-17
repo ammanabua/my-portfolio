@@ -158,14 +158,15 @@ export const designProjects = [
 
 
 export const projects = [
-  {
-    title: "Manyactive App",
-    tools: [ {title: 'Figma', image: './figma.svg'}, {title: 'HTML', image: './html-5.svg'}, {title: 'React', image: './react.svg'}, {title: "Tailwind CSS", image: './tailwindcss-icon.svg'}, {title: "Git", image: './git-icon.svg'}],
-    description:
-      "Web application for fitness and Mental Health tracking SAAS platform, creating access to fitness and health activities to improve staff wellness and maximize productivity",
-    image: "./manyactive.png",
-    link: "https://manyactive.com/",
-  },
+
+  // {
+  //   title: "Manyactive App",
+  //   tools: [ {title: 'Figma', image: './figma.svg'}, {title: 'HTML', image: './html-5.svg'}, {title: 'React', image: './react.svg'}, {title: "Tailwind CSS", image: './tailwindcss-icon.svg'}, {title: "Git", image: './git-icon.svg'}],
+  //   description:
+  //     "Web application for fitness and Mental Health tracking SAAS platform, creating access to fitness and health activities to improve staff wellness and maximize productivity",
+  //   image: "./manyactive.png",
+  //   link: "https://manyactive.com/",
+  // },
   {
     title: "Camp Scout",
     tools: [{title: 'HTML', image: './html-5.svg'}, {title: 'React', image: './react.svg'}, {title: "Express.js", image: './express.svg'}, {title: "Node.js", image: './nodejs-icon.svg'}, {title: "Git", image: './git-icon.svg'}],
@@ -181,7 +182,7 @@ export const projects = [
     description:
         "Welcome to the world of art, explore the mind of the artist who expresses their paradigm of the world from a unique perspective",
     image: "./entities.png",
-    link: "https://ammanabua.com/",
+    link: "https://entities.studio/",
     github: "https://github.com/ammanabua/entities-studio"
   },
   {
