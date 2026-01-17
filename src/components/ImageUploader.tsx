@@ -1,15 +1,17 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
 const ImageUploader = () => {
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState<File | null>(null);
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setFile(e.target.files[0]);
+    }
   };
 
   const handleUpload = async () => {
@@ -24,7 +26,7 @@ const ImageUploader = () => {
 
       // Send POST request to API Gateway
       const response = await axios.post(
-        process.env.REACT_APP_API_URL,
+        process.env.REACT_APP_API_URL || '',
         { filename, contentType, email }
       );
 

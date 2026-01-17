@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { X, Shield, Lock, Eye, Database, Mail, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 

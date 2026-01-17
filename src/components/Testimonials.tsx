@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { 
   Quote, 
   Star, 
@@ -22,8 +22,8 @@ const Testimonials = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const sectionRef = useRef(null);
-  const autoPlayRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
 
   // Intersection observer for animations
   useEffect(() => {
@@ -50,10 +50,12 @@ const Testimonials = () => {
         setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
       }, 5000);
     } else {
-      clearInterval(autoPlayRef.current);
+      if (autoPlayRef.current) clearInterval(autoPlayRef.current);
     }
 
-    return () => clearInterval(autoPlayRef.current);
+    return () => {
+      if (autoPlayRef.current) clearInterval(autoPlayRef.current);
+    };
   }, [isAutoPlaying]);
 
   const testimonials = [

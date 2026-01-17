@@ -1,14 +1,8 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, User, Briefcase, MessageCircle } from 'lucide-react';
-
-
-
-
-
 
 
 export default function Navbar() {
@@ -45,7 +39,7 @@ export default function Navbar() {
     { name: 'Contact', href: '#contact', icon: MessageCircle },
   ];
 
-  const scrollToSection = (e, href) => {
+  const scrollToSection = (e: React.MouseEvent<HTMLElement>, href: string) => {
     e.preventDefault();
     const targetId = href.replace('#', '');
     const element = document.getElementById(targetId);
@@ -127,8 +121,8 @@ export default function Navbar() {
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <div className="bg-slate-900/95 backdrop-blur-lg border-t border-white/10">
-            <div className="px-4 py-6 space-y-4">
-              {navItems.map((item) => (
+            <div className="px-6 py-6 space-y-2">
+              {navItems.map((item, index) => (
                 <a
                   key={item.name}
                   href={item.href}
@@ -136,14 +130,25 @@ export default function Navbar() {
                     scrollToSection(e, item.href);
                     setIsMenuOpen(false);
                   }}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-300 py-2"
+                  className="flex items-center space-x-3 text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 py-3 px-4 rounded-lg group"
                 >
-                  <item.icon className="w-5 h-5" />
+                  <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   <span className="font-medium">{item.name}</span>
                 </a>
               ))}
-              <a href="mailto: ammanabua@gmail.com" className="w-full mt-4 bg-amber-400 text-slate-800 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25">
-                Hire Me
+              
+              {/* Divider */}
+              <div className="pt-4 pb-2">
+                <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+              </div>
+              
+              {/* CTA Button */}
+              <a 
+                href="mailto: ammanabua@gmail.com" 
+                className="flex items-center justify-center space-x-2 w-full mt-2 bg-amber-400 text-slate-800 py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/25 hover:scale-[1.02]"
+              >
+                <span>Hire Me</span>
+                <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>

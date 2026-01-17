@@ -1,5 +1,3 @@
-import { AcademicCapIcon } from "@heroicons/react/solid";
-import React from "react";
 import { education } from "@/src/data";
 import { GraduationCap, Calendar } from "lucide-react";
 

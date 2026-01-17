@@ -1,6 +1,6 @@
 'use client';
 
-import { React, useEffect } from 'react'
+import { useEffect } from 'react'
 import { blogs } from '@/src/data'
 import ImageUploader from './ImageUploader'
 

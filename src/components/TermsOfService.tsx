@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { X, FileText, CheckCircle, AlertTriangle, Scale, Copyright, MessageSquare, RefreshCw } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 

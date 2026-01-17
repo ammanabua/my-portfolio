@@ -1,4 +1,3 @@
-import React from "react";
 import { Zap, Globe, Mail, Calendar, MapPin, Linkedin, Github, Twitter, FileText, Video, Coffee, Database, Cloud, Palette, Wrench, LucideIcon } from "lucide-react";
 
 // Type definitions
@@ -136,6 +135,7 @@ export const webProjects: WebProject[] = [
     description: 'A light-weight AI-powered research assistant/study partner that streamlines academic workflows by automating literature reviews, summarizing papers, and generating citations.',
     image: '/skHome.png',
     tech: ['Next.js', 'TypeScript', 'Node.js', 'S3', 'AWS', 'Lambda Functions', 'DynamoDB', 'Bedrock (Claude LLM)', 'API Gateway'],
+    tools: [{title: 'React', image: './react.svg'}, {title: 'Next.js', image: './Nextjs.svg'}, {title: 'TypeScript', image: './TypeScript.svg'}, {title: "Tailwind CSS", image: './tailwindcss-icon.svg'}, {title: "Node.js", image: './nodejs-icon.svg'}, {title: "Git", image: './git-icon.svg'}, {title: 'AWS', image: './aws.svg'}],
     category: 'Full-Stack (Cloud Native)',
     status: 'Live',
     metrics: { uptime: '99.9%', performance: '98' },
@@ -150,6 +150,7 @@ export const webProjects: WebProject[] = [
     description: 'Greenbaq AI is a fintech platform focused on ESG-driven financing solutions for small and medium-sized enterprises (SMEs). I worked on both backend and frontend features, contributing to secure APIs, asynchronous workflows, and data-driven user interfaces. This role involved collaborating on system design decisions, performance optimizations, and building production features that integrate financial data and user workflows. Emphasis was placed on reliability, security, and clean system architecture in a regulated, data-sensitive domain.',
     image: '/gb-ai.png',
     tech: ['React/Next.js', 'TypeScript', 'Python', 'Chartjs', 'Firebase', 'Stripe'],
+    tools: [{title: 'React', image: './react.svg'}, {title: 'Next.js', image: './Nextjs.svg'}, {title: 'TypeScript', image: './TypeScript.svg'}, {title: "Tailwind CSS", image: './tailwindcss-icon.svg'}, {title: "Python", image: './python.svg'},  {title: "Git", image: './git-icon.svg'}, {title: 'Firebase', image: './firebase.svg'}],
     category: 'Full-Stack',
     status: 'Live',
     metrics: { uptime: '99.9%', performance: '95' },
@@ -163,7 +164,7 @@ export const webProjects: WebProject[] = [
     description: 'Developed multi-step onboarding flows and supporting backend services with secure authentication, validation, and conditional logic. Emphasized clean APIs, async workflows, and production-ready state management. I also integrated AI workflows to automate user interview preparation and personalized content generation, enhancing user engagement and platform value.',
     image: '/pc.png',
     tech: ['Next.js', 'TypeScript', 'Chartjs', 'Firebase', 'Claude LLM'],
-    tools: [{title: 'HTML', image: './html-5.svg'}, {title: 'React', image: './react.svg'}, {title: "Tailwind CSS", image: './tailwindcss-icon.svg'}, {title: "Node.js", image: './nodejs-icon.svg'}, {title: "Git", image: './git-icon.svg'}],
+    tools: [{title: 'React', image: './react.svg'}, {title: 'Next.js', image: './Nextjs.svg'}, {title: 'TypeScript', image: './TypeScript.svg'}, {title: "Tailwind CSS", image: './tailwindcss-icon.svg'}, {title: "Node.js", image: './nodejs-icon.svg'}, {title: "Git", image: './git-icon.svg'}, {title: 'Firebase', image: './firebase.svg'}],
     category: 'Full-Stack',
     status: 'Live',
     metrics: { uptime: '99.9%', performance: '95' },
@@ -177,7 +178,7 @@ export const webProjects: WebProject[] = [
     description: 'A marketplace and collaborative platform for digital artists and designers to create, share, and monetize their digital assets and interactive experiences in a virtual environment.',
     image: '/entities.png',
     tech: ['Next.js', 'TypeScript', 'Stripe', 'Chartjs', 'Firebase'],
-    tools: [{title: 'HTML', image: './html-5.svg'}, {title: 'React', image: './react.svg'}, {title: "Tailwind CSS", image: './tailwindcss-icon.svg'}, {title: "Node.js", image: './nodejs-icon.svg'}, {title: "Git", image: './git-icon.svg'}],
+    tools: [{title: 'React', image: './react.svg'}, {title: 'Next.js', image: './Nextjs.svg'}, {title: 'TypeScript', image: './TypeScript.svg'}, {title: "Tailwind CSS", image: './tailwindcss-icon.svg'}, {title: "Node.js", image: './nodejs-icon.svg'}, {title: "Git", image: './git-icon.svg'}, {title: 'Firebase', image: './firebase.svg'}],
     category: 'Full-Stack',
     status: 'Live',
     metrics: { uptime: '99.9%', performance: '95' },
@@ -381,6 +382,7 @@ export const skills: Skill[] = [
   // Frontend
   { name: 'HTML', category: 'frontend', color: '#E34F26', bgColor: 'bg-amber-600', borderColor: 'border-orange-500', icon: <img src='/html-5.svg' className='w-10 h-10' alt='HTML' /> },
   { name: 'CSS', category: 'frontend', color: '#1572B6', bgColor: 'bg-blue-600', borderColor: 'border-blue-500', icon: <img src='/css-3.svg' className='w-10 h-10' alt='CSS' /> },
+  { name: 'Bootstrap', category: 'frontend', color: '#563d7c', bgColor: 'bg-purple-600', borderColor: 'border-purple-500', icon: <img src='/bootstrap.svg' className='w-10 h-10' alt='Bootstrap' /> },
   { name: 'JavaScript', category: 'frontend', color: '#F7DF1E', bgColor: 'bg-yellow-400', borderColor: 'border-yellow-400', icon: <img src='/javascript.svg' className='w-10 h-10' alt='JavaScript' /> },
   { name: 'Redux', category: 'frontend', color: '#764ABC', bgColor: 'bg-purple-600', borderColor: 'border-purple-500', icon: <img src='/Redux.svg' className='w-10 h-10' alt='Redux' /> },
   { name: 'Tailwind CSS', category: 'frontend', color: '#06B6D4', bgColor: 'bg-blue-500', borderColor: 'border-cyan-400', icon: <img src='/tailwindcss-icon.svg' className='w-10 h-10' alt='Tailwind CSS' /> },
@@ -391,6 +393,7 @@ export const skills: Skill[] = [
   { name: 'PostgresSQL', category: 'backend', color: '#336791', bgColor: 'bg-blue-700', borderColor: 'border-blue-600', icon: <img src='/PostgresSQL.svg' className='w-10 h-10' alt='PostgreSQL' /> },
   { name: 'MongoDB', category: 'backend', color: '#47A248', bgColor: 'bg-green-600', borderColor: 'border-green-500', icon: <img src='/mongodb.svg' className='w-10 h-10' alt='MongoDB' /> },
   { name: 'Redis', category: 'backend', color: '#DC382D', bgColor: 'bg-red-600', borderColor: 'border-red-500', icon: <img src='/Redis.svg' className='w-10 h-10' alt='Redis' /> },
+  { name: 'Firebase', category: 'backend', color: '#FFCA28', bgColor: 'bg-yellow-400', borderColor: 'border-yellow-400', icon: <img src='/firebase.svg' className='w-10 h-10' alt='Firebase' /> },
 
   // DevOps
   { name: 'Docker', category: 'devops', color: '#2496ED', bgColor: 'bg-blue-500', borderColor: 'border-blue-400', icon: <img src='/Docker.svg' className='w-10 h-10' alt='Docker' /> },
@@ -450,6 +453,6 @@ export const socialLinks: SocialLink[] = [
 
 export const quickActions: QuickAction[] = [
   { icon: FileText, label: 'View Resume', color: 'blue-500', url: '/cv.pdf' },
-  { icon: Video, label: 'Video Call', color: 'red-500', url: 'https://calendly.com/ammanabua/30min' },
-  { icon: Coffee, label: 'Coffee Chat', color: 'yellow-500', url: 'https://calendly.com/ammanabua/30min' }
+  { icon: Video, label: 'Video Call', color: 'gray-500', url: 'https://calendly.com/ammanabua/30min' },
+  { icon: Coffee, label: 'Coffee Chat', color: 'amber-500', url: 'https://calendly.com/ammanabua/30min' }
 ];

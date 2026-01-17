@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail, Code2, Zap, Database } from 'lucide-react';
 
 // Framer Motion alternative using CSS animations and React state
@@ -12,7 +12,7 @@ const Hero = () => {
   useEffect(() => {
     setIsVisible(true);
     
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     
@@ -39,7 +39,7 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const scrollToSection = (e, href) => {
+  const scrollToSection = (e: React.MouseEvent<HTMLElement>, href: string) => {
     e.preventDefault();
     const targetId = href.replace('#', '');
     const element = document.getElementById(targetId);

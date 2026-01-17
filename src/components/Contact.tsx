@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Send, Linkedin, Github, Twitter, Globe, Clock, Zap, CheckCircle, AlertCircle, Coffee, Video, FileText, Download, ExternalLink, Sparkles, Heart } from 'lucide-react';
 import { contactMethods, socialLinks, quickActions } from '@/src/data';
 
@@ -16,10 +16,10 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
-  const [activeCard, setActiveCard] = useState(null);
-  const [currentTime, setCurrentTime] = useState(new Date());
-  const sectionRef = useRef(null);
+  const [submitStatus, setSubmitStatus] = useState<string | null>(null);
+  const [activeCard, setActiveCard] = useState<string | null>(null);
+  const [currentTime, setCurrentTime] = useState<Date>(new Date());
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   // Intersection observer for animations
   useEffect(() => {
@@ -48,7 +48,7 @@ const Contact = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -56,7 +56,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -375,7 +375,7 @@ const Contact = () => {
                   {/* Submit button */}
                   <div className="flex items-center gap-4">
                     <button
-                      onClick={handleSubmit}
+                      type="submit"
                       disabled={isSubmitting}
                       className={`flex-1 flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
                         isSubmitting

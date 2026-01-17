@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   Calendar, 
   Code2, 
@@ -16,12 +16,12 @@ import {
   GitBranch,
   Terminal
 } from 'lucide-react';
-import { skills, skillCategories } from '@/src/data';
+import { skills, skillCategories, Skill } from '@/src/data';
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [isVisible, setIsVisible] = useState(false);
-  const [hoveredSkill, setHoveredSkill] = useState(null);
+  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
   const [isExpanded, setIsExpanded] = useState(false);
   const sectionRef = useRef(null);
 
@@ -54,7 +54,7 @@ const Skills = () => {
     ? filteredSkills.slice(0, 8) 
     : filteredSkills;
 
-  const SkillCard = ({ skill, index }) => (
+  const SkillCard = ({ skill, index }: { skill: Skill; index: number }) => (
     <div
       className={`group relative transition-all duration-500 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -134,7 +134,7 @@ const Skills = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`} style={{ transitionDelay: '200ms' }}>
           <div className="flex flex-wrap gap-2 p-2 bg-slate-800 rounded-3xl border border-white backdrop-blur-sm">
-            {skillCategories.map(({ id, label, icon: Icon, color }) => (
+            {skillCategories.map(({ id, label, icon: Icon }) => (
               <button
                 key={id}
                 onClick={() => {
