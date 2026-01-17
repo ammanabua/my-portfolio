@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Monitor, Smartphone, Palette, ExternalLink, Github, Play, Zap, Shield, Database, Globe, Clock, Sparkles, ArrowUpRight, Code2, Users, TrendingUp } from 'lucide-react';
+import { webProjects, designProjects } from '../data';
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState('web');
@@ -25,117 +26,6 @@ const Projects = () => {
     return () => observer.disconnect();
   }, []);
 
-  const webProjects = [
-    {
-      id: 1,
-      title: 'ScholarsKit AI',
-      description: 'A light-weight AI-powered research assistant/study partner that streamlines academic workflows by automating literature reviews, summarizing papers, and generating citations.',
-      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'D3.js', 'S3', 'Lambda Functions', 'Gemini AI', 'API Gateway'],
-      category: 'Full-Stack',
-      status: 'Live',
-      metrics: { users: '10K+', uptime: '99.9%', performance: '95' },
-      features: ['Real-time Analytics', 'Data Visualization', 'API Integration', 'Mobile Responsive'],
-      demoUrl: 'https://master.d9r77d4102d54.amplifyapp.com/',
-      githubUrl: 'https://www.github.com/ammanabua/ScholarsKit',
-      gradient: 'from-green-500 to-emerald-600'
-    },
-    {
-      id: 2,
-      title: 'Entities Studio',
-      description: 'A collaborative platform for digital artists and designers to create, share, and monetize 3D assets and interactive experiences in a virtual environment.',
-      image: '/entities.png',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'D3.js', 'AWS'],
-      category: 'Full-Stack',
-      status: 'Live',
-      metrics: { users: '10K+', uptime: '99.9%', performance: '95' },
-      features: ['Real-time Analytics', 'Data Visualization', 'API Integration', 'Mobile Responsive'],
-      demoUrl: 'https://www.entities.studio/',
-      githubUrl: 'https://www.github.com/ammanabua/entities-studio',
-      gradient: 'from-green-200 to-emerald-300'
-    },
-    {
-      id: 3,
-      title: 'EcoTracker Platform',
-      description: 'A comprehensive sustainability tracking platform that helps companies monitor their carbon footprint and environmental impact in real-time.',
-      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'D3.js', 'AWS'],
-      category: 'Full-Stack',
-      status: 'Live',
-      metrics: { users: '10K+', uptime: '99.9%', performance: '95' },
-      features: ['Real-time Analytics', 'Data Visualization', 'API Integration', 'Mobile Responsive'],
-      demoUrl: '#',
-      githubUrl: '#',
-      gradient: 'from-green-500 to-emerald-600'
-    },
-    {
-      id: 4,
-      title: 'CryptoFlow Dashboard',
-      description: 'Advanced cryptocurrency portfolio management dashboard with real-time market data, trading signals, and portfolio optimization.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-      tech: ['Next.js', 'TypeScript', 'WebSockets', 'Chart.js', 'Redis'],
-      category: 'Frontend',
-      status: 'Live',
-      metrics: { users: '5K+', trades: '50K+', accuracy: '87%' },
-      features: ['Live Market Data', 'Portfolio Analytics', 'Trading Alerts', 'Risk Management'],
-      demoUrl: '#',
-      githubUrl: '#',
-      gradient: 'from-blue-500 to-purple-600'
-    },
-    {
-      id: 5,
-      title: 'TaskFlow Enterprise',
-      description: 'Enterprise-grade project management solution with advanced collaboration tools, AI-powered insights, and seamless integrations.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop',
-      tech: ['React', 'Express', 'MongoDB', 'Socket.io', 'Docker'],
-      category: 'Full-Stack',
-      status: 'Beta',
-      metrics: { teams: '200+', projects: '1K+', efficiency: '+40%' },
-      features: ['Team Collaboration', 'AI Insights', 'Time Tracking', 'Integration Hub'],
-      demoUrl: '#',
-      githubUrl: '#',
-      gradient: 'from-purple-500 to-pink-600'
-    },
-    {
-      id: 6,
-      title: 'HealthVault API',
-      description: 'HIPAA-compliant healthcare data management API with advanced security, patient records, and provider integration capabilities.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop',
-      tech: ['Node.js', 'GraphQL', 'PostgreSQL', 'JWT', 'Kubernetes'],
-      category: 'Backend',
-      status: 'Live',
-      metrics: { records: '100K+', providers: '50+', compliance: '100%' },
-      features: ['HIPAA Compliance', 'GraphQL API', 'End-to-End Encryption', 'Audit Logging'],
-      demoUrl: '#',
-      githubUrl: '#',
-      gradient: 'from-cyan-500 to-blue-600'
-    }
-  ];
-
-  const designProjects = [
-    // Placeholder for future design projects
-    {
-      id: 7,
-      title: 'Design System for Entities Studio',
-      description: 'A comprehensive design system created for Entities Studio, focusing on consistency, scalability, and user experience across all digital products.',
-      image: './ent-studio.png',
-      tech: ['Figma'],
-      category: 'Design',
-      status: 'Live',
-      demoUrl: 'https://www.figma.com/proto/PnnMlDjDxbPzJjASOXQ6mN/Entities-Studio?node-id=0-1&t=yIUA5hOs6C8Tnw8E-1',
-    },
-    {
-      id: 8,
-      title: 'Mobile App UI for IRent',
-      description: 'A sleek and modern mobile app UI design for IRent, focusing on user-friendly navigation and an engaging rental experience.',
-      image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&h=600&fit=crop',
-      tech: ['Figma', 'Adobe XD'],
-      category: 'Design',
-      status: 'Live',
-      demoUrl: 'https://www.figma.com/proto/Pzp2S98znGClGltdW08lFN/IRENT-2021?t=5mpnV7rcV2jfUrrT-1',
-    }
-  ]
-
   const tabs = [
     { id: 'web', label: 'Web Apps', icon: Monitor, count: webProjects.length },
     { id: 'mobile', label: 'Mobile Apps', icon: Smartphone, count: 0 },
@@ -151,7 +41,7 @@ const Projects = () => {
       onMouseEnter={() => setHoveredProject(project.id)}
       onMouseLeave={() => setHoveredProject(null)}
     >
-      <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl border border-white/10 overflow-hidden backdrop-blur-sm hover:border-purple-500/30 transition-all duration-500 group-hover:scale-[1.02]">
+      <div className="relative rounded-2xl overflow-hidden backdrop-blur-sm hover:shadow-lg hover:shadow-gray-600 transition-all duration-500 group-hover:scale-[1.02]">
         {/* Project image with overlay */}
         <div className="relative h-48 overflow-hidden">
           <div 
@@ -182,16 +72,18 @@ const Projects = () => {
             </span>
           </div>
 
-          {/* Hover overlay with actions */}
-          <div className={`absolute inset-0 bg-black/50 flex items-center justify-center gap-4 transition-opacity duration-300 ${
-            hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
+          {/* Hover overlay with actions - always visible on mobile, hover on desktop */}
+          <div className={`absolute inset-0 bg-black/50 flex items-center justify-center gap-4 transition-opacity duration-300 md:opacity-0 ${
+            hoveredProject === project.id ? 'md:opacity-100' : ''
           }`}>
             <a href={project.demoUrl} target='_blank' rel="noopener noreferrer" className="p-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all duration-300 hover:scale-110 backdrop-blur-sm">
               <ExternalLink className="w-5 h-5" />
             </a>
-            <a href={project.githubUrl} target='_blank' rel="noopener noreferrer" className="p-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all duration-300 hover:scale-110 backdrop-blur-sm">
-              <Github className="w-5 h-5" />
-            </a>
+            {project.githubUrl && (
+              <a href={project.githubUrl} target='_blank' rel="noopener noreferrer" className="p-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all duration-300 hover:scale-110 backdrop-blur-sm">
+                <Github className="w-5 h-5" />
+              </a>
+            )}
             {/* <button className="p-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all duration-300 hover:scale-110 backdrop-blur-sm">
               <Play className="w-5 h-5" />
             </button> */}
@@ -199,7 +91,7 @@ const Projects = () => {
         </div>
 
         {/* Project content */}
-        <div className="p-6">
+        <div className="p-6 bg-gray-900">
           <div className="flex items-start justify-between mb-3">
             <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
               {project.title}
@@ -238,7 +130,7 @@ const Projects = () => {
           {/* Tech stack */}
           <div className="flex flex-wrap gap-1">
             {project.tech.map((tech, idx) => (
-              <span key={idx} className="text-xs px-2 py-1 bg-cyan-500/10 text-cyan-300 rounded border border-cyan-500/20">
+              <span key={idx} className="text-xs px-2 py-1 text-gray-500 rounded border border-cyan-500/20">
                 {tech}
               </span>
             ))}

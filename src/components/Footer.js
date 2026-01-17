@@ -63,8 +63,6 @@ export default function Footer(){
                   <a
                     key={item.name}
                     href={item.href}
-                    target='_blank'
-                    rel='noopener noreferrer'
                     className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300 group"
                   >
                     <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Mail, Phone, MapPin, Send, Calendar, MessageSquare, Linkedin, Github, Twitter, Globe, Clock, Zap, CheckCircle, AlertCircle, Coffee, Video, FileText, Download, ExternalLink, Sparkles, Heart } from 'lucide-react';
+import { Send, Linkedin, Github, Twitter, Globe, Clock, Zap, CheckCircle, AlertCircle, Coffee, Video, FileText, Download, ExternalLink, Sparkles, Heart } from 'lucide-react';
+import { contactMethods, socialLinks, quickActions } from '../data';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -78,62 +79,6 @@ const Contact = () => {
     }, 2000);
   };
 
-  const contactMethods = [
-    {
-      id: 'email',
-      icon: Mail,
-      title: 'Email Me',
-      subtitle: 'Quick Response',
-      value: 'ammanabua@gmail.com',
-      description: 'I typically respond within 2-4 hours during business days',
-      color: 'from-amber-500 to-red-500',
-      bgColor: 'from-amber-500 to-red-500',
-      borderColor: 'border-red-400',
-      action: 'Send Email',
-      responseTime: '2-4 hours'
-    },
-    {
-      id: 'calendar',
-      icon: Calendar,
-      title: 'Book a Meeting',
-      subtitle: '30min Consultation',
-      value: 'Free Strategy Call',
-      description: 'Let\'s discuss your project goals and technical requirements',
-      color: 'from-purple-500 to-pink-500',
-      bgColor: 'from-purple-500 to-pink-500',
-      borderColor: 'border-purple-400',
-      action: 'Book Now',
-      responseTime: 'Next available'
-    },
-    {
-      id: 'location',
-      icon: MapPin,
-      title: 'Meet in Person',
-      subtitle: 'D(M)V Area',
-      value: 'Coffee & Code',
-      description: 'Available for local meetups and collaboration sessions',
-      color: 'from-amber-500 to-red-500',
-      bgColor: 'from-amber-500 to-red-500',
-      borderColor: 'border-amber-400',
-      action: 'Arrange Meeting',
-      responseTime: 'Flexible'
-    }
-  ];
-
-  const socialLinks = [
-    { icon: Linkedin, url: '#', label: 'LinkedIn', color: 'hover:text-blue-400', followers: '2.5K' },
-    { icon: Github, url: '#', label: 'GitHub', color: 'hover:text-gray-300', repos: '47' },
-    { icon: Twitter, url: '#', label: 'Twitter', color: 'hover:text-cyan-400', followers: '1.2K' },
-    { icon: Globe, url: '#', label: 'Website', color: 'hover:text-purple-400', views: '10K+' }
-  ];
-
-  const quickActions = [
-    { icon: FileText, label: 'View Resume', color: 'from-blue-500 to-purple-500' },
-    { icon: Download, label: 'Download CV', color: 'from-green-500 to-emerald-500' },
-    { icon: Video, label: 'Video Call', color: 'from-red-500 to-pink-500' },
-    { icon: Coffee, label: 'Coffee Chat', color: 'from-yellow-500 to-amber-500' }
-  ];
-
   const getCurrentTimeString = () => {
     return currentTime.toLocaleTimeString('en-US', {
       hour: '2-digit',
@@ -211,16 +156,16 @@ const Contact = () => {
                 {contactMethods.map((method, index) => (
                   <div
                     key={method.id}
-                    className={`group relative bg-gradient-to-br ${method.bgColor} rounded-2xl border ${method.borderColor} p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 cursor-pointer`}
+                    className={`group relative ${method.bgColor} rounded-2xl border ${method.borderColor} p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 cursor-pointer`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                     onMouseEnter={() => setActiveCard(method.id)}
                     onMouseLeave={() => setActiveCard(null)}
                   >
                     {/* Glow effect */}
                     {activeCard === method.id && (
-                      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${method.bgColor} opacity-50 blur-xl -z-10`} />
+                      <div className={`absolute inset-0 rounded-2xl ${method.bgColor} opacity-50 blur-xl -z-10`} />
                     )}
-                    
+                    <a href={method.url} target='_blank' rel='noreferrer noopener' className='absolute inset-0 w-full h-full z-10'></a>
                     <div className="flex items-start gap-4">
                       <div className={`p-3 rounded-xl bg-gradient-to-r ${method.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                         <method.icon className="w-6 h-6 text-white" />
@@ -237,10 +182,10 @@ const Contact = () => {
                         </p>
                         
                         <div className="flex items-center justify-between">
-                          <span className="text-xs px-2 py-1 bg-white rounded-full text-gray-300">
+                          <span className="text-xs px-2 py-1 bg-white rounded-full text-gray-600">
                             {method.responseTime}
                           </span>
-                          <button className="text-purple-300 hover:text-purple-200 transition-colors text-sm font-medium flex items-center gap-1">
+                          <button className="text-gray-800 hover:text-purple-200 transition-colors text-sm font-medium flex items-center gap-1">
                             {method.action}
                             <ExternalLink className="w-3 h-3" />
                           </button>
@@ -256,13 +201,16 @@ const Contact = () => {
                 <h4 className="text-white font-semibold mb-4">Quick Actions</h4>
                 <div className="grid grid-cols-2 gap-3">
                   {quickActions.map((action, index) => (
-                    <button
+                    <a
                       key={action.label}
+                      href={action.url}
+                      target='_blank'
+                      rel='noopener noreferrer'
                       className={`group p-4 bg-gradient-to-r ${action.color} rounded-xl text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg`}
                     >
                       <action.icon className="w-5 h-5 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                       <span className="text-sm">{action.label}</span>
-                    </button>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -275,17 +223,12 @@ const Contact = () => {
                     <a
                       key={social.label}
                       href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`group p-3 bg-slate-800/50 rounded-xl border border-white text-gray-400 ${social.color} transition-all duration-300 hover:scale-110 backdrop-blur-sm`}
                     >
                       <social.icon className="w-6 h-6" />
                     </a>
-                  ))}
-                </div>
-                <div className="flex gap-4 mt-3 text-xs text-gray-400">
-                  {socialLinks.map((social) => (
-                    <span key={social.label}>
-                      {social.followers || social.repos || social.views}
-                    </span>
                   ))}
                 </div>
               </div>
@@ -437,7 +380,7 @@ const Contact = () => {
                           ? 'bg-gray-600 cursor-not-allowed'
                           : submitStatus === 'success'
                           ? 'bg-green-600 hover:bg-green-700'
-                          : 'bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25'
+                          : 'bg-gray-600 hover:bg-gray-700 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/25'
                       } text-white`}
                     >
                       {isSubmitting ? (

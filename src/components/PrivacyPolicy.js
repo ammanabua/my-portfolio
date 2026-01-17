@@ -10,17 +10,18 @@ export default function PrivacyPolicy({ isOpen, onClose }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black opacity-80 backdrop-blur-sm"
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm overflow-y-auto"
           onClick={onClose}
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="min-h-full py-8 px-4 flex items-start justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              className="relative w-full max-w-4xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl shadow-2xl my-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
             {/* Header */}
             <div className="sticky top-0 z-10 bg-slate-900 backdrop-blur-lg px-8 py-6">
               <div className="flex items-center justify-between">
@@ -165,6 +166,7 @@ export default function PrivacyPolicy({ isOpen, onClose }) {
               </section>
             </div>
           </motion.div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
