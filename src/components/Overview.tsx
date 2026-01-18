@@ -24,7 +24,7 @@ const Overview = ({ isVisible }: OverviewProps) => {
               <div className="flex flex-wrap gap-4">
                 {[
                   { icon: MapPin, text: 'Gaithersburg, MD' },
-                  { icon: Code2, text: '10+ projects completed' },
+                  { icon: Code2, text: '10+ Production Apps' },
                 ].map(({ icon: Icon, text }, index) => (
                   <div key={index} className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
                     <Icon className="w-4 h-4 text-amber-300" />

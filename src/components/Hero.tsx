@@ -122,11 +122,11 @@ const Hero = () => {
           }`}
           style={{ transitionDelay: '800ms' }}
         >
-          <button onClick={(e) => scrollToSection(e, '#projects')}className="group relative px-8 py-3 bg-amber-400 rounded-full text-slate-800 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 hover:bg-gray-300 hover:text-gray-800">
+          <button onClick={(e) => scrollToSection(e, '#projects')}className="group relative px-4 lg:px-8 py-3 bg-amber-400 rounded-full text-xs md:text-md lg:text-base text-slate-800 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 hover:bg-gray-300 hover:text-gray-800">
             <span className="relative z-10">View My Work</span>
           </button>
           
-          <a href="mailto: ammanabua@gmail.com" className="group px-8 py-3 border-2 border-gray-800 rounded-full text-white font-semibold transition-all duration-300 bg-gray-800 hover:border-gray-300 hover:bg-gray-300 hover:text-gray-800 hover:bg-gray-300 hover:scale-105">
+          <a href="mailto: ammanabua@gmail.com" className="group px-4 lg:px-8 py-3 border-2 border-gray-800 rounded-full text-white text-xs md:text-md lg:text-base font-semibold transition-all duration-300 bg-gray-800 hover:border-gray-300 hover:bg-gray-300 hover:text-gray-800 hover:bg-gray-300 hover:scale-105">
             <span className="flex items-center gap-2">
               <Mail className="w-5 h-5" />
               Get In Touch

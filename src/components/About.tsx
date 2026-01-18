@@ -84,7 +84,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Thorough problem solver, and continuous learner dedicated to crafting 
+            Creative problem solver, and continuous learner dedicated to crafting 
             exceptional digital experiences.
           </p>
         </div>
