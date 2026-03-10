@@ -12,7 +12,7 @@ const Overview = ({ isVisible }: OverviewProps) => {
             <div className="space-y-6">
               <div className="prose prose-invert max-w-none">
                 <p className="text-gray-300 md:text-lg leading-relaxed">
-                  I'm a passionate full-stack engineer with 5+ years of experience crafting digital solutions 
+                  I'm a passionate full-stack engineer with 7+ years of experience crafting digital solutions 
                   that bridge the gap between complex technical requirements and intuitive user experiences.
                 </p>
                 <p className="text-gray-300 md:text-lg leading-relaxed">

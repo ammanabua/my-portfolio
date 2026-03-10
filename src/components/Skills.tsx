@@ -199,29 +199,6 @@ const Skills = () => {
           )}
         </div>
 
-        {/* Stats section */}
-        <div className={`mt-20 grid grid-cols-1 md:grid-cols-3 max-w-5xl m-auto gap-8 transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`} style={{ transitionDelay: '800ms' }}>
-          {[
-            { label: 'Technologies', value: skills.length, icon: Code2 },
-            { label: 'Years Experience', value: '5+', icon: Calendar },
-            { label: 'Production Apps', value: '10+', icon: Cpu },
-          ].map(({ label, value, icon: Icon }, index) => (
-            <div key={label} className="text-center group">
-              <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-white p-6 backdrop-blur-sm hover:border-purple-500 transition-all duration-300 hover:scale-105">
-                <Icon className="w-8 h-8 text-amber-300 mx-auto mb-3 group-hover:text-cyan-400 transition-colors" />
-                <div className="text-3xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                  {value}
-                </div>
-                <div className="text-amber-300 text-sm font-medium">
-                  {label}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
         {/* Call to action */}
         <div className={`text-center mt-16 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'

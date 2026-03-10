@@ -284,16 +284,9 @@ const experience: Experience[] = [
     achievements: ['40% performance improvement', '99% Uptime', 'Migrated legacy systems to microservices', 'Led team of 5 developers', 'Implemented CI/CD pipelines']
   },
   {
-    role: 'Software Developer',
-    company: 'Manyactive App Ltd',
-    period: '2021 - 2022',
-    description: 'Developed enterprise SaaS platform for mental health awareness, and physical activity tracking using React, Node.js, and PostgreSQL. Collaborated with cross-functional teams.',
-    achievements: ['Reduced load time by 60%', 'Built real-time chat system', 'Mentored junior developers']
-  },
-  {
     role: 'Web Developer',
     company: 'Technology Media Maven',
-    period: '2018 - 2021',
+    period: '2018 - 2022',
     description: 'Created responsive web applications and implemented modern UI/UX designs. Optimized for mobile-first approach.',
     achievements: ['Improved mobile conversion by 35%', 'Built component library', 'Implemented A/B testing']
   }
